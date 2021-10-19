@@ -1,4 +1,4 @@
-from contam_sm_de import ContamSMDensityEstimate
+from IFdensity.contam_sm_de import ContamSMDensityEstimate
 
 from dekef.base_density import *
 from dekef.kernel_function import *
@@ -6,7 +6,7 @@ from dekef.scorematching_common_functions import *
 import numpy as np
 import pandas as pd
 import seaborn
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 
 def plot_IF_1d_params(x_limit, y_limit=None, plot_pts_cnt=2000, figsize=(10, 10),
