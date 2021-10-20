@@ -360,3 +360,19 @@ class ContamSMDensityEstimate:
 		output = np.log(norm_const)
 		
 		return output
+	
+	def log_density(self, new_data, compute_base_density=False):
+		
+		if compute_base_density:
+			baseden_part = self.base_density.baseden_eval(new_data).flatten()
+		else:
+			baseden_part = 0.
+
+		coef = self.coef()
+		natparam = self.natural_param(
+			new_data=new_data,
+			coef=coef)
+		logpar = self.density_logpartition_1d(coef=coef)
+		
+		return {'coef': coef, 'logden_vals': np.log(baseden_part) + natparam - logpar}
+	
