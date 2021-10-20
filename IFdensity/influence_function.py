@@ -63,6 +63,8 @@ class SMInfluenceFunction:
 			c=c,
 			bw=bw,
 			kernel_type=kernel_type)
+		
+		self.base_density = base_density
 	
 	def eval_IF_logdensity(self, new_data):
 		
@@ -70,22 +72,15 @@ class SMInfluenceFunction:
 			raise ValueError('In order to compute the influence function, contam_weight cannot be 0.')
 		
 		# contaminated log-density function part
-		contam_coef = self.contam_density.coef()
-		contam_natparam = self.contam_density.natural_param(
-			new_data=new_data,
-			coef=contam_coef)
-		contam_logpar = self.contam_density.density_logpartition_1d(coef=contam_coef)
+		contam_results = self.contam_density.log_density(new_data=new_data)
+		contam_logden = contam_results['logden_vals']
 		
 		# uncontaminated log-density function part
-		uncontam_coef = self.uncontam_density.coef()
-		uncontam_natparam = self.uncontam_density.natural_param(
-			new_data=new_data,
-			coef=uncontam_coef)
-		uncontam_logpar = self.uncontam_density.density_logpartition_1d(coef=uncontam_coef)
+		uncontam_results = self.uncontam_density.log_density(new_data=new_data)
+		uncontam_logden = uncontam_results['logden_vals']
 		
 		# apply the finite difference method to approximate the influence function
-		output = ((contam_natparam - contam_logpar) -
-				  (uncontam_natparam - uncontam_logpar)) / self.contam_density.contam_weight
+		output = (contam_logden - uncontam_logden) / self.contam_density.contam_weight
 		
 		return output
 	
