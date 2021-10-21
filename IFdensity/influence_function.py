@@ -14,7 +14,6 @@ def plot_IF_1d_params(x_limit, y_limit=None, plot_pts_cnt=2000, figsize=(10, 10)
 					  rugplot_data_color='tab:blue', rugplot_contam_data_color='red',
 					  title_fontsize=20, label_fontsize=15, tick_fontsize=10, info_fontsize=16,
 					  contam_data_marker_color='tab:purple', contam_data_marker_alpha=0.5):
-	
 	output = {'x_limit': x_limit,
 			  'y_limit': y_limit,
 			  'plot_pts_cnt': plot_pts_cnt,
@@ -73,11 +72,11 @@ class SMInfluenceFunction:
 		
 		# contaminated log-density function part
 		contam_results = self.contam_density.log_density(new_data=new_data)
-		contam_logden = contam_results['logden_vals']
+		contam_logden = contam_results
 		
 		# uncontaminated log-density function part
 		uncontam_results = self.uncontam_density.log_density(new_data=new_data)
-		uncontam_logden = uncontam_results['logden_vals']
+		uncontam_logden = uncontam_results
 		
 		# apply the finite difference method to approximate the influence function
 		output = (contam_logden - uncontam_logden) / self.contam_density.contam_weight
