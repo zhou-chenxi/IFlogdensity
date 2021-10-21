@@ -210,27 +210,85 @@ class ContamSMDensityEstimate:
 	
 	def matrix_K33(self):
 		
-		pass
-	
-	# return K33
+		kernel_partial_11 = self.kernel_function_data.partial_kernel_matrix_11(new_data=self.data)
+		
+		kernel_partial_12 = self.kernel_function_data.partial_kernel_matrix_12(new_data=self.data)
+		baseden_partial = np.zeros(self.data.shape, dtype=np.float64)
+		for u in range(self.data.shape[1]):
+			baseden_partial[:, u] = self.base_density.logbaseden_deriv1(new_data=self.data, j=u).flatten()
+		baseden_partial = baseden_partial.reshape(-1, 1)
+		
+		z_norm1 = np.matmul(baseden_partial.T, np.matmul(kernel_partial_11, baseden_partial))
+		
+		kernel_partial_12 = self.kernel_function_data.partial_kernel_matrix_12(new_data=self.data)
+		z_norm2 = np.sum(baseden_partial * kernel_partial_12)
+		
+		kernel_partial_21 = self.kernel_function_data.partial_kernel_matrix_21(new_data=self.data)
+		z_norm3 = np.sum(np.matmul(kernel_partial_21, baseden_partial))
+		
+		z_norm4 = np.sum(self.kernel_function_data.partial_kernel_matrix_22(new_data=self.data))
+		K33 = (z_norm1 + z_norm2 + z_norm3 + z_norm4) / self.N ** 2
+		
+		return K33
 	
 	def matrix_K34(self):
 		
-		pass
-	
-	# return K34
+		kernel_partial_11 = self.kernel_function_data.partial_kernel_matrix_11(new_data=self.contam_data)
+		
+		baseden_partial_data = np.zeros(self.data.shape, dtype=np.float64)
+		for u in range(self.data.shape[1]):
+			baseden_partial_data[:, u] = self.base_density.logbaseden_deriv1(
+				new_data=self.data, j=u).flatten()
+		baseden_partial_data = baseden_partial_data.reshape(-1, 1)
+		
+		baseden_partial_contam_data = np.zeros(self.contam_data.shape, dtype=np.float64)
+		for u in range(self.contam_data.shape[1]):
+			baseden_partial_contam_data[:, u] = self.base_density.logbaseden_deriv1(
+				new_data=self.contam_data, j=u).flatten()
+		baseden_partial_contam_data = baseden_partial_contam_data.reshape(-1, 1)
+		
+		z_norm1 = np.matmul(baseden_partial_data.T, np.matmul(kernel_partial_11, baseden_partial_contam_data))
+		
+		kernel_partial_12 = self.kernel_function_data.partial_kernel_matrix_12(new_data=self.contam_data)
+		z_norm2 = np.sum(baseden_partial_data * kernel_partial_12)
+		
+		kernel_partial_21 = self.kernel_function_data.partial_kernel_matrix_21(new_data=self.contam_data)
+		print(kernel_partial_21.shape, baseden_partial_contam_data.shape)
+		z_norm3 = np.sum(np.matmul(kernel_partial_21, baseden_partial_contam_data))
+		
+		z_norm4 = np.sum(self.kernel_function_data.partial_kernel_matrix_22(new_data=self.contam_data))
+		K34 = (z_norm1 + z_norm2 + z_norm3 + z_norm4) / self.N
+		
+		return K34
 	
 	def matrix_K43(self):
 		
-		pass
-	
-	# return K43
+		K43 = self.matrix_K34()
+		
+		return K43
 	
 	def matrix_K44(self):
 		
-		pass
-	
-	# return K44
+		kernel_partial_11 = self.kernel_function_contam_data.partial_kernel_matrix_11(new_data=self.contam_data)
+		
+		kernel_partial_12 = self.kernel_function_contam_data.partial_kernel_matrix_12(new_data=self.contam_data)
+		baseden_partial = np.zeros(self.contam_data.shape, dtype=np.float64)
+		for u in range(self.contam_data.shape[1]):
+			baseden_partial[:, u] = self.base_density.logbaseden_deriv1(new_data=self.contam_data, j=u).flatten()
+		baseden_partial = baseden_partial.reshape(-1, 1)
+		
+		z_norm1 = np.matmul(baseden_partial.T, np.matmul(kernel_partial_11, baseden_partial))
+		
+		kernel_partial_12 = self.kernel_function_contam_data.partial_kernel_matrix_12(new_data=self.contam_data)
+		z_norm2 = np.sum(baseden_partial * kernel_partial_12)
+		
+		kernel_partial_21 = self.kernel_function_contam_data.partial_kernel_matrix_21(new_data=self.contam_data)
+		z_norm3 = np.sum(np.matmul(kernel_partial_21, baseden_partial))
+		
+		z_norm4 = np.sum(self.kernel_function_contam_data.partial_kernel_matrix_22(new_data=self.contam_data))
+		K44 = (z_norm1 + z_norm2 + z_norm3 + z_norm4) / self.n ** 2
+		
+		return K44
 	
 	def coef(self):
 		
@@ -364,15 +422,16 @@ class ContamSMDensityEstimate:
 	def log_density(self, new_data, compute_base_density=False):
 		
 		if compute_base_density:
-			baseden_part = self.base_density.baseden_eval(new_data).flatten()
+			baseden_part = np.log(self.base_density.baseden_eval(new_data).flatten())
 		else:
 			baseden_part = 0.
-
+		
 		coef = self.coef()
 		natparam = self.natural_param(
 			new_data=new_data,
 			coef=coef)
 		logpar = self.density_logpartition_1d(coef=coef)
 		
-		return {'coef': coef, 'logden_vals': np.log(baseden_part) + natparam - logpar}
-	
+		output = baseden_part + natparam - logpar
+		
+		return output
