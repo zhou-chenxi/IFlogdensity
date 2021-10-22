@@ -1,4 +1,4 @@
-## IFdensity Examples 
+# IFdensity Examples 
 
 The following GIFs show the influence functions of the logarithm of the score matching 
 density estimate in a kernel exponential family under various scenarios.
