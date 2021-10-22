@@ -4,7 +4,7 @@ The following GIFs show the influence functions of the logarithm of the score ma
 density estimate in a kernel exponential family under various scenarios.
 
 This notebook looks at the influence function of the logarithm of the score matching density function
-in a kernel exponential family $\mathcal{Q}$ evaluated at a point $w$, which is defined as 
+in a kernel exponential family ```math \mathcal{Q}``` evaluated at a point ```math w```, which is defined as 
 
 ```math
 \mathrm{IF} \big( y; \log q (w; F) \big) := \lim_{\varepsilon \to 0^+} \frac{1}{\varepsilon} \Big(\log q \big(w; (1 - \varepsilon) F + \varepsilon \delta_y \big) - \log q \big(w; F\big)\Big), \quad \text{ for all } w \in \mathcal{X}, \hspace{50pt} (*)
@@ -27,7 +27,7 @@ is kept being moved to right and is sufficient far away from others (labeled by 
 the resulting influence function becomes very stable in the sense that the next one is essentially 
 a shift of the previous one to the right.  
 
-![alt text](gif/IF-logdensity-waiting-kernel=gaussian_poly2-bw=5.0-pen=exp-8.0-contamweight=1e-08.gif)
+![alt text](~/Dropbox/code_package/IFdensity/gif/IF-logdensity-waiting-kernel=gaussian_poly2-bw=5.0-pen=exp-8.0-contamweight=1e-08.gif)
 
 ![alt text](gif/IF-logdensity-waiting-kernel=gaussian_poly2-bw=5.0-pen=exp-10.0-contamweight=1e-08.gif)
 
