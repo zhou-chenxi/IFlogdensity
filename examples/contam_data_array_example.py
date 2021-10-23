@@ -16,13 +16,13 @@ if __name__ == '__main__':
     data_waiting = df[df != 108.0]
     
     # array of contaminated data
-    contam_data_array = np.arange(90., 401., 2)
+    contam_data_array = np.sort(np.unique(data_waiting.flatten())) # np.arange(90., 401., 2)
 
     # kernel function used
     kernel_type = 'gaussian_poly2'
 
     # bandwidth parameter in the Gaussian kernel function
-    bw = 9.0
+    bw = 5.0
     
     # penalty parameter
     log_pen_param = -8.0
