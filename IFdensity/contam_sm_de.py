@@ -430,11 +430,11 @@ class ContamSMDensityEstimate:
 		z_norm2 = np.sum(baseden_partial_data * kernel_partial_12)
 		
 		kernel_partial_21 = self.kernel_function_data.partial_kernel_matrix_21(new_data=self.contam_data)
-		print(kernel_partial_21.shape, baseden_partial_contam_data.shape)
+		# print(kernel_partial_21.shape, baseden_partial_contam_data.shape)
 		z_norm3 = np.sum(np.matmul(kernel_partial_21, baseden_partial_contam_data))
 		
 		z_norm4 = np.sum(self.kernel_function_data.partial_kernel_matrix_22(new_data=self.contam_data))
-		K34 = (z_norm1 + z_norm2 + z_norm3 + z_norm4) / self.N
+		K34 = (z_norm1 + z_norm2 + z_norm3 + z_norm4) / self.N / self.n
 		
 		return K34
 	
