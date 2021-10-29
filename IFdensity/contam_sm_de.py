@@ -467,6 +467,37 @@ class ContamSMDensityEstimate:
 		
 		return K44
 	
+	def matrix_K(self):
+	
+		K11 = self.matrix_K11()
+		K12 = self.matrix_K12()
+		K13 = self.matrix_K13()
+		K14 = self.matrix_K14()
+		
+		K21 = self.matrix_K21()
+		K22 = self.matrix_K22()
+		K23 = self.matrix_K23()
+		K24 = self.matrix_K24()
+		
+		K31 = self.matrix_K31()
+		K32 = self.matrix_K32()
+		K33 = self.matrix_K33()
+		K34 = self.matrix_K34()
+		
+		K41 = self.matrix_K41()
+		K42 = self.matrix_K42()
+		K43 = self.matrix_K43()
+		K44 = self.matrix_K44()
+		
+		row1 = np.hstack((K11, K12, K13, K14))
+		row2 = np.hstack((K21, K22, K23, K24))
+		row3 = np.hstack((K31, K32, K33, K34))
+		row4 = np.hstack((K41, K42, K43, K44))
+		
+		output = np.vstack((row1, row2, row3, row4))
+		
+		return output
+	
 	def coef(self):
 		
 		# form the large matrix to compute coef_i for all i = 0, \cdots, nd+d-1
