@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
 	name='IFdensity',
-	version='0.2.0',
+	version='2.0',
 	packages=['IFdensity'],
 	url='',
 	license='MIT',
