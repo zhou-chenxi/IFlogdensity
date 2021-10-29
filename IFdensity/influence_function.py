@@ -215,6 +215,59 @@ class SMInfluenceFunction:
 		output = part1 + part2 / pen_param
 		return output
 	
+	def eval_IF_natparam_norm(self):
+		
+		N, d = self.contam_density.N, self.contam_density.d
+		large_K = self.contam_density.matrix_K()
+		coef = np.vstack((self.contam_density.coef()[:(N * d + d)],
+						  - 1 / self.contam_density.penalty_param,
+						  1 / self.contam_density.penalty_param)).reshape(-1, 1)
+		output = np.matmul(coef.T, (np.matmul(large_K, coef))).item()
+		
+		return np.sqrt(output)
+	
+	def eval_IF_natparam_limit_norm_1d(self):
+		
+		N, d = self.contam_density.N, self.contam_density.d
+		assert d == 1, f'The function eval_IF_natparam_limit_norm_1d only works for 1-dimensional data, ' \
+					   f'but got {d}-dimensional data.'
+		
+		pen_param = self.contam_density.penalty_param
+		K11 = self.contam_density.matrix_K11()
+		K13 = self.contam_density.matrix_K13()
+		K11_inv = np.linalg.inv(K11 + N * pen_param * np.eye(N * d))
+		prod1 = np.matmul(K11, K11_inv)
+		prod2 = np.matmul(prod1, K13) - 2 * K13
+		prod3 = np.matmul(K11_inv, prod2)
+		gamma_coef = - pen_param * prod3
+		
+		part1 = np.matmul(gamma_coef.T, (np.matmul(K11, gamma_coef))).item()
+		
+		# norm{z_{F_n}}^2 / pen_param ** 2
+		part2 = self.contam_density.matrix_K33().item() / pen_param ** 2
+		
+		# norm{z_{delta_y}}^2 / pen_param ** 2
+		part3 =
+		
+		# inner product between partial_u k (X_i, .) and z_{F_n}
+		part4 = np.sum(K13.flatten() * gamma_coef.flatten()) * 2 / pen_param
+		
+		output = part1 + part2 + part3 - part4
+		
+		return np.sqrt(output)
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
 	def plot_IF_logdensity_1d(self, plot_kwargs, x_label, save_plot=False, save_dir=None, save_filename=None):
 		
 		# check the dimensionality
