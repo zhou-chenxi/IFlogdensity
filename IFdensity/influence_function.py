@@ -277,26 +277,14 @@ class SMInfluenceFunction:
 			k12 = 0.
 			k22 = self.contam_density.kernel_function_data.r1 * 24. / self.contam_density.kernel_function_data.bw ** 4
 		
-		part3 = k22 + 2. * mu_limit * k12 + mu_limit ** 2 * k11
+		part3 = (k22 + 2. * mu_limit * k12 + mu_limit ** 2 * k11) / pen_param ** 2
 		
 		# inner product between partial_u k (X_i, .) and z_{F_n}
-		part4 = np.sum(K13.flatten() * gamma_coef.flatten()) * 2 / pen_param
+		part4 = 2 * np.sum(K13.flatten() * gamma_coef.flatten()) / pen_param
 		
 		output = part1 + part2 + part3 - part4
 		
 		return np.sqrt(output)
-	
-	
-	
-	
-	
-	
-	
-		
-	
-	
-	
-	
 	
 	def plot_IF_logdensity_1d(self, plot_kwargs, x_label, save_plot=False, save_dir=None, save_filename=None):
 		
