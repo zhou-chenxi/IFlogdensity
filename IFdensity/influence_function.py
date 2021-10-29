@@ -192,29 +192,27 @@ class SMInfluenceFunction:
 		d = self.uncontam_density.d
 		
 		K11_inv = np.linalg.inv(K11 + N * pen_param * np.eye(N * d))
-		gamma_coef = - pen_param * np.matmul(K11_inv, (np.matmul(K11, np.matmul(K11_inv, K13)) - 2 * K13))
+		prod1 = np.matmul(K11, K11_inv)
+		prod2 = np.matmul(prod1, K13) - 2 * K13
+		prod3 = np.matmul(K11_inv, prod2)
+		gamma_coef = np.vstack((- pen_param * prod3, - pen_param))
 		
 		# partial_u k (X_j, \cdot) part
-		part1 = np.matmul(
-			gamma_coef,
-			self.uncontam_density.kernel_function_data.partial_kernel_matrix_10(new_data=new_data)
-		).flatten()
-
-		# z_{F_n} part
-		part2 = (kernel_partial10_hatz(
+		f_matrix = kernel_partial10_hatz(
 			data=self.uncontam_density.data,
 			new_data=new_data,
 			kernel_function=self.uncontam_density.kernel_function_data,
-			base_density=self.base_density)[[-1]]).flatten()
-
+			base_density=self.base_density)
+		part1 = np.matmul(f_matrix.T, gamma_coef).flatten()
+		
 		# z_{delta_y} part
-		part3 = (kernel_partial10_hatz(
+		part2 = (kernel_partial10_hatz(
 			data=self.contam_density.contam_data,
 			new_data=new_data,
 			kernel_function=self.contam_density.kernel_function_contam_data,
 			base_density=self.base_density)[[-1]]).flatten()
 	
-		output = part1 - part2 / pen_param + part3 / pen_param
+		output = part1 + part2 / pen_param
 		return output
 	
 	def plot_IF_logdensity_1d(self, plot_kwargs, x_label, save_plot=False, save_dir=None, save_filename=None):
