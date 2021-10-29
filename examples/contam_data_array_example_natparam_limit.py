@@ -22,7 +22,7 @@ if __name__ == '__main__':
     kernel_type = 'gaussian_poly2'
 
     # bandwidth parameter in the Gaussian kernel function
-    bw = 5.0
+    bw = 9.0
     
     # penalty parameter
     log_pen_param = -8.0
