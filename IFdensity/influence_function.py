@@ -195,7 +195,7 @@ class SMInfluenceFunction:
 		prod1 = np.matmul(K11, K11_inv)
 		prod2 = np.matmul(prod1, K13) - 2 * K13
 		prod3 = np.matmul(K11_inv, prod2)
-		gamma_coef = np.vstack((- pen_param * prod3, - pen_param))
+		gamma_coef = np.vstack((- prod3 / pen_param, - 1. / pen_param))
 		
 		# partial_u k (X_j, \cdot) part
 		f_matrix = kernel_partial10_hatz(
@@ -220,8 +220,8 @@ class SMInfluenceFunction:
 		N, d = self.contam_density.N, self.contam_density.d
 		large_K = self.contam_density.matrix_K()
 		coef = np.vstack((self.contam_density.coef()[:(N * d + d)],
-						  - 1 / self.contam_density.penalty_param,
-						  1 / self.contam_density.penalty_param)).reshape(-1, 1)
+						  - 1. / self.contam_density.penalty_param,
+						  1. / self.contam_density.penalty_param)).reshape(-1, 1)
 		output = np.matmul(coef.T, (np.matmul(large_K, coef))).item()
 		
 		return np.sqrt(output)
@@ -237,9 +237,9 @@ class SMInfluenceFunction:
 		K13 = self.contam_density.matrix_K13()
 		K11_inv = np.linalg.inv(K11 + N * pen_param * np.eye(N * d))
 		prod1 = np.matmul(K11, K11_inv)
-		prod2 = np.matmul(prod1, K13) - 2 * K13
+		prod2 = np.matmul(prod1, K13) - 2. * K13
 		prod3 = np.matmul(K11_inv, prod2)
-		gamma_coef = - pen_param * prod3
+		gamma_coef = - prod3 / pen_param
 		
 		part1 = np.matmul(gamma_coef.T, (np.matmul(K11, gamma_coef))).item()
 		
@@ -248,7 +248,7 @@ class SMInfluenceFunction:
 		
 		# norm{z_{delta_y}}^2 / pen_param ** 2
 		if self.base_density.name == 'Gamma':
-			mu_limit = - 1 / self.base_density.scale
+			mu_limit = - 1. / self.base_density.scale
 		elif self.base_density.name == 'Lognormal':
 			mu_limit = 0.
 		elif self.base_density.name == 'Exponential':
