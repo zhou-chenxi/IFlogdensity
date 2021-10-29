@@ -6,6 +6,44 @@ from IFdensity.contam_sm_de import ContamSMDensityEstimate
 def eval_IF_logdensity_contam_data_array(data, new_data, contam_data_array, contam_weight, penalty_param, base_density,
 										 r1=1.0, r2=0., c=0., bw=1.0, kernel_type='gaussian_poly2',
 										 save_data=False, save_dir=None):
+	
+	"""
+	
+	Parameters
+	----------
+	data : numpy.ndarray
+	
+	
+	new_data : numpy.ndarray
+	
+	contam_data_array : numpy.ndarray
+
+	contam_weight : float
+
+	penalty_param : float
+
+	base_density : base_density
+
+	r1 : float, optional
+
+	r2 : float, optional
+
+	c : float, optional
+
+	bw : float, optional
+
+	kernel_type : str, optional
+
+	save_data : logical, optional
+
+	save_dir : str, optional
+	
+	Returns
+	-------
+	
+	
+	"""
+	
 	if contam_weight == 0.:
 		raise ValueError('In order to compute the influence function, contam_weight cannot be 0.')
 	
