@@ -247,7 +247,37 @@ class SMInfluenceFunction:
 		part2 = self.contam_density.matrix_K33().item() / pen_param ** 2
 		
 		# norm{z_{delta_y}}^2 / pen_param ** 2
-		part3 =
+		if self.base_density.name == 'Gamma':
+			mu_limit = - 1 / self.base_density.scale
+		elif self.base_density.name == 'Lognormal':
+			mu_limit = 0.
+		elif self.base_density.name == 'Exponential':
+			mu_limit = -1. / self.base_density.scale
+		elif self.base_density.name == 'Uniform':
+			mu_limit = 0.
+		else:
+			raise NotImplementedError(f'The base density used is {self.base_density.name}, '
+									  f'which has not been implemented.')
+		
+		if self.contam_density.kernel_type == 'gaussian_poly2':
+			
+			if self.contam_density.kernel_function_data.r2 != 0.:
+				raise ValueError('In order to use the function eval_IF_natparam_limit_norm_1d, must set r2 to be 0.')
+			
+			k11 = self.contam_density.kernel_function_data.r1 * 1. / self.contam_density.kernel_function_data.bw ** 2
+			k12 = 0.
+			k22 = self.contam_density.kernel_function_data.r1 * 3. / self.contam_density.kernel_function_data.bw ** 4
+		
+		elif self.contam_density.kernel_type == 'rationalquad_poly2':
+			
+			if self.contam_density.kernel_function_data.r2 != 0.:
+				raise ValueError('In order to use the function eval_IF_natparam_limit_norm_1d, must set r2 to be 0.')
+			
+			k11 = self.contam_density.kernel_function_data.r1 * 2. / self.contam_density.kernel_function_data.bw ** 2
+			k12 = 0.
+			k22 = self.contam_density.kernel_function_data.r1 * 24. / self.contam_density.kernel_function_data.bw ** 4
+		
+		part3 = k22 + 2. * mu_limit * k12 + mu_limit ** 2 * k11
 		
 		# inner product between partial_u k (X_i, .) and z_{F_n}
 		part4 = np.sum(K13.flatten() * gamma_coef.flatten()) * 2 / pen_param
