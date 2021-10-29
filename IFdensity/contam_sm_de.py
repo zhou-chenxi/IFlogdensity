@@ -7,6 +7,172 @@ from scipy import integrate
 
 class ContamSMDensityEstimate:
 	
+	"""
+	A class of estimating the probability density function using the score matching loss function
+	in the presence of a contaminated observation.
+	
+	...
+	
+	Attributes
+	----------
+	data : numpy.ndarray
+		The array of uncontaminated observations whose density function is to be estimated.
+	
+	contam_data : numpy.ndarray
+		The contaminated observation.
+	
+	N : int
+		The number of uncontaminated observations.
+		
+	n : int
+		The number of contaminated observation; should always be 1.
+	
+	d : int
+		The dimensionality of self.data and self.contam_data.
+	
+	contam_weight : float
+		The weight of self.contam_data; must always be between 0 and 1, inclusively.
+	
+	penalty_param : float
+		The penalty parameter used to compute the penalized score matching density estimate;
+		must be strictly positive.
+		
+	base_density : base_density
+		The base density function used to estimate the probability density function.
+        __type__ must be 'base_density'.
+	
+	r1 : float
+		The multiplicative coefficient associated with the Gaussian kernel function or
+		the rational quadratic kernel function.
+	
+	r2 : float
+		The multiplicative coefficient associated with the polynomial kernel function of degree 2.
+
+	c : float
+		The non-homogenous additive constant in the polynomial kernel function of degree 2.
+    
+    bw : float
+        The bandwidth parameter in the Gaussian kernel function or the rational quadratic kernel function;
+        must be strictly positive.
+	
+	kernel_type : str
+		The type of the kernel function used; must be either 'gaussian_poly2' or 'rationalquad_poly2'.
+	
+	kernel_function_data : kernel_function
+	
+	
+	
+	kernel_function_contam_data : kernel_function
+	
+	
+	Methods
+	-------
+	matrix_K11()
+		Evaluates a matrix of size (self.N * self.d) by (self.N * self.d)
+		with the ((i-1)d+u, (j-1)d+v)-th entry being the inner product
+		between \partial_u k(X_i, \cdot) and \partial_v k(X_j, \cdot),
+		where X_i is the i-th observation in self.data.
+	
+	matrix_K12()
+		Evaluates a matrix of size (self.N * self.d) by self.d
+		with the ((i-1)d+u, v)-th entry being the inner product
+		between \partial_u k(X_i, \cdot) and \partial_v k(y, \cdot),
+		where X_i is the i-th observation in self.data and y is self.contam_data.
+	
+	matrix_K21()
+		Evaluates a matrix of size self.d by (self.N * self.d)
+		with the (v, (i-1)d+u)-th entry being the inner product
+		between \partial_v k(y, \cdot) and \partial_u k(X_i, \cdot),
+		where X_i is the i-th observation in self.data and y is self.contam_data.
+	
+	matrix_K13()
+		Evaluates a matrix of size (self.N * self.d) by 1
+		with the ((i-1)d+u)-th entry being the inner product
+		between \partial_u k(X_i, \cdot) and z_{F_n},
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+		             (\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, \mu is the base density, N = self.N, d = self.d.
+		
+	matrix_K31()
+		Evaluates a matrix of size 1 by (self.N * self.d)
+		with the ((i-1)d+u)-th entry being the inner product
+		between \partial_u k(X_i, \cdot) and z_{F_n},
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+		             (\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, \mu is the base density, N = self.N, d = self.d.
+	
+	matrix_K14()
+		Evaluates a matrix of size (self.N * self.d) by 1
+		with the ((i-1)d+u)-th entry being the inner product
+		between \partial_u k(X_i, \cdot) and z_{\delta_y},
+		where
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+		             (\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, d = self.d.
+	
+	matrix_K41()
+		Evaluates a matrix of size 1 by (self.N * self.d)
+		with the ((i-1)d+u)-th entry being the inner product
+		between \partial_u k(X_i, \cdot) and z_{\delta_y},
+		where
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+		             (\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, d = self.d.
+		
+	matrix_K22()
+		Evaluates a matrix of size self.d by self.d
+		with the (u, v)-th entry being the inner product
+		between \partial_u k(y, \cdot) and \partial_v k(y, \cdot),
+		where y is self.contam_data.
+		
+	matrix_K23()
+		Evaluates a matrix of size self.d by self.d
+		with the (u, v)-th entry being the inner product
+		between \partial_u k(y, \cdot) and \partial_v k(y, \cdot),
+		where
+		
+		
+		
+		y is self.contam_data.
+		
+	
+	matrix_K32()
+	
+	matrix_K24()
+	
+	matrix_K42()
+	
+	matrix_K33()
+	
+	matrix_K34()
+	
+	
+	matrix_K43()
+	
+	matrix_K44()
+	
+	
+	coef()
+		Computes the coefficient vector of the natural parameter in the score matching density estimate. 
+	
+	natural_param(new_data, coef)
+		Evaluates the natural parameter in the score matching density estimate at new_data.
+		
+	unnormalized_density_eval_1d(x, coef)
+		Evaluates the un-normalized score matching density estimate at new_data.
+	
+	density_logpartition_1d(coef)
+		Compute the normalizing constant of the score matching density estimate.
+	
+	log_density(new_data, compute_base_density)
+		Compute the logarithm of the score matching density estimate.
+	
+	"""
+	
 	def __init__(self, data, contam_data, contam_weight, penalty_param, base_density,
 				 r1=1.0, r2=0.0, c=0., bw=1., kernel_type='gaussian_poly2'):
 		
@@ -103,6 +269,17 @@ class ContamSMDensityEstimate:
 				bw=self.bw)
 	
 	def matrix_K11(self):
+		
+		"""
+		Evaluates the matrix K11, a matrix of size (self.N * self.d) by (self.N * self.d)
+		with the ((i-1)d+u, (j-1)d+v)-th entry being the inner product
+		between \partial_u k(X_i, \cdot) and \partial_v k(X_j, \cdot).z
+
+		Returns
+		-------
+		
+		"""
+		
 		
 		K11 = self.kernel_function_data.partial_kernel_matrix_11(new_data=self.data)
 		
