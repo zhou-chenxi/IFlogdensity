@@ -219,7 +219,31 @@ class SMInfluenceFunction:
 		
 		N, d = self.contam_density.N, self.contam_density.d
 		large_K = self.contam_density.matrix_K()
-		coef = np.vstack((self.contam_density.coef()[:(N * d + d)],
+		
+		# compute alpha coefficient vector
+		pen_param = self.contam_density.penalty_param
+		K11 = self.contam_density.matrix_K11()
+		K12 = self.contam_density.matrix_K12()
+		K13 = self.contam_density.matrix_K13()
+		K14 = self.contam_density.matrix_K14()
+		
+		K21 = self.contam_density.matrix_K21()
+		K23 = self.contam_density.matrix_K23()
+		
+		K11_inv = np.linalg.inv(K11 + N * pen_param * np.eye(N * d))
+		
+		# coef with data
+		coef1_1 = - 1. / pen_param * K11_inv * (np.matmul(np.matmul(K11, K11_inv), K13) - 2. * K13 + K14)
+		coef1_2 = - 1. / pen_param ** 2 * np.matmul(np.matmul(np.matmul(np.matmul(K11_inv, K12), K21), K11_inv), K13)
+		coef1_3 = 1. / pen_param ** 2 * np.matmul(np.matmul(K11_inv, K12), K23)
+		
+		coef1 = coef1_1 + coef1_2 + coef1_3
+		
+		# coef with contam_data
+		coef2 = 1. / pen_param ** 2 * np.matmul(np.matmul(K21, K11_inv), K13) - 1. / pen_param ** 2 * K23
+		
+		coef = np.vstack((coef1.reshape(-1, 1),
+						  coef2.reshape(-1, 1),
 						  - 1. / self.contam_density.penalty_param,
 						  1. / self.contam_density.penalty_param)).reshape(-1, 1)
 		output = np.matmul(coef.T, (np.matmul(large_K, coef))).item()
