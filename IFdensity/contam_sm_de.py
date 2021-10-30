@@ -389,7 +389,6 @@ class ContamSMDensityEstimate:
 		
 		kernel_partial_11 = self.kernel_function_data.partial_kernel_matrix_11(new_data=self.data)
 		
-		kernel_partial_12 = self.kernel_function_data.partial_kernel_matrix_12(new_data=self.data)
 		baseden_partial = np.zeros(self.data.shape, dtype=np.float64)
 		for u in range(self.data.shape[1]):
 			baseden_partial[:, u] = self.base_density.logbaseden_deriv1(new_data=self.data, j=u).flatten()
