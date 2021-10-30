@@ -222,6 +222,7 @@ class SMInfluenceFunction:
 		
 		# compute alpha coefficient vector
 		pen_param = self.contam_density.penalty_param
+		
 		K11 = self.contam_density.matrix_K11()
 		K12 = self.contam_density.matrix_K12()
 		K13 = self.contam_density.matrix_K13()
@@ -233,7 +234,7 @@ class SMInfluenceFunction:
 		K11_inv = np.linalg.inv(K11 + N * pen_param * np.eye(N * d))
 		
 		# coef with data
-		coef1_1 = - 1. / pen_param * K11_inv * (np.matmul(np.matmul(K11, K11_inv), K13) - 2. * K13 + K14)
+		coef1_1 = - 1. / pen_param * np.matmul(K11_inv, np.matmul(np.matmul(K11, K11_inv), K13) - 2. * K13 + K14)
 		coef1_2 = - 1. / pen_param ** 2 * np.matmul(np.matmul(np.matmul(np.matmul(K11_inv, K12), K21), K11_inv), K13)
 		coef1_3 = 1. / pen_param ** 2 * np.matmul(np.matmul(K11_inv, K12), K23)
 		
@@ -242,10 +243,11 @@ class SMInfluenceFunction:
 		# coef with contam_data
 		coef2 = 1. / pen_param ** 2 * np.matmul(np.matmul(K21, K11_inv), K13) - 1. / pen_param ** 2 * K23
 		
-		coef = np.vstack((coef1.reshape(-1, 1),
-						  coef2.reshape(-1, 1),
-						  - 1. / self.contam_density.penalty_param,
-						  1. / self.contam_density.penalty_param)).reshape(-1, 1)
+		coef = np.vstack((coef1,
+						  coef2,
+						  - 1. / pen_param,
+						  1. / pen_param)).reshape(-1, 1)
+		
 		output = np.matmul(coef.T, (np.matmul(large_K, coef))).item()
 		
 		return np.sqrt(output)
@@ -288,23 +290,23 @@ class SMInfluenceFunction:
 			if self.contam_density.kernel_function_data.r2 != 0.:
 				raise ValueError('In order to use the function eval_IF_natparam_limit_norm_1d, must set r2 to be 0.')
 			
-			k11 = self.contam_density.kernel_function_data.r1 * 1. / self.contam_density.kernel_function_data.bw ** 2
-			k12 = 0.
-			k22 = self.contam_density.kernel_function_data.r1 * 3. / self.contam_density.kernel_function_data.bw ** 4
+			ker11 = self.contam_density.kernel_function_data.r1 * 1. / self.contam_density.kernel_function_data.bw ** 2
+			ker12 = 0.
+			ker22 = self.contam_density.kernel_function_data.r1 * 3. / self.contam_density.kernel_function_data.bw ** 4
 		
 		elif self.contam_density.kernel_type == 'rationalquad_poly2':
 			
 			if self.contam_density.kernel_function_data.r2 != 0.:
 				raise ValueError('In order to use the function eval_IF_natparam_limit_norm_1d, must set r2 to be 0.')
 			
-			k11 = self.contam_density.kernel_function_data.r1 * 2. / self.contam_density.kernel_function_data.bw ** 2
-			k12 = 0.
-			k22 = self.contam_density.kernel_function_data.r1 * 24. / self.contam_density.kernel_function_data.bw ** 4
+			ker11 = self.contam_density.kernel_function_data.r1 * 2. / self.contam_density.kernel_function_data.bw ** 2
+			ker12 = 0.
+			ker22 = self.contam_density.kernel_function_data.r1 * 24. / self.contam_density.kernel_function_data.bw ** 4
 		
-		part3 = (k22 + 2. * mu_limit * k12 + mu_limit ** 2 * k11) / pen_param ** 2
+		part3 = (ker22 + 2. * mu_limit * ker12 + mu_limit ** 2 * ker11) / pen_param ** 2
 		
 		# inner product between partial_u k (X_i, .) and z_{F_n}
-		part4 = 2 * np.sum(K13.flatten() * gamma_coef.flatten()) / pen_param
+		part4 = 2. * np.sum(K13.flatten() * gamma_coef.flatten()) / pen_param
 		
 		output = part1 + part2 + part3 - part4
 		
