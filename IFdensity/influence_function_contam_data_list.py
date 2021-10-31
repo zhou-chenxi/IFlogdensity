@@ -81,7 +81,7 @@ def eval_IF_logdensity_contam_data_array(data, new_data, contam_data_array, cont
 	uncontam_den = ContamSMDensityEstimate(
 		data=data,
 		contam_data=contam_data_array[0].reshape(1, d),
-		contam_weight=contam_weight,
+		contam_weight=0.,
 		penalty_param=penalty_param,
 		base_density=base_density,
 		r1=r1,
