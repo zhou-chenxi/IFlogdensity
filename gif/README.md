@@ -7,10 +7,15 @@ Please see the texts above Cell 1
 [here](https://github.com/zhoucx1119/IFdensity/blob/main/examples/inf-fun-all-points.ipynb) 
 for the setup of these experiments. 
 
-**Observation:** When the contaminated observation (labeled by the purple vertical line and red rug) 
+**Observation:** 
+
+- When the contaminated observation (labeled by the purple vertical line and red rug) 
 is kept being moved to the right and is sufficient far away from others (labeled by the blue rugs), 
-the resulting influence function becomes very stable in the sense that the next one is essentially 
-a shift of the previous one to the right.  
+the resulting influence function becomes stable, i.e., the shape of the influence function does not vary 
+and the corresponding curve essentially shifts to the right with the contaminated data point.
+
+- The contaminated data point far away from others has a larger impact than 
+that in the region where data are abundant.
 
 ![alt text](IF-logdensity-waiting-kernel=gaussian_poly2-bw=5.0-pen=exp-8.0-contamweight=1e-08.gif)
 
