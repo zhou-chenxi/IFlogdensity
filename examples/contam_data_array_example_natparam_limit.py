@@ -22,10 +22,10 @@ if __name__ == '__main__':
     kernel_type = 'gaussian_poly2'
 
     # bandwidth parameter in the Gaussian kernel function
-    bw = 9.0
+    bw = 5.0
     
     # penalty parameter
-    log_pen_param = -8.0
+    log_pen_param = -12.0
     
     print(f'bw={bw}, and penalty parameter=exp({log_pen_param}).')
     
