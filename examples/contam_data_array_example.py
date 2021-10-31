@@ -16,7 +16,7 @@ if __name__ == '__main__':
     data_waiting = df[df != 108.0]
     
     # array of contaminated data
-    contam_data_array = np.sort(np.unique(data_waiting.flatten())) # np.arange(90., 401., 2)
+    contam_data_array = np.sort(np.unique(np.concatenate((np.arange(90., 401., 2), data_waiting.flatten()))))
 
     # kernel function used
     kernel_type = 'gaussian_poly2'
