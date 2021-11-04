@@ -219,7 +219,7 @@ class ContamSMDensityEstimate:
 		self.contam_weight = contam_weight
 		
 		# check the validity of the penalty_param
-		assert penalty_param > 0., "penalty_param must be between 0 and 1, inclusively."
+		assert penalty_param > 0., "penalty_param must be strictly positive, inclusively."
 		self.penalty_param = penalty_param
 		
 		# check the base density
