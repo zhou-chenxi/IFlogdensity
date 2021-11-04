@@ -16,7 +16,8 @@ if __name__ == '__main__':
     data_waiting = df[df != 108.0]
     
     # array of contaminated data
-    contam_data_array = np.sort(np.unique(np.concatenate((np.arange(90., 401., 2), data_waiting.flatten()))))
+    contam_data_array = np.sort(np.unique(np.concatenate([np.arange(2., 410., 4), np.arange(40., 100., 2)])))
+    # np.sort(np.unique(np.concatenate((np.arange(90., 401., 2), data_waiting.flatten()))))
 
     # kernel function used
     kernel_type = 'gaussian_poly2'
@@ -34,7 +35,9 @@ if __name__ == '__main__':
     
     # base density
     base_density = BasedenGamma(np.load('data/geyser.npy').astype(np.float64)[:, 0])
-    plot_kwargs = plot_IF_1d_params(x_limit=(21., 410.))
+    plot_kwargs = plot_IF_1d_params(x_limit=(1., 410.), plot_pts_cnt=3000)
+    plot_xlimit = plot_kwargs['x_limit']
+    plot_cnt = plot_kwargs['plot_pts_cnt']
     
     result = eval_IF_logdensity_contam_data_array(
         data=data_waiting,
@@ -49,4 +52,4 @@ if __name__ == '__main__':
         bw=bw,
         kernel_type=kernel_type,
         save_data=True,
-        save_dir=f'bw={bw}-kernel={kernel_type}-loglambda={log_pen_param}-contamweight={contam_weight}')
+        save_dir=f'bw={bw}-kernel={kernel_type}-loglambda={log_pen_param}-contamweight={contam_weight}-plotdomain={plot_xlimit}-plotcnts={plot_cnt}')
