@@ -3,8 +3,8 @@
 import os
 import copy
 from dekef.base_density import *
-from IFdensity.influence_function_contam_data_list import *
-from IFdensity.influence_function import *
+from IFlogdensity.influence_function_contam_data_list import *
+from IFlogdensity.influence_function_sm_de import *
 
 if __name__ == '__main__':
     
