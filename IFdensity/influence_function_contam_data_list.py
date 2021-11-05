@@ -1,6 +1,6 @@
 import os
 import numpy as np
-from IFdensity.contam_sm_de import ContamSMDensityEstimate
+from IFlogdensity.contam_sm_de import ContamSMDensityEstimate
 
 
 def eval_IF_logdensity_contam_data_array(data, new_data, contam_data_array, contam_weight, penalty_param, base_density,
