@@ -267,6 +267,11 @@ class ContamSMDensityEstimate:
 				r2=self.r2,
 				c=self.c,
 				bw=self.bw)
+		
+		else:
+			
+			raise NotImplementedError(f"kernel_type must be one of 'gaussian_poly2' and 'rationalquad_poly2', "
+									  f"but got {kernel_type}.")
 	
 	def matrix_K11(self):
 		
