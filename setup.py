@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-	name='IFdensity',
+	name='IFlogdensity',
 	version='2.0',
-	packages=['IFdensity'],
+	packages=['IFlogdensity'],
 	url='',
 	license='MIT',
 	author='Chenxi Zhou',
