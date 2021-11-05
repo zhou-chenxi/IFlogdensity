@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/IFdensity.iml" filepath="$PROJECT_DIR$/.idea/IFdensity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IFlogdensity.iml" filepath="$PROJECT_DIR$/.idea/IFlogdensity.iml" />
     </modules>
   </component>
 </project>
