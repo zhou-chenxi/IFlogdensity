@@ -16,28 +16,65 @@ def plot_IF_1d_params(x_limit, y_limit=None, plot_pts_cnt=2000, figsize=(10, 10)
 					  contam_data_marker_color='tab:purple', contam_data_marker_alpha=0.5):
 	
 	"""
+	Specifies and returns the plotting parameters used in the functions plot_IF_logdensity_1d, plot_IF_natparam_1d,
+	or plot_IF_natparam_limit_1d in the class SMInfluenceFunction.
 	
 	Parameters
 	----------
-	x_limit:
-	y_limit:
-	plot_pts_cnt:
-	figsize:
-	IF_color:
-	linewidth:
-	rugplot_data_color:
-	rugplot_contam_data_color:
-	title_fontsize:
-	label_fontsize:
-	tick_fontsize:
-	info_fontsize:
-	contam_data_marker_color:
-	contam_data_marker_alpha:
+	x_limit : tuple
+		The tuple to specify the plotting domain of the density estimate.
+		Must be of length 2. Both components must be finite numbers.
 	
+	y_limit : tuple or None, optional
+		The tuple to specify the domain of the plot of density estimate in the vertical axis; default is None.
+		Must be of length 2. Both components must be finite numbers if not None.
+	
+	plot_pts_cnt : int, optional
+		The number of points to be evaluated along the plot_domain to make a plot; default is 2000.
+	
+	figsize : typle, optional
+		The size of the plot; default is (10, 10).
+	
+	IF_color : str, optional
+		The color to plot the influence function; default is 'tab:blue'.
+	
+	linewidth : float, optional
+		The line width parameter to plot the influence function; default is 2.0.
+	
+	rugplot_data_color : str, optional
+		The color of the rug plot to indicate the location of the uncontaminated observations;
+		default is 'tab:blue'.
+		
+	rugplot_contam_data_color : str, optional
+		The color of the rug plot to indicate the location of the contaminated observation;
+		default is 'red'.
+	
+	title_fontsize : int, optional
+		The font size of the title of the plot; default is 20.
+	
+	label_fontsize : int, optional
+		The font size of the label of the plot; default is 15.
+		
+	tick_fontsize : int, optional
+		The font size of the tick label of the plot; default is 10.
+	
+	info_fontsize : int, optional
+		The font size of the information of the plot to show where the contaminated observation is located;
+		default is 16.
+	
+	contam_data_marker_color : str, optional
+		The color of the vertical line to indicate the location of the contaminated observation;
+		default is 'tab:purple'.
+	
+	contam_data_marker_alpha : float, optional
+		The alpha value of the vertical line to indicate the location of the contaminated observation;
+		default is 0.5.
 	
 	Returns
 	-------
-	
+	dict
+		A dict containing all the plotting parameter inputs.
+		
 	"""
 	
 	output = {'x_limit': x_limit,
@@ -67,35 +104,94 @@ class SMInfluenceFunction:
 	
 	Attributes
 	----------
-	contam_density
+	contam_density : ContamSMDensityEstimate object
+		An object returned from the ContamSMDensityEstimate class, where the contam_weight therein must be strictly
+		positive.
 	
+	uncontam_density : ContamSMDensityEstimate object
+		An object returned from the ContamSMDensityEstimate class, where the contam_weight therein must be 0.
 	
-	uncontam_density
-	
-	
-	
-	base_density
-	
-	
-	
-	
+	base_density : base_density object
+		The base density function used to estimate the probability density function.
+		__type__ must be 'base_density'.
 	
 	Methods
 	-------
 	eval_IF_logdensity(new_data)
+		Evaluates the influence function of the logarithm of the score matching density estimate at new_data.
 	
+	eval_IF_natparam(new_data)
+		Evaluates the influence function of the natural parameter
+		in the score matching density estimate at new_data.
 	
+	eval_IF_natparam_limit(new_data)
+		Evaluates the influence function of the limiting natural parameter
+		in the score matching density estimate at new_data
+		as the contaminated observation goes to infinity.
+	
+	eval_IF_natparam_norm()
+		Evaluates the RKHS norm of the influence function of the natural parameter
+		in the score matching density estimate.
+	
+	eval_IF_natparam_limit_norm_1d()
+		Evaluates the RKHS norm of the influence function of the limiting natural parameter
+		in the score matching density estimate.
 	
 	plot_IF_logdensity_1d(plot_kwargs, x_label, save_plot=False, save_dir=None, save_filename=None)
+		Computes and plots the influence function of the logarithm of
+		the score matching density estimate over a specified bounded interval.
 	
+	plot_IF_natparam_1d(plot_kwargs, x_label, save_plot=False, save_dir=None, save_filename=None)
+		Computes and plots the influence function of the natural parameter
+		in the score matching density estimate over a specified bounded interval.
 	
-	
-	
+	plot_IF_natparam_limit_1d(plot_kwargs, x_label, save_plot=False, save_dir=None, save_filename=None)
+		Computes and plots the influence function of the limiting natural parameter
+		in the score matching density estimate over a specified bounded interval.
 	
 	"""
 	
 	def __init__(self, data, contam_data, contam_weight, penalty_param, base_density,
 				 r1=1.0, r2=0., c=0., bw=1.0, kernel_type='gaussian_poly2'):
+		
+		"""
+		Parameters
+		----------
+		
+		data : numpy.ndarray
+			The array of observations whose probability density function is to be estimated.
+
+		contam_data : numpy.ndarray
+			The array of contaminated observation.
+
+		contam_weight : float
+			The weight of contamination.
+
+		penalty_param : float
+			The penalty parameter. Must be strictly positive.
+
+		base_density : base_density object
+			The base density function used to estimate the probability density function.
+
+		r1 : float, optional
+			The multiplicative constant associated with the Gaussian kernel function or the rational quadratic kernel
+			function, depending on kernel_type; default is 1.
+
+		r2 : float, optional
+			The multiplicative constant associated with the polynomial kernel function of degree 2; default is 0.
+
+		c : float, optional
+			The non-homogenous additive constant in the polynomial kernel function of degree 2; default is 0.
+
+		bw : float, optional
+			The bandwidth parameter in the Gaussian kernel function or the rational quadratic kernel function,
+			depending on kernel_type; default is 1.
+
+		kernel_type : str, optional
+			The type of the kernel function used to estimate the probability density function;
+			must be one of 'gaussian_poly2' and 'rationalquad_poly2'; default is 'gaussian_poly2'.
+			
+		"""
 		
 		# construct the contaminated density estimate
 		self.contam_density = ContamSMDensityEstimate(
@@ -128,13 +224,20 @@ class SMInfluenceFunction:
 	def eval_IF_logdensity(self, new_data):
 		
 		"""
+		Evaluates the influence function of the logarithm of the score matching density estimate at new_data.
 		
 		Parameters
 		----------
 		new_data : numpy.ndarray
+			An array of data points at which the influence function of
+			the logarithm of the score matching density estimate is to be evaluated.
 	
 		Returns
 		-------
+		numpy.ndarray
+			The value of the influence function of the logarithm of
+			the score matching density estimate at new_data.
+			
 		"""
 		
 		if self.contam_density.contam_weight == 0.:
@@ -156,13 +259,20 @@ class SMInfluenceFunction:
 	def eval_IF_natparam(self, new_data):
 		
 		"""
-
+		Evaluates the influence function of the natural parameter
+		in the score matching density estimate at new_data.
+		
 		Parameters
 		----------
 		new_data : numpy.ndarray
-
+			An array of data points at which the influence function of
+			the natural parameter in the score matching density estimate is to be evaluated.
+	
 		Returns
 		-------
+			The value of the influence function of the natural parameter in
+			the score matching density estimate at new_data.
+			
 		"""
 		
 		if self.contam_density.contam_weight == 0.:
@@ -184,6 +294,27 @@ class SMInfluenceFunction:
 		return output
 	
 	def eval_IF_natparam_limit(self, new_data):
+		
+		"""
+		Evaluates the influence function of the limiting natural parameter
+		in the score matching density estimate at new_data
+		as the contaminated observation goes to infinity.
+		This function only works when the underlying data is 1-dimensional.
+		
+		Parameters
+		----------
+		new_data : numpy.ndarray
+			An array of data points at which the influence function of
+			the limiting natural parameter in the score matching density estimate is to be evaluated.
+	
+		Returns
+		-------
+			The value of the influence function of the limiting natural parameter in
+			the score matching density estimate at new_data.
+			
+		"""
+		
+		assert self.contam_density.d == 1, 'The function eval_IF_natparam_limit only works for 1 dimensional data.'
 	
 		pen_param = self.contam_density.penalty_param
 		K11 = self.uncontam_density.matrix_K11()
@@ -216,6 +347,17 @@ class SMInfluenceFunction:
 		return output
 	
 	def eval_IF_natparam_norm(self):
+		
+		"""
+		Evaluates the RKHS norm of the influence function of the natural parameter
+		in the score matching density estimate.
+		
+		Returns
+		-------
+			The value of the RKHS norm of the influence function of the natural parameter in
+			the score matching density estimate.
+			
+		"""
 		
 		N, d = self.contam_density.N, self.contam_density.d
 		large_K = self.contam_density.matrix_K()
@@ -253,6 +395,18 @@ class SMInfluenceFunction:
 		return np.sqrt(output)
 	
 	def eval_IF_natparam_limit_norm_1d(self):
+		
+		"""
+		Evaluates the RKHS norm of the influence function of the limiting natural parameter
+		in the score matching density estimate.
+		This function only works when the underlying data is 1-dimensional.
+		
+		Returns
+		-------
+			The value of the RKHS norm of the influence function of the limiting natural parameter in
+			the score matching density estimate.
+
+		"""
 		
 		N, d = self.contam_density.N, self.contam_density.d
 		assert d == 1, f'The function eval_IF_natparam_limit_norm_1d only works for 1-dimensional data, ' \
@@ -313,6 +467,38 @@ class SMInfluenceFunction:
 		return np.sqrt(output)
 	
 	def plot_IF_logdensity_1d(self, plot_kwargs, x_label, save_plot=False, save_dir=None, save_filename=None):
+		
+		"""
+		Computes and plots the influence function of the logarithm of
+		the score matching density estimate over a specified bounded interval.
+		This functional only works when the underlying data is 1-dimensional.
+		
+		Parameters
+		----------
+		plot_kwargs : dict
+			The dict containing plotting parameters returned from the function plot_IF_1d_params.
+		
+		x_label : str
+			The label of the horizontal axis.
+		
+		save_plot : bool, optional
+			Whether to save the plot of the influence function to a local file; default is False.
+
+		save_dir : str, optional
+			The directory path to which the plot of the influence function is saved;
+			only works when save_plot is set to be True. Default is None.
+	
+		save_filename : str, optional
+			The file name for the plot of the influence function saved as a local file;
+			only works when save_plot is set to be True. Default is None.
+		
+		Returns
+		-------
+		dict
+			A dictionary of 'x_vals', the values of the horizontal axis for plotting, and
+			'IF_vals', the values of the vertical axis for plotting.
+		
+		"""
 		
 		# check the dimensionality
 		if self.contam_density.d != 1:
@@ -377,6 +563,37 @@ class SMInfluenceFunction:
 	
 	def plot_IF_natparam_1d(self, plot_kwargs, x_label, save_plot=False, save_dir=None, save_filename=None):
 		
+		"""
+		Computes and plots the influence function of the natural parameter
+		in the score matching density estimate over a specified bounded interval.
+		This functional only works when the underlying data is 1-dimensional.
+		
+		Parameters
+		----------
+		plot_kwargs : dict
+			The dict containing plotting parameters returned from the function plot_IF_1d_params.
+		
+		x_label : str
+			The label of the horizontal axis.
+		
+		save_plot : bool, optional
+			Whether to save the plot of the influence function to a local file; default is False.
+
+		save_dir : str, optional
+			The directory path to which the plot of the influence function is saved;
+			only works when save_plot is set to be True. Default is None.
+	
+		save_filename : str, optional
+			The file name for the plot of the influence function saved as a local file;
+			only works when save_plot is set to be True. Default is None.
+		
+		Returns
+		-------
+		dict
+			A dictionary of 'x_vals', the values of the horizontal axis for plotting, and
+			'IF_vals', the values of the vertical axis for plotting.
+		 
+		"""
 		# check the dimensionality
 		if self.contam_density.d != 1:
 			raise ValueError(
@@ -439,6 +656,38 @@ class SMInfluenceFunction:
 		return {'x_vals': new_data.flatten(), "IF_vals": result.flatten()}
 	
 	def plot_IF_natparam_limit_1d(self, plot_kwargs, x_label, save_plot=False, save_dir=None, save_filename=None):
+		
+		"""
+		Computes and plots the influence function of the limiting natural parameter
+		in the score matching density estimate over a specified bounded interval.
+		This function only works when the underlying data is 1-dimensional.
+		
+		Parameters
+		----------
+		plot_kwargs : dict
+			The dict containing plotting parameters returned from the function plot_IF_1d_params.
+		
+		x_label : str
+			The label of the horizontal axis.
+		
+		save_plot : bool, optional
+			Whether to save the plot of the influence function to a local file; default is False.
+
+		save_dir : str, optional
+			The directory path to which the plot of the influence function is saved;
+			only works when save_plot is set to be True. Default is None.
+	
+		save_filename : str, optional
+			The file name for the plot of the influence function saved as a local file;
+			only works when save_plot is set to be True. Default is None.
+		
+		Returns
+		-------
+		dict
+			A dictionary of 'x_vals', the values of the horizontal axis for plotting, and
+			'IF_vals', the values of the vertical axis for plotting.
+			
+		"""
 		
 		# check the dimensionality
 		if self.contam_density.d != 1:
