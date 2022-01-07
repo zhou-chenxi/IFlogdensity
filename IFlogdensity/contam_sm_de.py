@@ -16,7 +16,7 @@ class ContamSMDensityEstimate:
 	Attributes
 	----------
 	data : numpy.ndarray
-		The array of uncontaminated observations whose density function is to be estimated.
+		The array of uncontaminated observations.
 	
 	contam_data : numpy.ndarray
 		The contaminated observation.
@@ -39,7 +39,7 @@ class ContamSMDensityEstimate:
 		
 	base_density : base_density
 		The base density function used to estimate the probability density function.
-        __type__ must be 'base_density'.
+		__type__ must be 'base_density'.
 	
 	r1 : float
 		The multiplicative coefficient associated with the Gaussian kernel function or
@@ -50,131 +50,253 @@ class ContamSMDensityEstimate:
 
 	c : float
 		The non-homogenous additive constant in the polynomial kernel function of degree 2.
-    
-    bw : float
-        The bandwidth parameter in the Gaussian kernel function or the rational quadratic kernel function;
-        must be strictly positive.
-	
+		
+	bw : float
+		The bandwidth parameter in the Gaussian kernel function or the rational quadratic kernel function;
+		must be strictly positive.
+		
 	kernel_type : str
-		The type of the kernel function used; must be either 'gaussian_poly2' or 'rationalquad_poly2'.
+		The type of the kernel function used; must be one of 'gaussian_poly2' and 'rationalquad_poly2'.
 	
 	kernel_function_data : kernel_function
-	
-	
+		The class of kernel functions centered at self.data.
 	
 	kernel_function_contam_data : kernel_function
-	
+		The class of kernel functions centered at self.contam_data.
 	
 	Methods
 	-------
 	matrix_K11()
-		Evaluates a matrix of size (self.N * self.d) by (self.N * self.d)
-		with the ((i-1)d+u, (j-1)d+v)-th entry being the inner product
+		Returns a matrix of size (self.N * self.d) by (self.N * self.d)
+		whose ((i-1)d+u, (j-1)d+v)-th entry is the inner product
 		between \partial_u k(X_i, \cdot) and \partial_v k(X_j, \cdot),
-		where X_i is the i-th observation in self.data.
+		where X_i is the i-th observation in self.data and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
 	matrix_K12()
-		Evaluates a matrix of size (self.N * self.d) by self.d
-		with the ((i-1)d+u, v)-th entry being the inner product
+		Returns a matrix of size (self.N * self.d) by self.d
+		whose ((i-1)d+u, v)-th entry is the inner product
 		between \partial_u k(X_i, \cdot) and \partial_v k(y, \cdot),
-		where X_i is the i-th observation in self.data and y is self.contam_data.
+		where X_i is the i-th observation in self.data, y is self.contam_data, and
+		\partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
 	matrix_K21()
-		Evaluates a matrix of size self.d by (self.N * self.d)
-		with the (v, (i-1)d+u)-th entry being the inner product
+		Returns a matrix of size self.d by (self.N * self.d)
+		whose (v, (i-1)d+u)-th entry is the inner product
 		between \partial_v k(y, \cdot) and \partial_u k(X_i, \cdot),
-		where X_i is the i-th observation in self.data and y is self.contam_data.
+		where X_i is the i-th observation in self.data, y is self.contam_data, and
+		\partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
 	matrix_K13()
-		Evaluates a matrix of size (self.N * self.d) by 1
-		with the ((i-1)d+u)-th entry being the inner product
+		Returns a matrix of size (self.N * self.d) by 1
+		whose ((i-1)d+u)-th entry is the inner product
 		between \partial_u k(X_i, \cdot) and z_{F_n},
 		where
 		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
-		             (\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
-		X_i is the i-th observation in self.data, \mu is the base density, N = self.N, d = self.d.
+						(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, \mu is the base density, N = self.N, d = self.d, and
+		\partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 		
 	matrix_K31()
-		Evaluates a matrix of size 1 by (self.N * self.d)
-		with the ((i-1)d+u)-th entry being the inner product
+		Returns a matrix of size 1 by (self.N * self.d)
+		whose ((i-1)d+u)-th entry is the inner product
 		between \partial_u k(X_i, \cdot) and z_{F_n},
 		where
 		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
-		             (\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
-		X_i is the i-th observation in self.data, \mu is the base density, N = self.N, d = self.d.
+						(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, \mu is the base density, N = self.N, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
 	matrix_K14()
-		Evaluates a matrix of size (self.N * self.d) by 1
-		with the ((i-1)d+u)-th entry being the inner product
+		Returns a matrix of size (self.N * self.d) by 1
+		whose ((i-1)d+u)-th entry is the inner product
 		between \partial_u k(X_i, \cdot) and z_{\delta_y},
 		where
 		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
 		             (\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
 		X_i is the i-th observation in self.data, y is self.contam_data,
-		\mu is the base density, d = self.d.
+		\mu is the base density, d = self.d, and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
 	matrix_K41()
-		Evaluates a matrix of size 1 by (self.N * self.d)
-		with the ((i-1)d+u)-th entry being the inner product
+		Returns a matrix of size 1 by (self.N * self.d)
+		whose ((i-1)d+u)-th entry is the inner product
 		between \partial_u k(X_i, \cdot) and z_{\delta_y},
 		where
 		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
 		             (\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
 		X_i is the i-th observation in self.data, y is self.contam_data,
-		\mu is the base density, d = self.d.
+		\mu is the base density, d = self.d, and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 		
 	matrix_K22()
-		Evaluates a matrix of size self.d by self.d
-		with the (u, v)-th entry being the inner product
+		Returns a matrix of size self.d by self.d
+		whose (u, v)-th entry is the inner product
 		between \partial_u k(y, \cdot) and \partial_v k(y, \cdot),
-		where y is self.contam_data.
+		where y is self.contam_data, and \partial_u k (y, \cdot) is the evaluation at y of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 		
 	matrix_K23()
-		Evaluates a matrix of size self.d by self.d
-		with the (u, v)-th entry being the inner product
-		between \partial_u k(y, \cdot) and \partial_v k(y, \cdot),
+		Returns a matrix of size self.d by 1
+		whose u-th entry is the inner product
+		between \partial_u k(y, \cdot) and z_{F_n},
 		where
-		
-		
-		
-		y is self.contam_data.
-		
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+						(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, N = self.N, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
 	matrix_K32()
-	
+		Returns a matrix of size 1 by self.d
+		whose u-th entry is the inner product
+		between z_{F_n} and \partial_u k(y, \cdot),
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+						(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, N = self.N, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+		
 	matrix_K24()
+		Returns a matrix of size self.d by 1
+		whose u-th entry is the inner product
+		between \partial_u k(y, \cdot) and z_{\delta_y},
+		where
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+						(\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		y is self.contam_data, \mu is the base density, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
 	matrix_K42()
+		Returns a matrix of size 1 by self.d
+		whose u-th entry is the inner product
+		between z_{\delta_y} and \partial_u k(y, \cdot),
+		where
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+						(\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		y is self.contam_data, \mu is the base density, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
 	matrix_K33()
+		Returns a matrix of size 1 by 1 with the entry being the RKHS norm of z_{F_n},
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+						(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, \mu is the base density, N = self.N, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
 	matrix_K34()
-	
+		Returns a matrix of size 1 by 1 with the entry being the inner product
+		between z_{F_n} and z_{\delta_y},
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+						(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+						(\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
 	matrix_K43()
+		Returns a matrix of size 1 by 1 with the entry being the inner product
+		between z_{F_n} and z_{\delta_y},
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+						(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+						(\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
 	matrix_K44()
+		Returns a matrix of size 1 by 1 with the entry being the RKHS norm of z_{\delta_y},
+		where
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+						(\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		y is self.contam_data, \mu is the base density, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 	
-	
+	matrix_K()
+		Returns the large Gram matrix of shape (self.N * self.d + self.d + 2) by (self.N * self.d + self.d + 2)
+		which has the following structure
+		
+				  K11  K12  K13  K14
+				  K21  K22  K23  K24
+			K =   K31  K32  K33  K34
+				  K41  K42  K43  K44
+
 	coef()
-		Computes the coefficient vector of the natural parameter in the score matching density estimate. 
-	
+		Computes the coefficient vector of basis functions in the natural parameter
+		that minimizes the penalized score matching loss function.
+		
 	natural_param(new_data, coef)
 		Evaluates the natural parameter in the score matching density estimate at new_data.
 		
 	unnormalized_density_eval_1d(x, coef)
-		Evaluates the un-normalized score matching density estimate at new_data.
+		Evaluates the density function up to a normalizing constant at 1-dimensional data x.
 	
 	density_logpartition_1d(coef)
-		Compute the normalizing constant of the score matching density estimate.
+		Evaluates the log-partition function at coef.
 	
 	log_density(new_data, compute_base_density)
-		Compute the logarithm of the score matching density estimate.
+		Evaluates the log-density function at new_data.
 	
 	"""
 	
 	def __init__(self, data, contam_data, contam_weight, penalty_param, base_density,
 				 r1=1.0, r2=0.0, c=0., bw=1., kernel_type='gaussian_poly2'):
+		
+		"""
+		Parameters
+		----------
+		data : numpy.ndarray
+			The array of observations whose probability density function is to be estimated.
+
+		contam_data : numpy.ndarray
+			The array of contaminated observation.
+
+		contam_weight : float
+			The weight of contamination.
+
+		penalty_param : float
+			The penalty parameter. Must be strictly positive.
+
+		base_density : base_density object
+			The base density function used to estimate the probability density function.
+
+		r1 : float, optional
+			The multiplicative constant associated with the Gaussian kernel function or the rational quadratic kernel
+			function, depending on kernel_type; default is 1.
+
+		r2 : float, optional
+			The multiplicative constant associated with the polynomial kernel function of degree 2; default is 0.
+
+		c : float, optional
+			The non-homogenous additive constant in the polynomial kernel function of degree 2; default is 0.
+
+		bw : float, optional
+			The bandwidth parameter in the Gaussian kernel function or the rational quadratic kernel function,
+			depending on kernel_type; default is 1.
+
+		kernel_type : str, optional
+			The type of the kernel function used to estimate the probability density function;
+			must be one of 'gaussian_poly2' and 'rationalquad_poly2'; default is 'gaussian_poly2'.
+			
+		"""
 		
 		# check types of data and contam_data
 		if isinstance(data, np.ndarray):
@@ -276,15 +398,18 @@ class ContamSMDensityEstimate:
 	def matrix_K11(self):
 		
 		"""
-		Evaluates the matrix K11, a matrix of size (self.N * self.d) by (self.N * self.d)
-		with the ((i-1)d+u, (j-1)d+v)-th entry being the inner product
-		between \partial_u k(X_i, \cdot) and \partial_v k(X_j, \cdot).z
+		Returns a matrix of size (self.N * self.d) by (self.N * self.d)
+		whose ((i-1)d+u, (j-1)d+v)-th entry is the inner product
+		between \partial_u k(X_i, \cdot) and \partial_v k(X_j, \cdot),
+		where X_i is the i-th observation in self.data and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
 
 		Returns
 		-------
-		
+		numpy.ndarray
+			An array of shape (self.N * self.d) by (self.N * self.d). Please see details above.
+			
 		"""
-		
 		
 		K11 = self.kernel_function_data.partial_kernel_matrix_11(new_data=self.data)
 		
@@ -292,17 +417,65 @@ class ContamSMDensityEstimate:
 	
 	def matrix_K12(self):
 		
+		"""
+		Returns a matrix of size (self.N * self.d) by self.d
+		whose ((i-1)d+u, v)-th entry is the inner product
+		between \partial_u k(X_i, \cdot) and \partial_v k(y, \cdot),
+		where X_i is the i-th observation in self.data, y is self.contam_data, and
+		\partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape (self.N * self.d) by self.d. Please see details above.
+			
+		"""
+		
 		K12 = self.kernel_function_data.partial_kernel_matrix_11(new_data=self.contam_data)
 		
 		return K12
 	
 	def matrix_K21(self):
 		
+		"""
+		Returns a matrix of size self.d by (self.N * self.d)
+		whose (v, (i-1)d+u)-th entry is the inner product
+		between \partial_v k(y, \cdot) and \partial_u k(X_i, \cdot),
+		where X_i is the i-th observation in self.data, y is self.contam_data, and
+		\partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape self.d by (self.N * self.d). Please see details above.
+			
+		"""
+		
 		K21 = self.matrix_K12().T
 		
 		return K21
 	
 	def matrix_K13(self):
+		
+		"""
+		Returns a matrix of size (self.N * self.d) by 1
+		whose ((i-1)d+u)-th entry is the inner product
+		between \partial_u k(X_i, \cdot) and z_{F_n},
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+				(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, \mu is the base density, N = self.N, d = self.d, and
+		\partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape (self.N * self.d) by 1. Please see details above.
+			
+		"""
 		
 		K13 = vector_h(
 			data=self.data,
@@ -313,11 +486,47 @@ class ContamSMDensityEstimate:
 	
 	def matrix_K31(self):
 		
+		"""
+		Returns a matrix of size 1 by (self.N * self.d)
+		whose ((i-1)d+u)-th entry is the inner product
+		between \partial_u k(X_i, \cdot) and z_{F_n},
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+			  (\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, \mu is the base density, N = self.N, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape 1 by (self.N * self.d). Please see details above.
+		
+		"""
+		
 		K31 = self.matrix_K13().T
 		
 		return K31
 	
 	def matrix_K14(self):
+		
+		"""
+		Returns a matrix of size (self.N * self.d) by 1
+		whose ((i-1)d+u)-th entry is the inner product
+		between \partial_u k(X_i, \cdot) and z_{\delta_y},
+		where
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+					 (\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, d = self.d, and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape (self.N * self.d) by 1. Please see details above.
+
+		"""
 		
 		# \partial_u \partial_v k(X_i, y), result is nd * d
 		kernel_partial_11 = self.kernel_function_data.partial_kernel_matrix_11(new_data=self.contam_data)
@@ -338,17 +547,68 @@ class ContamSMDensityEstimate:
 	
 	def matrix_K41(self):
 		
+		"""
+		Returns a matrix of size 1 by (self.N * self.d)
+		whose ((i-1)d+u)-th entry is the inner product
+		between \partial_u k(X_i, \cdot) and z_{\delta_y},
+		where
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+					 (\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, d = self.d, and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape 1 by (self.N * self.d). Please see details above.
+
+		"""
+		
 		K41 = self.matrix_K14().T
 		
 		return K41
 	
 	def matrix_K22(self):
 		
+		"""
+		Returns a matrix of size self.d by self.d
+		whose (u, v)-th entry is the inner product
+		between \partial_u k(y, \cdot) and \partial_v k(y, \cdot),
+		where y is self.contam_data, and \partial_u k (y, \cdot) is the evaluation at y of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape self.d by self.d. Please see details above.
+			
+		"""
+		
 		K22 = self.kernel_function_contam_data.partial_kernel_matrix_11(new_data=self.contam_data)
 		
 		return K22
 	
 	def matrix_K23(self):
+		
+		"""
+		Returns a matrix of size self.d by 1
+		whose u-th entry is the inner product
+		between \partial_u k(y, \cdot) and z_{F_n},
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+				(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, N = self.N, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape self.d by 1. Please see details above.
+
+		"""
 		
 		# \partial_u \partial_v k(y, X_j), result is d * nd
 		kernel_partial_11 = self.kernel_function_contam_data.partial_kernel_matrix_11(new_data=self.data)
@@ -371,11 +631,48 @@ class ContamSMDensityEstimate:
 	
 	def matrix_K32(self):
 		
+		"""
+		Returns a matrix of size 1 by self.d
+		whose u-th entry is the inner product
+		between z_{F_n} and \partial_u k(y, \cdot),
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+				(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, N = self.N, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape 1 by self.d. Please see details above.
+
+		"""
+		
 		K32 = self.matrix_K23().T
 		
 		return K32
 	
 	def matrix_K24(self):
+		
+		"""
+		Returns a matrix of size self.d by 1
+		whose u-th entry is the inner product
+		between \partial_u k(y, \cdot) and z_{\delta_y},
+		where
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+				(\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		y is self.contam_data, \mu is the base density, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape self.d by 1. Please see details above.
+
+		"""
 		
 		K24 = vector_h(
 			data=self.contam_data,
@@ -386,11 +683,45 @@ class ContamSMDensityEstimate:
 	
 	def matrix_K42(self):
 		
+		"""
+		Returns a matrix of size 1 by self.d
+		whose u-th entry is the inner product
+		between z_{\delta_y} and \partial_u k(y, \cdot),
+		where
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+				(\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		y is self.contam_data, \mu is the base density, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape 1 by self.d. Please see details above.
+			
+		"""
+		
 		K42 = self.matrix_K24().T
 		
 		return K42
 	
 	def matrix_K33(self):
+		
+		"""
+		Returns a matrix of size 1 by 1 with the entry being the RKHS norm of z_{F_n},
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+				(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		X_i is the i-th observation in self.data, \mu is the base density, N = self.N, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape 1 by 1. Please see details above.
+		
+		"""
 		
 		kernel_partial_11 = self.kernel_function_data.partial_kernel_matrix_11(new_data=self.data)
 		
@@ -413,6 +744,26 @@ class ContamSMDensityEstimate:
 		return K33
 	
 	def matrix_K34(self):
+		
+		"""
+		Returns a matrix of size 1 by 1 with the entry being the inner product
+		between z_{F_n} and z_{\delta_y},
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+				(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+				(\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape 1 by 1. Please see details above.
+			
+		"""
 		
 		kernel_partial_11 = self.kernel_function_data.partial_kernel_matrix_11(new_data=self.contam_data)
 		
@@ -444,11 +795,47 @@ class ContamSMDensityEstimate:
 	
 	def matrix_K43(self):
 		
+		"""
+		Returns a matrix of size 1 by 1 with the entry being the inner product
+		between z_{F_n} and z_{\delta_y},
+		where
+		z_{F_n} = \frac{1}{N} \sum_{i=1}^N \sum_{u=1}^d (\partial_u^2 k(X_i, \cdot) +
+				(\partial_u \log \mu) (X_i) \partial_u k (X_i, \cdot)),
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+				(\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		X_i is the i-th observation in self.data, y is self.contam_data,
+		\mu is the base density, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape 1 by 1. Please see details above.
+			
+		"""
+		
 		K43 = self.matrix_K34()
 		
 		return K43
 	
 	def matrix_K44(self):
+		
+		"""
+		Returns a matrix of size 1 by 1 with the entry being the RKHS norm of z_{\delta_y},
+		where
+		z_{\delta_y} = \sum_{u=1}^d (\partial_u^2 k(y, \cdot) +
+				(\partial_u \log \mu) (y) \partial_u k (y, \cdot)),
+		y is self.contam_data, \mu is the base density, d = self.d,
+		and \partial_u k (x, \cdot) is the evaluation at x of
+		the partial derivative of k with respect to the u-th coordinate of the first argument.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape 1 by 1. Please see details above.
+			
+		"""
 		
 		kernel_partial_11 = self.kernel_function_contam_data.partial_kernel_matrix_11(new_data=self.contam_data)
 		
@@ -472,6 +859,23 @@ class ContamSMDensityEstimate:
 		return K44
 	
 	def matrix_K(self):
+		
+		"""
+		Returns the large Gram matrix of shape (self.N * self.d + self.d + 2) by (self.N * self.d + self.d + 2)
+		which has the following structure
+		
+				  K11  K12  K13  K14
+				  K21  K22  K23  K24
+			K =   K31  K32  K33  K34
+				  K41  K42  K43  K44
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of shape (self.N * self.d + self.d + 2) by (self.N * self.d + self.d + 2).
+			Please see details above.
+			
+		"""
 	
 		K11 = self.matrix_K11()
 		K12 = self.matrix_K12()
@@ -503,6 +907,17 @@ class ContamSMDensityEstimate:
 		return output
 	
 	def coef(self):
+		
+		"""
+		Computes the coefficient vector of basis functions in the natural parameter
+		that minimizes the penalized score matching loss function.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An array of coefficient vector of shape (self.N * self.d + self.d + 2) by 1.
+		
+		"""
 		
 		# form the large matrix to compute coef_i for all i = 0, \cdots, nd+d-1
 		# LHS
@@ -539,6 +954,24 @@ class ContamSMDensityEstimate:
 		return output
 	
 	def natural_param(self, new_data, coef):
+		
+		"""
+		Evaluates the natural parameter in the score matching density estimate at new_data.
+		
+		Parameters
+		----------
+		new_data : numpy.ndarray
+			The array of data at which the natural parameter is to be evaluated.
+			
+		coef : numpy.ndarray
+			The coefficient vector of basis functions in the natural parameter.
+		
+		Returns
+		-------
+		numpy.ndarray
+			The 1-dimensional array of the values of the natural parameter estimates at new_data.
+		
+		"""
 		
 		# check the validity of new_data
 		if isinstance(new_data, np.ndarray):
@@ -581,13 +1014,32 @@ class ContamSMDensityEstimate:
 	
 	def unnormalized_density_eval_1d(self, x, coef):
 		
+		"""
+		Evaluates the density function up to a normalizing constant at 1-dimensional data x.
+		This function is mainly used in computing the normalizing constant and only works when self.d is equal to 1.
+		
+		Parameters
+		----------
+		x : float or numpy.ndarray
+			The point at which the un-normalized density function is to be evaluated.
+			
+		coef : numpy.ndarray
+			The coefficient vector of basis functions in the natural parameter.
+		
+		Returns
+		-------
+		float or numpy.ndarray
+			The value of the un-normalized density function at x.
+		
+		"""
+		
 		if self.d != 1:
 			error_msg = (f'The function self.unnormalized_density_eval_1d only works for 1-dimensional data. '
 						 f'But the underlying data is {self.d}-dimensional.')
 			raise ValueError(error_msg)
 		
 		# linear combination of first derivatives at data
-		fx1_data = np.sum([coef[i] * self.kernel_function_data.kernel_x_1d_deriv1(self.data[i,])(x)
+		fx1_data = np.sum([coef[i] * self.kernel_function_data.kernel_x_1d_deriv1(self.data[i, ])(x)
 						   for i in range(self.N)])
 		
 		# linear combination of first derivatives at contam_data
@@ -595,10 +1047,10 @@ class ContamSMDensityEstimate:
 						   self.kernel_function_contam_data.kernel_x_1d_deriv1(self.contam_data)(x))
 		
 		# z part involving data
-		z_data_1 = np.sum([self.base_density.logbaseden_deriv1(new_data=self.data[i,].reshape(1, 1), j=0) *
-						   self.kernel_function_data.kernel_x_1d_deriv1(self.data[i,])(x)
+		z_data_1 = np.sum([self.base_density.logbaseden_deriv1(new_data=self.data[i, ].reshape(1, 1), j=0) *
+						   self.kernel_function_data.kernel_x_1d_deriv1(self.data[i, ])(x)
 						   for i in range(self.N)])
-		z_data_2 = np.sum([self.kernel_function_data.kernel_x_1d_deriv2(self.data[i,])(x)
+		z_data_2 = np.sum([self.kernel_function_data.kernel_x_1d_deriv2(self.data[i, ])(x)
 						   for i in range(self.N)])
 		z_data = -(z_data_1 + z_data_2) / self.N
 		
@@ -614,6 +1066,21 @@ class ContamSMDensityEstimate:
 		return output
 	
 	def density_logpartition_1d(self, coef):
+		
+		"""
+		Evaluates the log-partition function at coef.
+		
+		Parameters
+		----------
+		coef : numpy.ndarray
+			The coefficient vector of basis functions in the natural parameter.
+		
+		Returns
+		-------
+		float
+			The value of the log-partition function at coef.
+		
+		"""
 		
 		if self.d != 1:
 			error_msg = (f'The function self.density_logpartition_1d only works for 1-dimensional data. '
@@ -632,6 +1099,24 @@ class ContamSMDensityEstimate:
 		return output
 	
 	def log_density(self, new_data, compute_base_density=False):
+		
+		"""
+		Evaluates the log-density function at new_data.
+		
+		Parameters
+		----------
+		new_data : numpy.ndarray
+			The array of data at which the log-density function is to be evaluated.
+		
+		compute_base_density : bool, optional
+			Whether to compute the base density part; default is False.
+		
+		Returns
+		-------
+		numpy.ndarray
+			An 1-dimensional array of the values of the log-density function at new_data.
+		
+		"""
 		
 		if compute_base_density:
 			baseden_part = np.log(self.base_density.baseden_eval(new_data).flatten())
