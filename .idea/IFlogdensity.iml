@@ -4,12 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <content url="file://$MODULE_DIR$/../dekef/dekef">
-      <sourceFolder url="file://$MODULE_DIR$/../dekef/dekef" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../dekef/dekef/.idea" />
-      <excludeFolder url="file://$MODULE_DIR$/../dekef/dekef/.ipynb_checkpoints" />
-    </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (IFlogdensity)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
