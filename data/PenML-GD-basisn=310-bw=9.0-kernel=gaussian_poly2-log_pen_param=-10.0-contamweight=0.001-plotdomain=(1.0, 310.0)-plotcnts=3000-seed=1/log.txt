@@ -1,0 +1,129 @@
+(base) zhoucx1119@iMac ~ % cd /Users/chenxizhou/Dropbox/code_package/IFlogdensity/examples
+(base) zhoucx1119@iMac examples % python3 contam_data_array_example_penalized_ML_fixedlambda_varycontamdata.py
+bw=9.0, and penalty parameter=exp(-10.0).
+310 basis functions are used.
+Step size = 0.3.
+--------------------------------------------------
+contaminated data = 0.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6048466507846633, IF sup norm = 112.61596227701887
+--------------------------------------------------
+contaminated data = 5.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.603317045634329, IF sup norm = 137.26602851445335
+--------------------------------------------------
+contaminated data = 10.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6006430850092777, IF sup norm = 151.09049217672776
+--------------------------------------------------
+contaminated data = 15.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.5933576466200647, IF sup norm = 157.93276997867878
+--------------------------------------------------
+contaminated data = 20.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.5908758144329656, IF sup norm = 151.51740646346923
+--------------------------------------------------
+contaminated data = 25.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.5914002460472747, IF sup norm = 136.86671551848838
+--------------------------------------------------
+contaminated data = 30.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.5964406160878335, IF sup norm = 113.38507031577016
+--------------------------------------------------
+contaminated data = 35.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.605656634789109, IF sup norm = 83.14822462915572
+--------------------------------------------------
+contaminated data = 40.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.616440765246446, IF sup norm = 51.87234814988351
+--------------------------------------------------
+contaminated data = 45.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6250436700606357, IF sup norm = 26.406215717605264
+--------------------------------------------------
+contaminated data = 50.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6329345958645014, IF sup norm = 5.418012381555037
+--------------------------------------------------
+contaminated data = 55.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6319178474815685, IF sup norm = 4.26681802824902
+--------------------------------------------------
+contaminated data = 60.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.628469890636026, IF sup norm = 4.244265005734604
+--------------------------------------------------
+contaminated data = 65.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.625682848131105, IF sup norm = 4.631995663338273
+--------------------------------------------------
+contaminated data = 70.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6254574613646855, IF sup norm = 3.993685535949254
+--------------------------------------------------
+contaminated data = 75.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6277865733022465, IF sup norm = 2.6064354430208603
+--------------------------------------------------
+contaminated data = 80.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6309795491694894, IF sup norm = 2.4849030048050835
+--------------------------------------------------
+contaminated data = 85.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.632241293533017, IF sup norm = 2.782585017405026
+--------------------------------------------------
+contaminated data = 90.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6286265503265227, IF sup norm = 6.452755738119542
+--------------------------------------------------
+contaminated data = 95.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.618591030371765, IF sup norm = 18.407960103917098
+--------------------------------------------------
+contaminated data = 100.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6034259268276343, IF sup norm = 38.43954298982233
+--------------------------------------------------
+contaminated data = 105.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.5871888408750916, IF sup norm = 63.07410474037667
+--------------------------------------------------
+contaminated data = 110.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.574733813395653, IF sup norm = 87.68026355997272
+--------------------------------------------------
+contaminated data = 115.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.569176981693123, IF sup norm = 108.79610859326228
+--------------------------------------------------
+contaminated data = 120.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.5665782624103395, IF sup norm = 128.5877235407664
+--------------------------------------------------
+contaminated data = 125.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.5728281114721954, IF sup norm = 140.3710308213313
+--------------------------------------------------
+contaminated data = 130.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.5809251648743428, IF sup norm = 148.81691833755005
+--------------------------------------------------
+contaminated data = 135.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.5885830540260324, IF sup norm = 154.72427745891613
+--------------------------------------------------
+contaminated data = 140.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.5986740932489023, IF sup norm = 155.28094717456753
+--------------------------------------------------
+contaminated data = 145.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.602930752113742, IF sup norm = 157.6853719033675
+--------------------------------------------------
+contaminated data = 150.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.605667860172564, IF sup norm = 159.09731264960314
+--------------------------------------------------
+contaminated data = 155.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.607310725622408, IF sup norm = 159.8831219752288
+--------------------------------------------------
+contaminated data = 160.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6082415786793347, IF sup norm = 160.294717747405
+--------------------------------------------------
+contaminated data = 165.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6087418104189117, IF sup norm = 160.49846033236292
+--------------------------------------------------
+contaminated data = 170.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6089968407233433, IF sup norm = 160.5926393674295
+--------------------------------------------------
+contaminated data = 175.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.609119957149885, IF sup norm = 160.63479660654423
+--------------------------------------------------
+contaminated data = 180.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6091761033642555, IF sup norm = 160.65270162301815
+--------------------------------------------------
+contaminated data = 185.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.609200245498248, IF sup norm = 160.66037985300952
+--------------------------------------------------
+contaminated data = 190.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.609210019346085, IF sup norm = 160.66300333537242
+--------------------------------------------------
+contaminated data = 195.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.60921373869158, IF sup norm = 160.6644304942293
+--------------------------------------------------
+contaminated data = 200.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.60921506507347, IF sup norm = 160.66425350325986
+--------------------------------------------------
+contaminated data = 205.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6092155061136584, IF sup norm = 160.6649148552215
+--------------------------------------------------
+contaminated data = 210.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6092156419185586, IF sup norm = 160.66420219256372
+--------------------------------------------------
+contaminated data = 215.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.609215680341075, IF sup norm = 160.66496578140033
+--------------------------------------------------
+contaminated data = 220.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6092156902493713, IF sup norm = 160.6640479039534
+--------------------------------------------------
+contaminated data = 225.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6092156925590633, IF sup norm = 160.6649650304952
+--------------------------------------------------
+contaminated data = 230.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.609215693041011, IF sup norm = 160.6642413971855
+--------------------------------------------------
+contaminated data = 235.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6092156931297334, IF sup norm = 160.6649403280045
+--------------------------------------------------
+contaminated data = 240.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6092156931437542, IF sup norm = 160.66441193731862
+--------------------------------------------------
+contaminated data = 245.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6092156931455346, IF sup norm = 160.66489284893493
+--------------------------------------------------
+contaminated data = 250.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6092156931456767, IF sup norm = 160.66455973194138
+--------------------------------------------------
+contaminated data = 255.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.609215693145674, IF sup norm = 160.6648226301317
+--------------------------------------------------
+contaminated data = 260.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6092156931458046, IF sup norm = 160.66468478852158
+--------------------------------------------------
+contaminated data = 265.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6092156931476054, IF sup norm = 160.66472967358436
+--------------------------------------------------
+contaminated data = 270.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.609215693105227, IF sup norm = 160.6647871059934
+--------------------------------------------------
+contaminated data = 275.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.609215690034388, IF sup norm = 160.66461305705815
+--------------------------------------------------
+contaminated data = 280.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.609215605775502, IF sup norm = 160.66478437512188
+--------------------------------------------------
+contaminated data = 285.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.609214270523948, IF sup norm = 160.66121139509448
+--------------------------------------------------
+contaminated data = 290.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6092013062439072, IF sup norm = 160.59390937888196
+--------------------------------------------------
+contaminated data = 295.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6091236223090144, IF sup norm = 159.85026924226275
+--------------------------------------------------
+contaminated data = 300.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.6088383875209074, IF sup norm = 155.57400498236973
+--------------------------------------------------
+contaminated data = 305.0, uncontam_f_norm=2.6296696288808277, contam_f_norm=2.608204410225541, IF sup norm = 142.49292473931519

@@ -1,0 +1,2071 @@
+(base) zhoucx1119@iMac examples % python3 contam_data_array_example_ML.py
+bw=5.0, and penalty parameter=exp(-8.0).
+205 basis functions are used.
+Step size = 0.6.
+Absolute tolerance parameter = 0.05.
+random number = 0
+--------------------------------------------------
+Computing the uncontaminated log-density values.
+Iter = 1, GradNorm = 0.5057328332857177, Relative Error = 0.9999999802267142
+Iter = 2, GradNorm = 0.26542183977684364, Relative Error = 0.5248261869891876
+Iter = 3, GradNorm = 0.17462396221999715, Relative Error = 0.3452889495676712
+Iter = 4, GradNorm = 0.15438847383116308, Relative Error = 0.30527674024117135
+Iter = 5, GradNorm = 0.12336963180053447, Relative Error = 0.24394229767441822
+Iter = 6, GradNorm = 0.10128715013962462, Relative Error = 0.20027797578177386
+Iter = 7, GradNorm = 0.08981021898914321, Relative Error = 0.1775843119178325
+Iter = 8, GradNorm = 0.09553864958918794, Relative Error = 0.1889113014066453
+Iter = 9, GradNorm = 0.07897778707532682, Relative Error = 0.15616503480812635
+Iter = 10, GradNorm = 0.06630298763613915, Relative Error = 0.1311027917533937
+Iter = 11, GradNorm = 0.0607963774139807, Relative Error = 0.12021441403526428
+Iter = 12, GradNorm = 0.05900531929991743, Relative Error = 0.11667290365514567
+Iter = 13, GradNorm = 0.053994501065411586, Relative Error = 0.10676486959915903
+Iter = 14, GradNorm = 0.0444743028092039, Relative Error = 0.0879403095916351
+Log-partition = 0.31554892230991044
+new_data saved.
+grid_points saved.
+contam_data_array saved.
+uncontam_coef saved.
+uncontam_logdensity saved.
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [2.].
+Iter = 1, GradNorm = 0.4630395627167453, Relative Error = 0.9999999784035737
+Iter = 2, GradNorm = 0.25199686559082335, Relative Error = 0.5442231732210437
+Iter = 3, GradNorm = 0.17720884372921766, Relative Error = 0.3827077730948526
+Iter = 4, GradNorm = 0.140853628043074, Relative Error = 0.3041934995245822
+Iter = 5, GradNorm = 0.1296683871984623, Relative Error = 0.28003737658462335
+Iter = 6, GradNorm = 0.10837892346660191, Relative Error = 0.23405974316778413
+Iter = 7, GradNorm = 0.07826201784824922, Relative Error = 0.16901798995077333
+Iter = 8, GradNorm = 0.07601762865478344, Relative Error = 0.16417091137323941
+Iter = 9, GradNorm = 0.06982506961826794, Relative Error = 0.15079719689742793
+Iter = 10, GradNorm = 0.06300189989111359, Relative Error = 0.13606158869201807
+Iter = 11, GradNorm = 0.08049197647931042, Relative Error = 0.17383390367058257
+Iter = 12, GradNorm = 0.06297954185833585, Relative Error = 0.13601330333133807
+Iter = 13, GradNorm = 0.0449974849844967, Relative Error = 0.0971784867554354
+Log-partition = 0.15632847950505016
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [6.].
+Iter = 1, GradNorm = 0.4600990968227551, Relative Error = 0.9999999782655522
+Iter = 2, GradNorm = 0.26172906701697507, Relative Error = 0.5688536733408646
+Iter = 3, GradNorm = 0.19335689758375202, Relative Error = 0.4202505388871343
+Iter = 4, GradNorm = 0.15289943533604808, Relative Error = 0.3323184789292578
+Iter = 5, GradNorm = 0.1003914062499105, Relative Error = 0.21819517743290137
+Iter = 6, GradNorm = 0.09073900563631346, Relative Error = 0.19721621774690604
+Iter = 7, GradNorm = 0.08109914984469792, Relative Error = 0.17626452353870772
+Iter = 8, GradNorm = 0.08353788908756174, Relative Error = 0.18156498860525544
+Iter = 9, GradNorm = 0.08755794544358393, Relative Error = 0.19030235909002546
+Iter = 10, GradNorm = 0.0759455048217318, Relative Error = 0.16506336068804506
+Iter = 11, GradNorm = 0.06848271627387052, Relative Error = 0.14884340190699882
+Iter = 12, GradNorm = 0.057148798855971704, Relative Error = 0.12420975830754491
+Iter = 13, GradNorm = 0.06404826777358677, Relative Error = 0.13920537298121774
+Iter = 14, GradNorm = 0.05257566356417996, Relative Error = 0.11427030129931069
+Iter = 15, GradNorm = 0.053088758174887445, Relative Error = 0.1153854841003613
+Iter = 16, GradNorm = 0.06293289903989878, Relative Error = 0.1367811806340727
+Iter = 17, GradNorm = 0.06380425350037022, Relative Error = 0.13867502143391394
+Iter = 18, GradNorm = 0.059186998222348096, Relative Error = 0.12863967207210603
+Iter = 19, GradNorm = 0.06025925675528974, Relative Error = 0.13097016677866216
+Iter = 20, GradNorm = 0.04906114853519707, Relative Error = 0.10663169697066374
+Log-partition = 0.23470763666160327
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [10.].
+Iter = 1, GradNorm = 0.48767472541859774, Relative Error = 0.9999999794945293
+Iter = 2, GradNorm = 0.252132989827113, Relative Error = 0.5170105636304771
+Iter = 3, GradNorm = 0.18899822956581194, Relative Error = 0.3875497659389398
+Iter = 4, GradNorm = 0.1286402207727648, Relative Error = 0.2637828278357416
+Iter = 5, GradNorm = 0.11363417693594655, Relative Error = 0.2330122286084969
+Iter = 6, GradNorm = 0.0876779408567562, Relative Error = 0.17978774475880416
+Iter = 7, GradNorm = 0.11463506670936813, Relative Error = 0.23506460020113737
+Iter = 8, GradNorm = 0.07609733537367958, Relative Error = 0.15604116811251478
+Iter = 9, GradNorm = 0.07316116909475684, Relative Error = 0.15002042095118712
+Iter = 10, GradNorm = 0.084984573737258, Relative Error = 0.17426486870251975
+Iter = 11, GradNorm = 0.06426564643209091, Relative Error = 0.1317797330159583
+Iter = 12, GradNorm = 0.06702995009384138, Relative Error = 0.13744806779113938
+Iter = 13, GradNorm = 0.054305702982245053, Relative Error = 0.11135640015394999
+Iter = 14, GradNorm = 0.06737055379633373, Relative Error = 0.138146491715438
+Iter = 15, GradNorm = 0.04957263407862927, Relative Error = 0.1016510195798402
+Log-partition = 0.22587430184134535
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [14.].
+Iter = 1, GradNorm = 0.5058065078942207, Relative Error = 0.9999999802295944
+Iter = 2, GradNorm = 0.26182796863744995, Relative Error = 0.517644513019514
+Iter = 3, GradNorm = 0.19227624625661777, Relative Error = 0.38013793704577864
+Iter = 4, GradNorm = 0.1433709442233012, Relative Error = 0.28345017146118384
+Iter = 5, GradNorm = 0.10784037774625192, Relative Error = 0.21320480051386878
+Iter = 6, GradNorm = 0.09083613661852433, Relative Error = 0.17958672615903476
+Iter = 7, GradNorm = 0.0897210764439078, Relative Error = 0.17738220697003979
+Iter = 8, GradNorm = 0.09152666392304305, Relative Error = 0.18095192664595916
+Iter = 9, GradNorm = 0.0733690677016733, Relative Error = 0.14505362249407977
+Iter = 10, GradNorm = 0.06913423406552476, Relative Error = 0.13668118464219314
+Iter = 11, GradNorm = 0.0769940189006316, Relative Error = 0.1522202980324847
+Iter = 12, GradNorm = 0.056410911560077104, Relative Error = 0.111526660025908
+Iter = 13, GradNorm = 0.07436442419965818, Relative Error = 0.1470214826595216
+Iter = 14, GradNorm = 0.05286563188089636, Relative Error = 0.10451749831336128
+Iter = 15, GradNorm = 0.05483788685756285, Relative Error = 0.10841672639147583
+Iter = 16, GradNorm = 0.05030582860393819, Relative Error = 0.09945666341622479
+Iter = 17, GradNorm = 0.05468051569092392, Relative Error = 0.10810559721248839
+Iter = 18, GradNorm = 0.05525468053123595, Relative Error = 0.1092407443883342
+Iter = 19, GradNorm = 0.05303433918439941, Relative Error = 0.10485103949469168
+Iter = 20, GradNorm = 0.053682820018403736, Relative Error = 0.10613311240411975
+Iter = 21, GradNorm = 0.0671359192396656, Relative Error = 0.1327304351853088
+Iter = 22, GradNorm = 0.07739382154439811, Relative Error = 0.15301072407410826
+Iter = 23, GradNorm = 0.0639493547322328, Relative Error = 0.12643046791580992
+Iter = 24, GradNorm = 0.054407963629512515, Relative Error = 0.107566750733115
+Iter = 25, GradNorm = 0.0718383268552561, Relative Error = 0.14202728575806856
+Iter = 26, GradNorm = 0.06028752320552577, Relative Error = 0.11919087847368091
+Iter = 27, GradNorm = 0.06422561648079206, Relative Error = 0.12697664859712932
+Iter = 28, GradNorm = 0.05840647017749362, Relative Error = 0.11547196034691701
+Iter = 29, GradNorm = 0.047053331848056754, Relative Error = 0.09302634541751202
+Log-partition = 0.3519388586953401
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [18.].
+Iter = 1, GradNorm = 0.4867075776434992, Relative Error = 0.9999999794537824
+Iter = 2, GradNorm = 0.24589753612823906, Relative Error = 0.505226428293024
+Iter = 3, GradNorm = 0.20318481049330364, Relative Error = 0.4174679328034871
+Iter = 4, GradNorm = 0.15715352976371574, Relative Error = 0.3228910618069646
+Iter = 5, GradNorm = 0.11644761901867816, Relative Error = 0.23925581185714542
+Iter = 6, GradNorm = 0.09481474699798853, Relative Error = 0.1948084422867841
+Iter = 7, GradNorm = 0.09830115686776224, Relative Error = 0.20197169586714006
+Iter = 8, GradNorm = 0.0737659414376055, Relative Error = 0.15156110837465955
+Iter = 9, GradNorm = 0.06364272462183533, Relative Error = 0.13076172683063242
+Iter = 10, GradNorm = 0.0762486894951984, Relative Error = 0.15666221655670717
+Iter = 11, GradNorm = 0.059107665514660825, Relative Error = 0.12144389570921518
+Iter = 12, GradNorm = 0.06411086160444376, Relative Error = 0.13172357126144357
+Iter = 13, GradNorm = 0.06773684294592872, Relative Error = 0.1391735914245582
+Iter = 14, GradNorm = 0.06447865553505804, Relative Error = 0.13247924867423064
+Iter = 15, GradNorm = 0.064777335482229, Relative Error = 0.1330929229927616
+Iter = 16, GradNorm = 0.051195163187208785, Relative Error = 0.10518669625653736
+Iter = 17, GradNorm = 0.052435935989026655, Relative Error = 0.10773601505352867
+Iter = 18, GradNorm = 0.08843858364798171, Relative Error = 0.18170783832686146
+Iter = 19, GradNorm = 0.06462315630136022, Relative Error = 0.13277614309291397
+Iter = 20, GradNorm = 0.052113705080372566, Relative Error = 0.10707395241708152
+Iter = 21, GradNorm = 0.0681608803042412, Relative Error = 0.14004482780771293
+Iter = 22, GradNorm = 0.0448868428517033, Relative Error = 0.09222548403042724
+Log-partition = 0.28024834154339734
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [22.].
+Iter = 1, GradNorm = 0.48606283881505147, Relative Error = 0.9999999794265289
+Iter = 2, GradNorm = 0.2552010739008242, Relative Error = 0.5250371932826511
+Iter = 3, GradNorm = 0.1979695227943673, Relative Error = 0.40729202669364134
+Iter = 4, GradNorm = 0.12773570217626345, Relative Error = 0.2627966784288575
+Iter = 5, GradNorm = 0.123438847827161, Relative Error = 0.2539565575276663
+Iter = 6, GradNorm = 0.11917394687336089, Relative Error = 0.24518217585213342
+Iter = 7, GradNorm = 0.09437050231693958, Relative Error = 0.19415288073754403
+Iter = 8, GradNorm = 0.08226666915501066, Relative Error = 0.16925109449439407
+Iter = 9, GradNorm = 0.0678992362320045, Relative Error = 0.13969229781196543
+Iter = 10, GradNorm = 0.0696625369046487, Relative Error = 0.14332001936472938
+Iter = 11, GradNorm = 0.06768943979099132, Relative Error = 0.13926067370918813
+Iter = 12, GradNorm = 0.07288338972538846, Relative Error = 0.14994643162518442
+Iter = 13, GradNorm = 0.08766200108306965, Relative Error = 0.18035116507418023
+Iter = 14, GradNorm = 0.06516130957210207, Relative Error = 0.13405943229554698
+Iter = 15, GradNorm = 0.04343742111088633, Relative Error = 0.08936585303069401
+Log-partition = 0.2279761726923176
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [26.].
+Iter = 1, GradNorm = 0.4992566931941596, Relative Error = 0.9999999799702238
+Iter = 2, GradNorm = 0.2815481337169891, Relative Error = 0.5639346090211548
+Iter = 3, GradNorm = 0.18156828630008567, Relative Error = 0.3636772128214656
+Iter = 4, GradNorm = 0.14253090812007363, Relative Error = 0.2854862182283885
+Iter = 5, GradNorm = 0.11102775546407348, Relative Error = 0.22238610869666198
+Iter = 6, GradNorm = 0.09015999555982802, Relative Error = 0.1805884527598722
+Iter = 7, GradNorm = 0.08950976366590044, Relative Error = 0.1792860528326053
+Iter = 8, GradNorm = 0.09656309002521901, Relative Error = 0.19341370763261617
+Iter = 9, GradNorm = 0.06834471732034578, Relative Error = 0.13689293880900924
+Iter = 10, GradNorm = 0.06275359559851575, Relative Error = 0.12569404716457266
+Iter = 11, GradNorm = 0.09101242381375863, Relative Error = 0.1822958474698018
+Iter = 12, GradNorm = 0.06591894310223902, Relative Error = 0.13203416735419038
+Iter = 13, GradNorm = 0.06123422457011009, Relative Error = 0.12265078100773394
+Iter = 14, GradNorm = 0.05685590163675664, Relative Error = 0.11388109818656862
+Iter = 15, GradNorm = 0.06125195348583409, Relative Error = 0.12268629162904474
+Iter = 16, GradNorm = 0.08874460688483711, Relative Error = 0.17775346092914565
+Iter = 17, GradNorm = 0.06875504317200985, Relative Error = 0.137714812304225
+Iter = 18, GradNorm = 0.056414646342460205, Relative Error = 0.11299727371015528
+Iter = 19, GradNorm = 0.04078334446750489, Relative Error = 0.08168812598124367
+Log-partition = 0.3053055473488102
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [30.].
+Iter = 1, GradNorm = 0.4891745979297298, Relative Error = 0.9999999795574017
+Iter = 2, GradNorm = 0.2584591684075732, Relative Error = 0.5283576952234222
+Iter = 3, GradNorm = 0.18760454308584848, Relative Error = 0.38351243103116667
+Iter = 4, GradNorm = 0.13399584329166128, Relative Error = 0.27392231959617547
+Iter = 5, GradNorm = 0.1214590234086381, Relative Error = 0.24829380233506673
+Iter = 6, GradNorm = 0.11043664612618735, Relative Error = 0.2257611992445275
+Iter = 7, GradNorm = 0.08549953002269103, Relative Error = 0.17478325456126925
+Iter = 8, GradNorm = 0.07178323196649286, Relative Error = 0.14674357745241873
+Iter = 9, GradNorm = 0.08189943101105243, Relative Error = 0.1674237167739854
+Iter = 10, GradNorm = 0.06051885650494676, Relative Error = 0.1237162672058406
+Iter = 11, GradNorm = 0.08862723267502651, Relative Error = 0.18117709144820915
+Iter = 12, GradNorm = 0.05783631778915418, Relative Error = 0.11823246107136942
+Iter = 13, GradNorm = 0.06910815401080048, Relative Error = 0.14127502305010872
+Iter = 14, GradNorm = 0.05616372478481694, Relative Error = 0.114813246383559
+Iter = 15, GradNorm = 0.05953100752468625, Relative Error = 0.12169684721909751
+Iter = 16, GradNorm = 0.045232915384930975, Relative Error = 0.09246783183690661
+Log-partition = 0.2505724865240432
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [34.].
+Iter = 1, GradNorm = 0.4724378592768301, Relative Error = 0.9999999788331956
+Iter = 2, GradNorm = 0.24618949763597095, Relative Error = 0.521104495735742
+Iter = 3, GradNorm = 0.1963801406242912, Relative Error = 0.41567400370527907
+Iter = 4, GradNorm = 0.1304883240386496, Relative Error = 0.276202083965857
+Iter = 5, GradNorm = 0.12541727102442674, Relative Error = 0.2654682852083924
+Iter = 6, GradNorm = 0.09197281959897506, Relative Error = 0.19467706883819383
+Iter = 7, GradNorm = 0.09600908838682319, Relative Error = 0.20322056005752923
+Iter = 8, GradNorm = 0.0763079059593773, Relative Error = 0.16151945244394422
+Iter = 9, GradNorm = 0.08220920279666882, Relative Error = 0.1740106120673774
+Iter = 10, GradNorm = 0.04717146743515081, Relative Error = 0.09984692274426922
+Log-partition = 0.16307834492282672
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [38.].
+Iter = 1, GradNorm = 0.46927507186052786, Relative Error = 0.999999978690537
+Iter = 2, GradNorm = 0.2753889002016285, Relative Error = 0.5868389583137427
+Iter = 3, GradNorm = 0.16646733011886142, Relative Error = 0.35473294141012324
+Iter = 4, GradNorm = 0.1457743073151234, Relative Error = 0.31063722100302915
+Iter = 5, GradNorm = 0.1161780558752342, Relative Error = 0.24756919846377698
+Iter = 6, GradNorm = 0.10032065619305938, Relative Error = 0.2137779312622345
+Iter = 7, GradNorm = 0.09086815978826955, Relative Error = 0.19363516901005254
+Iter = 8, GradNorm = 0.10065444533426461, Relative Error = 0.214489217998112
+Iter = 9, GradNorm = 0.09001693962214909, Relative Error = 0.19182126454543522
+Iter = 10, GradNorm = 0.05363517313832271, Relative Error = 0.114293673820643
+Iter = 11, GradNorm = 0.06701805944973416, Relative Error = 0.14281188590714994
+Iter = 12, GradNorm = 0.05421513434571008, Relative Error = 0.11552954001044366
+Iter = 13, GradNorm = 0.06878846100106432, Relative Error = 0.1465845165448371
+Iter = 14, GradNorm = 0.047374281234715473, Relative Error = 0.10095204937558451
+Log-partition = 0.26540746401847193
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [42.].
+Iter = 1, GradNorm = 0.49399666687499194, Relative Error = 0.9999999797569489
+Iter = 2, GradNorm = 0.2695049034473176, Relative Error = 0.5455601546799818
+Iter = 3, GradNorm = 0.16967202338094683, Relative Error = 0.34346794487421844
+Iter = 4, GradNorm = 0.15351644225009745, Relative Error = 0.31076411934840903
+Iter = 5, GradNorm = 0.13634512884757966, Relative Error = 0.27600414178916105
+Iter = 6, GradNorm = 0.08757058322705076, Relative Error = 0.17726957958709283
+Iter = 7, GradNorm = 0.09745912601795667, Relative Error = 0.19728700734280272
+Iter = 8, GradNorm = 0.09291410874896398, Relative Error = 0.18808650563549503
+Iter = 9, GradNorm = 0.045409829341355235, Relative Error = 0.09192334982619002
+Log-partition = 0.16067632246920555
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [46.].
+Iter = 1, GradNorm = 0.48378629400383366, Relative Error = 0.9999999793297166
+Iter = 2, GradNorm = 0.26833415876004163, Relative Error = 0.5546543102590917
+Iter = 3, GradNorm = 0.17999749223463873, Relative Error = 0.37205991725059745
+Iter = 4, GradNorm = 0.15610622040022384, Relative Error = 0.3226759813336651
+Iter = 5, GradNorm = 0.10304353206149713, Relative Error = 0.2129939008374255
+Iter = 6, GradNorm = 0.08413666856356232, Relative Error = 0.1739128782010654
+Iter = 7, GradNorm = 0.08870894154279498, Relative Error = 0.1833638960190407
+Iter = 8, GradNorm = 0.07196881038006155, Relative Error = 0.148761570520796
+Iter = 9, GradNorm = 0.08842510773369683, Relative Error = 0.18277720349230087
+Iter = 10, GradNorm = 0.06862748134591737, Relative Error = 0.14185494872003146
+Iter = 11, GradNorm = 0.057300855278810195, Relative Error = 0.11844249166333598
+Iter = 12, GradNorm = 0.07296763558116132, Relative Error = 0.15082617051635902
+Iter = 13, GradNorm = 0.05384296745680211, Relative Error = 0.11129493954499266
+Iter = 14, GradNorm = 0.04917966298064669, Relative Error = 0.1016557570432109
+Log-partition = 0.28699574965044433
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [50.].
+Iter = 1, GradNorm = 0.4615057120345803, Relative Error = 0.9999999783317963
+Iter = 2, GradNorm = 0.26945199656215413, Relative Error = 0.58385407525232
+Iter = 3, GradNorm = 0.19473261515966828, Relative Error = 0.42195059749460073
+Iter = 4, GradNorm = 0.14750266686358965, Relative Error = 0.3196117833887602
+Iter = 5, GradNorm = 0.11096344691191014, Relative Error = 0.24043785724415292
+Iter = 6, GradNorm = 0.1121779524850801, Relative Error = 0.24306947266121803
+Iter = 7, GradNorm = 0.09738307449206883, Relative Error = 0.21101162963429518
+Iter = 8, GradNorm = 0.11170728724605906, Relative Error = 0.24204962563322002
+Iter = 9, GradNorm = 0.09560076532805391, Relative Error = 0.20714968582966045
+Iter = 10, GradNorm = 0.07561811773212286, Relative Error = 0.1638508779452508
+Iter = 11, GradNorm = 0.058763061669359976, Relative Error = 0.1273289991081777
+Iter = 12, GradNorm = 0.07650335589088965, Relative Error = 0.16576903002116475
+Iter = 13, GradNorm = 0.06942422043112462, Relative Error = 0.1504298150953862
+Iter = 14, GradNorm = 0.06958995062902787, Relative Error = 0.15078892266435115
+Iter = 15, GradNorm = 0.07581998325027443, Relative Error = 0.16428828426225514
+Iter = 16, GradNorm = 0.048884150312453585, Relative Error = 0.1059231727332532
+Log-partition = 0.34136055114578334
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [54.].
+Iter = 1, GradNorm = 0.4952466245825947, Relative Error = 0.9999999798080405
+Iter = 2, GradNorm = 0.279062859814036, Relative Error = 0.5634825970079264
+Iter = 3, GradNorm = 0.1806747306661517, Relative Error = 0.36481768486610416
+Iter = 4, GradNorm = 0.16360728694245857, Relative Error = 0.3303551715810256
+Iter = 5, GradNorm = 0.1278507481598853, Relative Error = 0.25815571319861846
+Iter = 6, GradNorm = 0.09149912828919937, Relative Error = 0.18475466949173103
+Iter = 7, GradNorm = 0.09125279102260252, Relative Error = 0.18425726628008784
+Iter = 8, GradNorm = 0.09044914726851856, Relative Error = 0.18263455206465196
+Iter = 9, GradNorm = 0.0655286553747461, Relative Error = 0.13231519570037092
+Iter = 10, GradNorm = 0.07688559079763733, Relative Error = 0.15524707373819568
+Iter = 11, GradNorm = 0.05793284426583265, Relative Error = 0.11697776465388764
+Iter = 12, GradNorm = 0.0811320638760921, Relative Error = 0.16382153499028232
+Iter = 13, GradNorm = 0.051553252225372215, Relative Error = 0.10409611822768364
+Iter = 14, GradNorm = 0.08515273955789603, Relative Error = 0.17194006705298406
+Iter = 15, GradNorm = 0.05187284842854675, Relative Error = 0.10474144558754324
+Iter = 16, GradNorm = 0.04027212282383216, Relative Error = 0.08131730740134042
+Log-partition = 0.3454752426212069
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [58.].
+Iter = 1, GradNorm = 0.4981127779456678, Relative Error = 0.9999999799242255
+Iter = 2, GradNorm = 0.2702394535852841, Relative Error = 0.5425266327728988
+Iter = 3, GradNorm = 0.18873357512363098, Relative Error = 0.3788972692349696
+Iter = 4, GradNorm = 0.1463502201566741, Relative Error = 0.29380940160210745
+Iter = 5, GradNorm = 0.11101086415727, Relative Error = 0.22286290744532872
+Iter = 6, GradNorm = 0.11329687995266936, Relative Error = 0.22745226120359582
+Iter = 7, GradNorm = 0.061435422788800764, Relative Error = 0.12333636934352687
+Iter = 8, GradNorm = 0.08953088482863714, Relative Error = 0.17974018534614056
+Iter = 9, GradNorm = 0.05756606875841525, Relative Error = 0.11556834145100153
+Iter = 10, GradNorm = 0.06613378211346768, Relative Error = 0.13276868956972313
+Iter = 11, GradNorm = 0.07414215942031187, Relative Error = 0.1488461272518043
+Iter = 12, GradNorm = 0.05992409577600411, Relative Error = 0.12030226331499122
+Iter = 13, GradNorm = 0.05515312487329618, Relative Error = 0.11072416972220371
+Iter = 14, GradNorm = 0.05392935680896927, Relative Error = 0.10826736055379425
+Iter = 15, GradNorm = 0.06467243081243297, Relative Error = 0.1298349136531046
+Iter = 16, GradNorm = 0.04347171726140474, Relative Error = 0.08727283923123545
+Log-partition = 0.3090777815453793
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [62.].
+Iter = 1, GradNorm = 0.4641077344599446, Relative Error = 0.9999999784532791
+Iter = 2, GradNorm = 0.27474856659988134, Relative Error = 0.5919930660058051
+Iter = 3, GradNorm = 0.1910444381907525, Relative Error = 0.411638117379532
+Iter = 4, GradNorm = 0.14866816478057956, Relative Error = 0.32033114412597474
+Iter = 5, GradNorm = 0.10193239599513261, Relative Error = 0.2196308878959679
+Iter = 6, GradNorm = 0.0911312785976071, Relative Error = 0.19635802178576295
+Iter = 7, GradNorm = 0.0838218277705676, Relative Error = 0.18060855215442748
+Iter = 8, GradNorm = 0.0703311540437251, Relative Error = 0.15154057410863808
+Iter = 9, GradNorm = 0.06801740960385562, Relative Error = 0.14655521355930734
+Iter = 10, GradNorm = 0.0611051550640584, Relative Error = 0.13166157167914305
+Iter = 11, GradNorm = 0.06739855241446041, Relative Error = 0.1452217792506096
+Iter = 12, GradNorm = 0.08790669583652821, Relative Error = 0.18941010333456118
+Iter = 13, GradNorm = 0.04570406035817511, Relative Error = 0.09847726288506195
+Log-partition = 0.2582040178529488
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [66.].
+Iter = 1, GradNorm = 0.48750150612802384, Relative Error = 0.9999999794872433
+Iter = 2, GradNorm = 0.2305718045117669, Relative Error = 0.47296633319847137
+Iter = 3, GradNorm = 0.1932605989250547, Relative Error = 0.39643076489284623
+Iter = 4, GradNorm = 0.15988834016470949, Relative Error = 0.3279750623846693
+Iter = 5, GradNorm = 0.11870768827282054, Relative Error = 0.24350219300989098
+Iter = 6, GradNorm = 0.09102760867018683, Relative Error = 0.186722719127466
+Iter = 7, GradNorm = 0.08952760280401756, Relative Error = 0.1836457935866327
+Iter = 8, GradNorm = 0.068143449451513, Relative Error = 0.13978100005255717
+Iter = 9, GradNorm = 0.05305822462502166, Relative Error = 0.10883704536231212
+Iter = 10, GradNorm = 0.05747624797300864, Relative Error = 0.11789962917349098
+Iter = 11, GradNorm = 0.04931934121973475, Relative Error = 0.10116756479334289
+Log-partition = 0.24194121952112477
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [70.].
+Iter = 1, GradNorm = 0.48769775830698503, Relative Error = 0.9999999794954977
+Iter = 2, GradNorm = 0.24208809052073937, Relative Error = 0.4963895802950552
+Iter = 3, GradNorm = 0.18818682386053276, Relative Error = 0.385867715806477
+Iter = 4, GradNorm = 0.1270422987645359, Relative Error = 0.2604939104100394
+Iter = 5, GradNorm = 0.112048583160814, Relative Error = 0.22975004283858885
+Iter = 6, GradNorm = 0.09113736115815159, Relative Error = 0.18687262292491053
+Iter = 7, GradNorm = 0.10085113358400202, Relative Error = 0.20679022980585082
+Iter = 8, GradNorm = 0.09887801769421586, Relative Error = 0.20274445388065904
+Iter = 9, GradNorm = 0.05423520361876548, Relative Error = 0.11120658560124212
+Iter = 10, GradNorm = 0.08451809119193165, Relative Error = 0.17330013931646926
+Iter = 11, GradNorm = 0.06954224773548064, Relative Error = 0.1425929176934571
+Iter = 12, GradNorm = 0.08352527582922868, Relative Error = 0.1712644208301012
+Iter = 13, GradNorm = 0.04976450369564435, Relative Error = 0.10203963792657691
+Log-partition = 0.31731918459463165
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [74.].
+Iter = 1, GradNorm = 0.49731455568976046, Relative Error = 0.9999999798920026
+Iter = 2, GradNorm = 0.2401536477376881, Relative Error = 0.4829008927269246
+Iter = 3, GradNorm = 0.20073165718156802, Relative Error = 0.40363116431781804
+Iter = 4, GradNorm = 0.14837342302467338, Relative Error = 0.2983492406237567
+Iter = 5, GradNorm = 0.14969764574602562, Relative Error = 0.3010119873291856
+Iter = 6, GradNorm = 0.10839815943924865, Relative Error = 0.21796699095049354
+Iter = 7, GradNorm = 0.09370815995996683, Relative Error = 0.18842834379885176
+Iter = 8, GradNorm = 0.09925030152377638, Relative Error = 0.1995724806212325
+Iter = 9, GradNorm = 0.06718826780297885, Relative Error = 0.1351021515120731
+Iter = 10, GradNorm = 0.07713601931979232, Relative Error = 0.15510508768792436
+Iter = 11, GradNorm = 0.05543952049871018, Relative Error = 0.11147777347284656
+Iter = 12, GradNorm = 0.06429452563800647, Relative Error = 0.12928341551555378
+Iter = 13, GradNorm = 0.06386466178063045, Relative Error = 0.128419045382377
+Iter = 14, GradNorm = 0.04709072061229607, Relative Error = 0.0946900088216452
+Log-partition = 0.3455925025733801
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [78.].
+Iter = 1, GradNorm = 0.48002512444475326, Relative Error = 0.9999999791677575
+Iter = 2, GradNorm = 0.2685005396132902, Relative Error = 0.5593468348774396
+Iter = 3, GradNorm = 0.1792019017303644, Relative Error = 0.3733177470751565
+Iter = 4, GradNorm = 0.14650404751429294, Relative Error = 0.30520078429591957
+Iter = 5, GradNorm = 0.11923526738072641, Relative Error = 0.24839380029265815
+Iter = 6, GradNorm = 0.11419442668419974, Relative Error = 0.23789259872045831
+Iter = 7, GradNorm = 0.06312928508693207, Relative Error = 0.13151245748819784
+Iter = 8, GradNorm = 0.07714920037831685, Relative Error = 0.16071908498615514
+Iter = 9, GradNorm = 0.06940752273413907, Relative Error = 0.14459143439316566
+Iter = 10, GradNorm = 0.05555685714586594, Relative Error = 0.1157373919807944
+Iter = 11, GradNorm = 0.055836934143425124, Relative Error = 0.11632085517357732
+Iter = 12, GradNorm = 0.05893396618902224, Relative Error = 0.122772667429574
+Iter = 13, GradNorm = 0.04966735784528757, Relative Error = 0.10346824422587367
+Log-partition = 0.2775197277043154
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [82.].
+Iter = 1, GradNorm = 0.4992800340531169, Relative Error = 0.9999999799711602
+Iter = 2, GradNorm = 0.2682828720156151, Relative Error = 0.5373394655186206
+Iter = 3, GradNorm = 0.20410207386975482, Relative Error = 0.40879277331589287
+Iter = 4, GradNorm = 0.1553708366778821, Relative Error = 0.3111897591912419
+Iter = 5, GradNorm = 0.12159204818558658, Relative Error = 0.2435347649758074
+Iter = 6, GradNorm = 0.1218371964160552, Relative Error = 0.2440257684384704
+Iter = 7, GradNorm = 0.09087091661893967, Relative Error = 0.182003902822265
+Iter = 8, GradNorm = 0.0727434546292417, Relative Error = 0.1456966996692196
+Iter = 9, GradNorm = 0.054377552687724325, Relative Error = 0.10891192895732733
+Iter = 10, GradNorm = 0.054068913914011085, Relative Error = 0.10829376130294296
+Iter = 11, GradNorm = 0.07284099062970452, Relative Error = 0.14589205296167454
+Iter = 12, GradNorm = 0.04651191029642949, Relative Error = 0.09315795984724203
+Log-partition = 0.29513690562270867
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [86.].
+Iter = 1, GradNorm = 0.4751783506218881, Relative Error = 0.9999999789552706
+Iter = 2, GradNorm = 0.2865373218250599, Relative Error = 0.6030100391146919
+Iter = 3, GradNorm = 0.1896353297129501, Relative Error = 0.39908241920942167
+Iter = 4, GradNorm = 0.12908868860474487, Relative Error = 0.27166365159347844
+Iter = 5, GradNorm = 0.137753742987622, Relative Error = 0.28989902403665274
+Iter = 6, GradNorm = 0.08937485319371938, Relative Error = 0.18808695976127854
+Iter = 7, GradNorm = 0.07322390865216682, Relative Error = 0.15409773407260227
+Iter = 8, GradNorm = 0.06497206593837526, Relative Error = 0.1367319544041174
+Iter = 9, GradNorm = 0.09390312598062218, Relative Error = 0.19761658729098433
+Iter = 10, GradNorm = 0.05816382004569179, Relative Error = 0.12240418517705663
+Iter = 11, GradNorm = 0.0746030975246733, Relative Error = 0.15700019972929058
+Iter = 12, GradNorm = 0.055579521705489604, Relative Error = 0.11696559925992861
+Iter = 13, GradNorm = 0.05497242599322273, Relative Error = 0.1156879827635201
+Iter = 14, GradNorm = 0.051455219801467736, Relative Error = 0.10828611752043146
+Iter = 15, GradNorm = 0.04352768156766693, Relative Error = 0.09160282785331433
+Log-partition = 0.3093908052391132
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [90.].
+Iter = 1, GradNorm = 0.4740811587115743, Relative Error = 0.9999999789065657
+Iter = 2, GradNorm = 0.2710006784657721, Relative Error = 0.5716335014999212
+Iter = 3, GradNorm = 0.17953690737703995, Relative Error = 0.3787049965831235
+Iter = 4, GradNorm = 0.15010817350541455, Relative Error = 0.3166296900452055
+Iter = 5, GradNorm = 0.11326657081951727, Relative Error = 0.2389180973531294
+Iter = 6, GradNorm = 0.10633564008751231, Relative Error = 0.22429838412798406
+Iter = 7, GradNorm = 0.08466777574897962, Relative Error = 0.178593416775199
+Iter = 8, GradNorm = 0.08152424433554985, Relative Error = 0.17196262943139234
+Iter = 9, GradNorm = 0.09670612476435061, Relative Error = 0.20398642921669294
+Iter = 10, GradNorm = 0.10496321428585519, Relative Error = 0.2214034667757783
+Iter = 11, GradNorm = 0.05096571048920158, Relative Error = 0.107504186736024
+Iter = 12, GradNorm = 0.06991522101917329, Relative Error = 0.1474752123337532
+Iter = 13, GradNorm = 0.059296567304635596, Relative Error = 0.1250768248521404
+Iter = 14, GradNorm = 0.0644973674113857, Relative Error = 0.1360470984044194
+Iter = 15, GradNorm = 0.10573527080996224, Relative Error = 0.22303199913492114
+Iter = 16, GradNorm = 0.06326009791308182, Relative Error = 0.1334372721131401
+Iter = 17, GradNorm = 0.054971918038409145, Relative Error = 0.11595465432176541
+Iter = 18, GradNorm = 0.044249997106360656, Relative Error = 0.09333844081303694
+Log-partition = 0.3493668454727864
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [94.].
+Iter = 1, GradNorm = 0.5056813467816729, Relative Error = 0.9999999802247009
+Iter = 2, GradNorm = 0.2521673562369635, Relative Error = 0.4986684853122563
+Iter = 3, GradNorm = 0.1893302277967149, Relative Error = 0.37440618535291964
+Iter = 4, GradNorm = 0.14609685221005164, Relative Error = 0.28891089270101117
+Iter = 5, GradNorm = 0.08948558441805643, Relative Error = 0.1769604182910221
+Iter = 6, GradNorm = 0.09977952280388705, Relative Error = 0.19731698917855636
+Iter = 7, GradNorm = 0.08739112410476169, Relative Error = 0.17281856040916427
+Iter = 8, GradNorm = 0.06759242052500493, Relative Error = 0.13366603221282655
+Iter = 9, GradNorm = 0.08049341782817888, Relative Error = 0.1591781400454749
+Iter = 10, GradNorm = 0.06681673074369927, Relative Error = 0.13213208248163139
+Iter = 11, GradNorm = 0.05062490663044378, Relative Error = 0.10011226625525171
+Iter = 12, GradNorm = 0.09722240459360722, Relative Error = 0.19226021147460026
+Iter = 13, GradNorm = 0.05278794571427453, Relative Error = 0.10438974070595534
+Iter = 14, GradNorm = 0.05036180871353285, Relative Error = 0.09959198225944581
+Iter = 15, GradNorm = 0.05303796759591153, Relative Error = 0.10488416645110882
+Iter = 16, GradNorm = 0.06105914786177128, Relative Error = 0.12074629021400421
+Iter = 17, GradNorm = 0.041038845482264406, Relative Error = 0.081155543766631
+Log-partition = 0.31528222294735514
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [98.].
+Iter = 1, GradNorm = 0.5044740580708983, Relative Error = 0.9999999801773755
+Iter = 2, GradNorm = 0.22346827668633154, Relative Error = 0.4429727726954748
+Iter = 3, GradNorm = 0.19701823877612307, Relative Error = 0.39054185585696805
+Iter = 4, GradNorm = 0.1484889393779547, Relative Error = 0.2943440481406196
+Iter = 5, GradNorm = 0.12760207310044105, Relative Error = 0.2529407975089573
+Iter = 6, GradNorm = 0.10350593756228435, Relative Error = 0.2051759329435695
+Iter = 7, GradNorm = 0.06754197425314878, Relative Error = 0.13388591907494538
+Iter = 8, GradNorm = 0.08413597593929169, Relative Error = 0.16677958544237262
+Iter = 9, GradNorm = 0.07284752678917332, Relative Error = 0.1444029166211481
+Iter = 10, GradNorm = 0.05593346578359623, Relative Error = 0.11087480868438888
+Iter = 11, GradNorm = 0.07415919878776739, Relative Error = 0.14700299476512463
+Iter = 12, GradNorm = 0.05584662615840878, Relative Error = 0.11070266975657538
+Iter = 13, GradNorm = 0.059635785603181016, Relative Error = 0.11821377822496885
+Iter = 14, GradNorm = 0.04165419230976749, Relative Error = 0.08256954112438827
+Log-partition = 0.2702388969885718
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [102.].
+Iter = 1, GradNorm = 0.4763500565048356, Relative Error = 0.9999999790070356
+Iter = 2, GradNorm = 0.25938128219179135, Relative Error = 0.5445182029572747
+Iter = 3, GradNorm = 0.1537757840034646, Relative Error = 0.3228209563016899
+Iter = 4, GradNorm = 0.13328553408829827, Relative Error = 0.2798058475487696
+Iter = 5, GradNorm = 0.09866937530393978, Relative Error = 0.20713626855962275
+Iter = 6, GradNorm = 0.09518781947036303, Relative Error = 0.19982745078381708
+Iter = 7, GradNorm = 0.06671632830424835, Relative Error = 0.14005735066601716
+Iter = 8, GradNorm = 0.07141814132820606, Relative Error = 0.14992785002052914
+Iter = 9, GradNorm = 0.06226148304819051, Relative Error = 0.13070530986807047
+Iter = 10, GradNorm = 0.07558963856389513, Relative Error = 0.15868505932732518
+Iter = 11, GradNorm = 0.061530954214116085, Relative Error = 0.12917171328555166
+Iter = 12, GradNorm = 0.05585095518622031, Relative Error = 0.1172477115328656
+Iter = 13, GradNorm = 0.0470030503915948, Relative Error = 0.0986733364738969
+Log-partition = 0.21233217941587912
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [106.].
+Iter = 1, GradNorm = 0.5061124248084384, Relative Error = 0.9999999802415445
+Iter = 2, GradNorm = 0.24438867289228752, Relative Error = 0.48287427078290945
+Iter = 3, GradNorm = 0.1734715225799616, Relative Error = 0.34275293521610445
+Iter = 4, GradNorm = 0.1436717922571429, Relative Error = 0.28387327079114766
+Iter = 5, GradNorm = 0.10259141419071505, Relative Error = 0.20270478876802442
+Iter = 6, GradNorm = 0.09885536323964678, Relative Error = 0.19532292913740232
+Iter = 7, GradNorm = 0.08640661464464543, Relative Error = 0.17072612467494497
+Iter = 8, GradNorm = 0.10471867839670654, Relative Error = 0.20690793427421347
+Iter = 9, GradNorm = 0.06041666897018147, Relative Error = 0.1193740062779705
+Iter = 10, GradNorm = 0.07362159120070777, Relative Error = 0.14546489305004578
+Iter = 11, GradNorm = 0.06183585366943724, Relative Error = 0.12217809604468988
+Iter = 12, GradNorm = 0.04512420155313599, Relative Error = 0.08915845264741484
+Log-partition = 0.20764294381805756
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [110.].
+Iter = 1, GradNorm = 0.5099849062642746, Relative Error = 0.9999999803915768
+Iter = 2, GradNorm = 0.24792488526432244, Relative Error = 0.4861416041094194
+Iter = 3, GradNorm = 0.17693116354642643, Relative Error = 0.3469341109977859
+Iter = 4, GradNorm = 0.1302171066127139, Relative Error = 0.25533521180700036
+Iter = 5, GradNorm = 0.10300343867243515, Relative Error = 0.20197350036732983
+Iter = 6, GradNorm = 0.10922556282847896, Relative Error = 0.2141741046550447
+Iter = 7, GradNorm = 0.07403395908588496, Relative Error = 0.1451689191676416
+Iter = 8, GradNorm = 0.06562831572529214, Relative Error = 0.12868677804439904
+Iter = 9, GradNorm = 0.06693753550517668, Relative Error = 0.13125395157861805
+Iter = 10, GradNorm = 0.05300262500683879, Relative Error = 0.10392978952219202
+Iter = 11, GradNorm = 0.06056504077974303, Relative Error = 0.11875849431664008
+Iter = 12, GradNorm = 0.050290113334086874, Relative Error = 0.09861098187466096
+Iter = 13, GradNorm = 0.04679804013070627, Relative Error = 0.0917635769965704
+Log-partition = 0.22296584314995202
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [114.].
+Iter = 1, GradNorm = 0.47431669326627973, Relative Error = 0.9999999789170402
+Iter = 2, GradNorm = 0.2685052752276222, Relative Error = 0.5660885930826777
+Iter = 3, GradNorm = 0.18573147414116184, Relative Error = 0.39157692078343875
+Iter = 4, GradNorm = 0.13944078928471132, Relative Error = 0.2939824558664757
+Iter = 5, GradNorm = 0.09888590105422748, Relative Error = 0.20848074793333451
+Iter = 6, GradNorm = 0.09760435287649426, Relative Error = 0.20577886505864737
+Iter = 7, GradNorm = 0.10756747333630501, Relative Error = 0.22678407189872252
+Iter = 8, GradNorm = 0.07689534283119863, Relative Error = 0.16211814237549602
+Iter = 9, GradNorm = 0.08713994889538301, Relative Error = 0.18371680418444583
+Iter = 10, GradNorm = 0.07471926295393838, Relative Error = 0.15753032191234315
+Iter = 11, GradNorm = 0.04492813681277343, Relative Error = 0.09472181035031131
+Log-partition = 0.2157609257563777
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [118.].
+Iter = 1, GradNorm = 0.4881535289804585, Relative Error = 0.999999979514642
+Iter = 2, GradNorm = 0.25284679659716336, Relative Error = 0.517965714486575
+Iter = 3, GradNorm = 0.19129883222739244, Relative Error = 0.3918825061207851
+Iter = 4, GradNorm = 0.16044942353482602, Relative Error = 0.3286863880367137
+Iter = 5, GradNorm = 0.11142280011891187, Relative Error = 0.22825359486612734
+Iter = 6, GradNorm = 0.069816400264643, Relative Error = 0.14302139529800245
+Iter = 7, GradNorm = 0.09210629723727576, Relative Error = 0.18868304720200524
+Iter = 8, GradNorm = 0.07231178581992354, Relative Error = 0.14813328194025094
+Iter = 9, GradNorm = 0.07492497922813368, Relative Error = 0.15348650218662666
+Iter = 10, GradNorm = 0.060891102555538985, Relative Error = 0.12473760342435322
+Iter = 11, GradNorm = 0.04504680412017451, Relative Error = 0.09227999086979435
+Log-partition = 0.17084260108496988
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [122.].
+Iter = 1, GradNorm = 0.4733675967203643, Relative Error = 0.9999999788747691
+Iter = 2, GradNorm = 0.28038338816979397, Relative Error = 0.5923163820025116
+Iter = 3, GradNorm = 0.18650800042572208, Relative Error = 0.3940024576626749
+Iter = 4, GradNorm = 0.15426605460321186, Relative Error = 0.32589060259533664
+Iter = 5, GradNorm = 0.10862224880707708, Relative Error = 0.22946700886367208
+Iter = 6, GradNorm = 0.08427391454238115, Relative Error = 0.17803059048813377
+Iter = 7, GradNorm = 0.10867268358837462, Relative Error = 0.22957355350378164
+Iter = 8, GradNorm = 0.0638779338061929, Relative Error = 0.13494361020763287
+Iter = 9, GradNorm = 0.06448587887696358, Relative Error = 0.13622790820804467
+Iter = 10, GradNorm = 0.0745396152347192, Relative Error = 0.15746665842040286
+Iter = 11, GradNorm = 0.06420299776474751, Relative Error = 0.13563031532631803
+Iter = 12, GradNorm = 0.07902215961277236, Relative Error = 0.1669361369280464
+Iter = 13, GradNorm = 0.048461075781501634, Relative Error = 0.10237514163095104
+Log-partition = 0.24022618615943214
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [126.].
+Iter = 1, GradNorm = 0.48749126697649475, Relative Error = 0.9999999794868124
+Iter = 2, GradNorm = 0.25393762762139327, Relative Error = 0.5209070184729425
+Iter = 3, GradNorm = 0.20678027177412506, Relative Error = 0.4241722499253978
+Iter = 4, GradNorm = 0.12569249023325776, Relative Error = 0.2578353627429486
+Iter = 5, GradNorm = 0.12059170081068074, Relative Error = 0.2473720177284224
+Iter = 6, GradNorm = 0.12279082433876648, Relative Error = 0.25188312106903005
+Iter = 7, GradNorm = 0.08513929386804085, Relative Error = 0.1746478304106065
+Iter = 8, GradNorm = 0.09751560642758454, Relative Error = 0.2000355924979688
+Iter = 9, GradNorm = 0.06864160192623488, Relative Error = 0.14080580549453514
+Iter = 10, GradNorm = 0.05858787105727295, Relative Error = 0.12018239879212828
+Iter = 11, GradNorm = 0.07582712637956858, Relative Error = 0.15554560657959163
+Iter = 12, GradNorm = 0.0532500119568553, Relative Error = 0.10923274830089492
+Iter = 13, GradNorm = 0.05825897458201108, Relative Error = 0.11950772728353895
+Iter = 14, GradNorm = 0.0608417610757184, Relative Error = 0.1248058456616281
+Iter = 15, GradNorm = 0.05649698455789812, Relative Error = 0.11589332409864272
+Iter = 16, GradNorm = 0.0406845143638531, Relative Error = 0.0834569074059858
+Log-partition = 0.2518824712298364
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [130.].
+Iter = 1, GradNorm = 0.49750289721153296, Relative Error = 0.999999979899615
+Iter = 2, GradNorm = 0.2663648786837993, Relative Error = 0.5354036626172796
+Iter = 3, GradNorm = 0.17649516095948697, Relative Error = 0.3547620695298633
+Iter = 4, GradNorm = 0.15485358830707968, Relative Error = 0.3112616751830107
+Iter = 5, GradNorm = 0.1254828523555474, Relative Error = 0.2522253649910701
+Iter = 6, GradNorm = 0.09643646648676316, Relative Error = 0.19384101095465436
+Iter = 7, GradNorm = 0.10317583625646687, Relative Error = 0.2073874036932966
+Iter = 8, GradNorm = 0.06536724070497457, Relative Error = 0.13139067080301728
+Iter = 9, GradNorm = 0.0650889586039537, Relative Error = 0.1308313130646261
+Iter = 10, GradNorm = 0.04792181282717769, Relative Error = 0.09632468902699666
+Log-partition = 0.14737627339628584
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [134.].
+Iter = 1, GradNorm = 0.5065475006429995, Relative Error = 0.9999999802585151
+Iter = 2, GradNorm = 0.26172139139276623, Relative Error = 0.5166768879399748
+Iter = 3, GradNorm = 0.18585850991412545, Relative Error = 0.36691229550847265
+Iter = 4, GradNorm = 0.13921229404124114, Relative Error = 0.27482573917800585
+Iter = 5, GradNorm = 0.12236601330560391, Relative Error = 0.24156867960968828
+Iter = 6, GradNorm = 0.09149383082842916, Relative Error = 0.18062240738739202
+Iter = 7, GradNorm = 0.07768683178059019, Relative Error = 0.1533653411542312
+Iter = 8, GradNorm = 0.09192830966970529, Relative Error = 0.1814801331330474
+Iter = 9, GradNorm = 0.07482660408875652, Relative Error = 0.14771882699368788
+Iter = 10, GradNorm = 0.05891211204721538, Relative Error = 0.1163012566628424
+Iter = 11, GradNorm = 0.0702056854993518, Relative Error = 0.13859644756764147
+Iter = 12, GradNorm = 0.059680067214008856, Relative Error = 0.11781731419082957
+Iter = 13, GradNorm = 0.08519860013330792, Relative Error = 0.16819468725679615
+Iter = 14, GradNorm = 0.06531425935659982, Relative Error = 0.1289400460653561
+Iter = 15, GradNorm = 0.049231516395034786, Relative Error = 0.09719032343588355
+Log-partition = 0.2528616038220141
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [138.].
+Iter = 1, GradNorm = 0.47296588333788553, Relative Error = 0.9999999788568263
+Iter = 2, GradNorm = 0.28873852770658887, Relative Error = 0.6104848822583384
+Iter = 3, GradNorm = 0.18289113232910922, Relative Error = 0.3866898964709329
+Iter = 4, GradNorm = 0.13638570839347167, Relative Error = 0.2883626712085941
+Iter = 5, GradNorm = 0.09401958737729893, Relative Error = 0.1987872459761736
+Iter = 6, GradNorm = 0.095760712093845, Relative Error = 0.20246853619407565
+Iter = 7, GradNorm = 0.0877113578981392, Relative Error = 0.18544964686381404
+Iter = 8, GradNorm = 0.0909472138047105, Relative Error = 0.1922912731885681
+Iter = 9, GradNorm = 0.06898199602152985, Relative Error = 0.145849831865676
+Iter = 10, GradNorm = 0.05981860814820512, Relative Error = 0.1264755217887791
+Iter = 11, GradNorm = 0.0762077263991549, Relative Error = 0.1611273190574702
+Iter = 12, GradNorm = 0.0677362227454446, Relative Error = 0.14321587179871767
+Iter = 13, GradNorm = 0.07033902340039826, Relative Error = 0.14871901841376173
+Iter = 14, GradNorm = 0.0445197615931383, Relative Error = 0.09412890489617928
+Log-partition = 0.2305277089663999
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [142.].
+Iter = 1, GradNorm = 0.48903918173744626, Relative Error = 0.9999999795517411
+Iter = 2, GradNorm = 0.2496604378514018, Relative Error = 0.5105121267774356
+Iter = 3, GradNorm = 0.20480164600471787, Relative Error = 0.41878370786010766
+Iter = 4, GradNorm = 0.14756619555114406, Relative Error = 0.30174717700410586
+Iter = 5, GradNorm = 0.12260237342414271, Relative Error = 0.25070050723044107
+Iter = 6, GradNorm = 0.09040595776394848, Relative Error = 0.18486444295549492
+Iter = 7, GradNorm = 0.08523984808490587, Relative Error = 0.17430064813837898
+Iter = 8, GradNorm = 0.06511544235154797, Relative Error = 0.13314974229408372
+Iter = 9, GradNorm = 0.07010478560039901, Relative Error = 0.14335208053843798
+Iter = 10, GradNorm = 0.09179795687149053, Relative Error = 0.18771083876806077
+Iter = 11, GradNorm = 0.07487163961234636, Relative Error = 0.15309946703114788
+Iter = 12, GradNorm = 0.07587251471331266, Relative Error = 0.1551460823492585
+Iter = 13, GradNorm = 0.061735126079206996, Relative Error = 0.12623758406739546
+Iter = 14, GradNorm = 0.060361439067899376, Relative Error = 0.12342863330329162
+Iter = 15, GradNorm = 0.06512942145815444, Relative Error = 0.1331783271331777
+Iter = 16, GradNorm = 0.045118780392831764, Relative Error = 0.09226005022733431
+Log-partition = 0.24918374621487227
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [146.].
+Iter = 1, GradNorm = 0.4881054334802593, Relative Error = 0.9999999795126235
+Iter = 2, GradNorm = 0.2664847711902239, Relative Error = 0.5459573843105511
+Iter = 3, GradNorm = 0.20087788608310672, Relative Error = 0.4115460885886042
+Iter = 4, GradNorm = 0.1467726678653734, Relative Error = 0.3006986908788888
+Iter = 5, GradNorm = 0.11475045616778468, Relative Error = 0.23509358008711817
+Iter = 6, GradNorm = 0.09835036296025494, Relative Error = 0.2014940916434024
+Iter = 7, GradNorm = 0.08402578142591048, Relative Error = 0.17214678211083867
+Iter = 8, GradNorm = 0.06840777014214944, Relative Error = 0.14014957435096928
+Iter = 9, GradNorm = 0.05595157431736442, Relative Error = 0.11463009696925722
+Iter = 10, GradNorm = 0.06547327359731048, Relative Error = 0.13413756079112124
+Iter = 11, GradNorm = 0.06920237815257006, Relative Error = 0.14177751770016647
+Iter = 12, GradNorm = 0.08289372435785076, Relative Error = 0.16982749417176551
+Iter = 13, GradNorm = 0.05657009382439152, Relative Error = 0.1158972811715414
+Iter = 14, GradNorm = 0.04628618410355132, Relative Error = 0.09482824812098883
+Log-partition = 0.19912776424661008
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [150.].
+Iter = 1, GradNorm = 0.48163068995139446, Relative Error = 0.999999979237204
+Iter = 2, GradNorm = 0.28898789685437876, Relative Error = 0.6000196766600282
+Iter = 3, GradNorm = 0.18341262845549286, Relative Error = 0.3808158999706676
+Iter = 4, GradNorm = 0.15645340241793476, Relative Error = 0.324841008751568
+Iter = 5, GradNorm = 0.11767034987514317, Relative Error = 0.2443165476931149
+Iter = 6, GradNorm = 0.09233437407927463, Relative Error = 0.1917119778464971
+Iter = 7, GradNorm = 0.07852952523832758, Relative Error = 0.16304925173219373
+Iter = 8, GradNorm = 0.08063502151411184, Relative Error = 0.16742085071040824
+Iter = 9, GradNorm = 0.09075665767507894, Relative Error = 0.18843619745219312
+Iter = 10, GradNorm = 0.06709517307827058, Relative Error = 0.13930833953284485
+Iter = 11, GradNorm = 0.07600585461356701, Relative Error = 0.15780940588138884
+Iter = 12, GradNorm = 0.05772346489262242, Relative Error = 0.11985005295228855
+Iter = 13, GradNorm = 0.059658893642382915, Relative Error = 0.12386854419455325
+Iter = 14, GradNorm = 0.06403545530354979, Relative Error = 0.1329555099166481
+Iter = 15, GradNorm = 0.04663811755623372, Relative Error = 0.09683377235076662
+Log-partition = 0.20570892632063725
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [154.].
+Iter = 1, GradNorm = 0.486918303688856, Relative Error = 0.9999999794626743
+Iter = 2, GradNorm = 0.26915280579468737, Relative Error = 0.5527678837043656
+Iter = 3, GradNorm = 0.16384250134710163, Relative Error = 0.3364886814501663
+Iter = 4, GradNorm = 0.14852856875330736, Relative Error = 0.3050379592997155
+Iter = 5, GradNorm = 0.13100631245134337, Relative Error = 0.2690519308235698
+Iter = 6, GradNorm = 0.10101100912190689, Relative Error = 0.2074495994136166
+Iter = 7, GradNorm = 0.08221859906764951, Relative Error = 0.16885501480683213
+Iter = 8, GradNorm = 0.08473243636503006, Relative Error = 0.17401776434142224
+Iter = 9, GradNorm = 0.07162398967657428, Relative Error = 0.14709652042856305
+Iter = 10, GradNorm = 0.061916499579268244, Relative Error = 0.1271599318378345
+Iter = 11, GradNorm = 0.06704718070227508, Relative Error = 0.13769697876904805
+Iter = 12, GradNorm = 0.05326608535793451, Relative Error = 0.10939429440308933
+Iter = 13, GradNorm = 0.06304815043110631, Relative Error = 0.1294840400506983
+Iter = 14, GradNorm = 0.06700832104782961, Relative Error = 0.13761717143103466
+Iter = 15, GradNorm = 0.06656145485446645, Relative Error = 0.13669942777506547
+Iter = 16, GradNorm = 0.05483720720714344, Relative Error = 0.11262095851704763
+Iter = 17, GradNorm = 0.05014399559023887, Relative Error = 0.10298235695912068
+Iter = 18, GradNorm = 0.0705639255393188, Relative Error = 0.1449194321830532
+Iter = 19, GradNorm = 0.06410242014626533, Relative Error = 0.13164922810282134
+Iter = 20, GradNorm = 0.05140045040300131, Relative Error = 0.10556277913146339
+Iter = 21, GradNorm = 0.05015969666638175, Relative Error = 0.10301460277058735
+Iter = 22, GradNorm = 0.04641115832802205, Relative Error = 0.09531610749329729
+Log-partition = 0.2443993480059505
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [158.].
+Iter = 1, GradNorm = 0.4711971950713566, Relative Error = 0.9999999787774633
+Iter = 2, GradNorm = 0.28246628121340084, Relative Error = 0.5994651033013344
+Iter = 3, GradNorm = 0.19438688153982792, Relative Error = 0.4125382736733139
+Iter = 4, GradNorm = 0.14254278189714978, Relative Error = 0.30251194269194265
+Iter = 5, GradNorm = 0.12357084522936541, Relative Error = 0.26224868038139626
+Iter = 6, GradNorm = 0.09129534069146941, Relative Error = 0.19375187227106735
+Iter = 7, GradNorm = 0.06346824213368174, Relative Error = 0.13469571009885406
+Iter = 8, GradNorm = 0.07299966416254, Relative Error = 0.15492380552530052
+Iter = 9, GradNorm = 0.07086667577621955, Relative Error = 0.1503970630842085
+Iter = 10, GradNorm = 0.05685929122624976, Relative Error = 0.12066983974923869
+Iter = 11, GradNorm = 0.06049932244300415, Relative Error = 0.128394909375242
+Iter = 12, GradNorm = 0.05417729050414969, Relative Error = 0.11497795386104902
+Iter = 13, GradNorm = 0.053753811677362914, Relative Error = 0.11407922436471712
+Iter = 14, GradNorm = 0.07099158330922073, Relative Error = 0.15066214855512564
+Iter = 15, GradNorm = 0.06425702035953539, Relative Error = 0.13636969758724377
+Iter = 16, GradNorm = 0.05864091529545605, Relative Error = 0.12445089797715514
+Iter = 17, GradNorm = 0.05352436840431195, Relative Error = 0.11359228753533542
+Iter = 18, GradNorm = 0.046001644932959884, Relative Error = 0.09762716000404446
+Log-partition = 0.24460284627367723
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [162.].
+Iter = 1, GradNorm = 0.4808511355272406, Relative Error = 0.9999999792035433
+Iter = 2, GradNorm = 0.2590387300940755, Relative Error = 0.5387087719423989
+Iter = 3, GradNorm = 0.20595931352968766, Relative Error = 0.4283223934173198
+Iter = 4, GradNorm = 0.14061466474837397, Relative Error = 0.2924286778898981
+Iter = 5, GradNorm = 0.12219837226607279, Relative Error = 0.25412931507542835
+Iter = 6, GradNorm = 0.09421225691612244, Relative Error = 0.19592811162552431
+Iter = 7, GradNorm = 0.07266743004341815, Relative Error = 0.1511225058302403
+Iter = 8, GradNorm = 0.08269707020930994, Relative Error = 0.17198060351636427
+Iter = 9, GradNorm = 0.06789566904942373, Relative Error = 0.14119893376770043
+Iter = 10, GradNorm = 0.07981101662672738, Relative Error = 0.16597863469622537
+Iter = 11, GradNorm = 0.06143849941614987, Relative Error = 0.1277703089358021
+Iter = 12, GradNorm = 0.051774266262421785, Relative Error = 0.10767212835825246
+Iter = 13, GradNorm = 0.0486582416136798, Relative Error = 0.10119190120744606
+Log-partition = 0.1711292573882078
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [166.].
+Iter = 1, GradNorm = 0.47482149946228824, Relative Error = 0.9999999789394545
+Iter = 2, GradNorm = 0.2642340430289377, Relative Error = 0.5564913083406218
+Iter = 3, GradNorm = 0.1936593743439687, Relative Error = 0.4078572063074361
+Iter = 4, GradNorm = 0.13961293636172, Relative Error = 0.29403245973381603
+Iter = 5, GradNorm = 0.11759777321390397, Relative Error = 0.24766732523780904
+Iter = 6, GradNorm = 0.107422317648577, Relative Error = 0.22623726075557832
+Iter = 7, GradNorm = 0.07454452222473235, Relative Error = 0.1569948301397515
+Iter = 8, GradNorm = 0.07320327355069434, Relative Error = 0.15417008726835776
+Iter = 9, GradNorm = 0.07894899586390658, Relative Error = 0.16627089188379943
+Iter = 10, GradNorm = 0.06852614236152027, Relative Error = 0.144319793850794
+Iter = 11, GradNorm = 0.07729010095026087, Relative Error = 0.1627771687044845
+Iter = 12, GradNorm = 0.08717565788856188, Relative Error = 0.18359669086449765
+Iter = 13, GradNorm = 0.06529227866145414, Relative Error = 0.13750910049419285
+Iter = 14, GradNorm = 0.05033187481670605, Relative Error = 0.10600167392101591
+Iter = 15, GradNorm = 0.0713089778351515, Relative Error = 0.1501805971593523
+Iter = 16, GradNorm = 0.043076211217201746, Relative Error = 0.09072085059074812
+Log-partition = 0.2559710563449108
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [170.].
+Iter = 1, GradNorm = 0.4757961470165088, Relative Error = 0.9999999789825961
+Iter = 2, GradNorm = 0.2797499886708341, Relative Error = 0.5879618499338312
+Iter = 3, GradNorm = 0.18727250431757633, Relative Error = 0.3935981860212429
+Iter = 4, GradNorm = 0.15075922440034062, Relative Error = 0.3168567508945006
+Iter = 5, GradNorm = 0.12516729537486856, Relative Error = 0.26306916003637587
+Iter = 6, GradNorm = 0.10913013839971367, Relative Error = 0.22936321950142854
+Iter = 7, GradNorm = 0.08188813251018091, Relative Error = 0.17210759545361276
+Iter = 8, GradNorm = 0.10122583628621228, Relative Error = 0.21275042850482717
+Iter = 9, GradNorm = 0.08260366411755188, Relative Error = 0.17361145713223103
+Iter = 10, GradNorm = 0.09278022276714783, Relative Error = 0.1949999414642784
+Iter = 11, GradNorm = 0.054806354087026915, Relative Error = 0.1151887279432677
+Iter = 12, GradNorm = 0.07668604845650562, Relative Error = 0.16117416529248013
+Iter = 13, GradNorm = 0.05131342684162528, Relative Error = 0.10784750167674188
+Iter = 14, GradNorm = 0.05584485058501129, Relative Error = 0.11737137797662714
+Iter = 15, GradNorm = 0.061992296338602884, Relative Error = 0.13029171300442413
+Iter = 16, GradNorm = 0.043046040217340105, Relative Error = 0.0904716012993071
+Log-partition = 0.23082879895101882
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [174.].
+Iter = 1, GradNorm = 0.4728185253343962, Relative Error = 0.999999978850237
+Iter = 2, GradNorm = 0.26407547837519574, Relative Error = 0.5585133801669407
+Iter = 3, GradNorm = 0.18835596916331596, Relative Error = 0.3983684121649399
+Iter = 4, GradNorm = 0.16115484240201858, Relative Error = 0.3408386735262893
+Iter = 5, GradNorm = 0.1158712290017105, Relative Error = 0.24506490406464654
+Iter = 6, GradNorm = 0.09094897771596838, Relative Error = 0.19235493306463888
+Iter = 7, GradNorm = 0.0913940850319629, Relative Error = 0.1932963244922819
+Iter = 8, GradNorm = 0.06350607194569947, Relative Error = 0.13431383755035203
+Iter = 9, GradNorm = 0.07663018772552545, Relative Error = 0.162071031482151
+Iter = 10, GradNorm = 0.06805664350676305, Relative Error = 0.14393818858778593
+Iter = 11, GradNorm = 0.07598098327144494, Relative Error = 0.16069797944301853
+Iter = 12, GradNorm = 0.06501514514603075, Relative Error = 0.1375054916154026
+Iter = 13, GradNorm = 0.058857462059422716, Relative Error = 0.12448213777786094
+Iter = 14, GradNorm = 0.047887634098736004, Relative Error = 0.10128121154317259
+Log-partition = 0.19325903979013614
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [178.].
+Iter = 1, GradNorm = 0.4776712973176594, Relative Error = 0.9999999790651022
+Iter = 2, GradNorm = 0.2503200378549413, Relative Error = 0.5240424409425
+Iter = 3, GradNorm = 0.19170484299742127, Relative Error = 0.40133212956401076
+Iter = 4, GradNorm = 0.1503545290013029, Relative Error = 0.3147656698192982
+Iter = 5, GradNorm = 0.12199092419514779, Relative Error = 0.25538675303773645
+Iter = 6, GradNorm = 0.11507826215291676, Relative Error = 0.2409151657007269
+Iter = 7, GradNorm = 0.08676184581806574, Relative Error = 0.18163503750156731
+Iter = 8, GradNorm = 0.07556340529416383, Relative Error = 0.15819121671445277
+Iter = 9, GradNorm = 0.06758751274471872, Relative Error = 0.1414937671769594
+Iter = 10, GradNorm = 0.052019529931777594, Relative Error = 0.10890235426509245
+Iter = 11, GradNorm = 0.07249260870039874, Relative Error = 0.15176253542938878
+Iter = 12, GradNorm = 0.07296498006919382, Relative Error = 0.15275144006225788
+Iter = 13, GradNorm = 0.06957540057398302, Relative Error = 0.14565539003102446
+Iter = 14, GradNorm = 0.05376774460598094, Relative Error = 0.11256222381853154
+Iter = 15, GradNorm = 0.05158854259670078, Relative Error = 0.10800008668386175
+Iter = 16, GradNorm = 0.0544040489172562, Relative Error = 0.11389432039106465
+Iter = 17, GradNorm = 0.052115516572696426, Relative Error = 0.10910330131685875
+Iter = 18, GradNorm = 0.056017823192404455, Relative Error = 0.11727274034308213
+Iter = 19, GradNorm = 0.04973224904323923, Relative Error = 0.10411395510127733
+Log-partition = 0.27348052698545827
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [182.].
+Iter = 1, GradNorm = 0.4879094645957817, Relative Error = 0.9999999795043948
+Iter = 2, GradNorm = 0.24795820427443221, Relative Error = 0.5082053478872451
+Iter = 3, GradNorm = 0.1851766095706756, Relative Error = 0.37953066954497827
+Iter = 4, GradNorm = 0.15973107443730275, Relative Error = 0.3273785051410103
+Iter = 5, GradNorm = 0.11692101207408452, Relative Error = 0.23963669115249311
+Iter = 6, GradNorm = 0.1016810958615712, Relative Error = 0.20840156044481598
+Iter = 7, GradNorm = 0.08715071239063031, Relative Error = 0.17862066003705307
+Iter = 8, GradNorm = 0.08646629032596288, Relative Error = 0.1772178955893357
+Iter = 9, GradNorm = 0.07764410248461488, Relative Error = 0.1591362876257746
+Iter = 10, GradNorm = 0.06144895441920166, Relative Error = 0.12594335141802743
+Iter = 11, GradNorm = 0.06903204270653428, Relative Error = 0.14148534984635264
+Iter = 12, GradNorm = 0.07411733401832721, Relative Error = 0.1519079621885416
+Iter = 13, GradNorm = 0.05144123152452592, Relative Error = 0.10543191760550137
+Iter = 14, GradNorm = 0.04468700924546618, Relative Error = 0.09158873023010676
+Log-partition = 0.19771332018257576
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [186.].
+Iter = 1, GradNorm = 0.49866206900684396, Relative Error = 0.9999999799463396
+Iter = 2, GradNorm = 0.24230689224667118, Relative Error = 0.48591401361270464
+Iter = 3, GradNorm = 0.20256315177282166, Relative Error = 0.4062132660583593
+Iter = 4, GradNorm = 0.12427436034149729, Relative Error = 0.24921558220149254
+Iter = 5, GradNorm = 0.13519542346442096, Relative Error = 0.27111631133789393
+Iter = 6, GradNorm = 0.09545730749996724, Relative Error = 0.19142684298369744
+Iter = 7, GradNorm = 0.0826050738284851, Relative Error = 0.16565341000664174
+Iter = 8, GradNorm = 0.07606328941892448, Relative Error = 0.15253473769333992
+Iter = 9, GradNorm = 0.09439450187133806, Relative Error = 0.18929552866610203
+Iter = 10, GradNorm = 0.059755042707589245, Relative Error = 0.11983073352319042
+Iter = 11, GradNorm = 0.06914107068410483, Relative Error = 0.13865315530270328
+Iter = 12, GradNorm = 0.05577040362544351, Relative Error = 0.11184007361561994
+Iter = 13, GradNorm = 0.05109196638371974, Relative Error = 0.10245809443837521
+Iter = 14, GradNorm = 0.06917307444915724, Relative Error = 0.1387173345663765
+Iter = 15, GradNorm = 0.08838134234048335, Relative Error = 0.17723694273385956
+Iter = 16, GradNorm = 0.08273163013028913, Relative Error = 0.1659072017167635
+Iter = 17, GradNorm = 0.052047292102817486, Relative Error = 0.10437387219512867
+Iter = 18, GradNorm = 0.049487445211922124, Relative Error = 0.0992404421657315
+Log-partition = 0.2188167616377268
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [190.].
+Iter = 1, GradNorm = 0.47224858430229366, Relative Error = 0.999999978824712
+Iter = 2, GradNorm = 0.26750153807310334, Relative Error = 0.5664422113702925
+Iter = 3, GradNorm = 0.18637312682044022, Relative Error = 0.3946504639061771
+Iter = 4, GradNorm = 0.14370805070363832, Relative Error = 0.3043059364018955
+Iter = 5, GradNorm = 0.12240749208473449, Relative Error = 0.2592013900339522
+Iter = 6, GradNorm = 0.09748677660482441, Relative Error = 0.20643105724613678
+Iter = 7, GradNorm = 0.07758756458866731, Relative Error = 0.16429390267068175
+Iter = 8, GradNorm = 0.07821787162174706, Relative Error = 0.16562859596714563
+Iter = 9, GradNorm = 0.06069491960402022, Relative Error = 0.1285232403787071
+Iter = 10, GradNorm = 0.0654005017080947, Relative Error = 0.13848744601287435
+Iter = 11, GradNorm = 0.08176825183575186, Relative Error = 0.1731466283273058
+Iter = 12, GradNorm = 0.060500002388335146, Relative Error = 0.12811049756054574
+Iter = 13, GradNorm = 0.06392833128414921, Relative Error = 0.1353700827391509
+Iter = 14, GradNorm = 0.0688964333455445, Relative Error = 0.14589018194396747
+Iter = 15, GradNorm = 0.06903329668285017, Relative Error = 0.14617999400260975
+Iter = 16, GradNorm = 0.05703542773851501, Relative Error = 0.12077416095389318
+Iter = 17, GradNorm = 0.057913997709135974, Relative Error = 0.12263455817099654
+Iter = 18, GradNorm = 0.07640399247891058, Relative Error = 0.16178765463937664
+Iter = 19, GradNorm = 0.04773785779626338, Relative Error = 0.10108628881530485
+Log-partition = 0.20487023053477832
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [194.].
+Iter = 1, GradNorm = 0.4531394861419794, Relative Error = 0.9999999779317404
+Iter = 2, GradNorm = 0.273772034676391, Relative Error = 0.6041672310784661
+Iter = 3, GradNorm = 0.19971880149663285, Relative Error = 0.4407446342617113
+Iter = 4, GradNorm = 0.1489866035382561, Relative Error = 0.32878750320094596
+Iter = 5, GradNorm = 0.1380123702049146, Relative Error = 0.30456928027671204
+Iter = 6, GradNorm = 0.13398072581446782, Relative Error = 0.29567214280630366
+Iter = 7, GradNorm = 0.07189749420052409, Relative Error = 0.15866525609146392
+Iter = 8, GradNorm = 0.07279814382556608, Relative Error = 0.16065283305774056
+Iter = 9, GradNorm = 0.07342580738457852, Relative Error = 0.16203797728894606
+Iter = 10, GradNorm = 0.07156919068220864, Relative Error = 0.1579407473670852
+Iter = 11, GradNorm = 0.07299519619306581, Relative Error = 0.16108769333625836
+Iter = 12, GradNorm = 0.04775083466907256, Relative Error = 0.10537778118134086
+Log-partition = 0.21572431049002497
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [198.].
+Iter = 1, GradNorm = 0.49287327087928373, Relative Error = 0.9999999797108093
+Iter = 2, GradNorm = 0.2629664096654786, Relative Error = 0.5335375640496228
+Iter = 3, GradNorm = 0.20437563727397784, Relative Error = 0.4146616284603065
+Iter = 4, GradNorm = 0.1421582137881126, Relative Error = 0.28842751129560723
+Iter = 5, GradNorm = 0.10859285244076085, Relative Error = 0.22032610947591172
+Iter = 6, GradNorm = 0.08490517178631107, Relative Error = 0.1722657224080815
+Iter = 7, GradNorm = 0.0796317406881484, Relative Error = 0.16156635747445214
+Iter = 8, GradNorm = 0.0650661060941332, Relative Error = 0.13201386364068177
+Iter = 9, GradNorm = 0.07783609642915203, Relative Error = 0.15792314058959087
+Iter = 10, GradNorm = 0.062365238005087434, Relative Error = 0.1265340208619711
+Iter = 11, GradNorm = 0.08713544257185228, Relative Error = 0.17679076134215074
+Iter = 12, GradNorm = 0.08113695338292264, Relative Error = 0.1646203122193491
+Iter = 13, GradNorm = 0.06404570695483201, Relative Error = 0.12994355636518734
+Iter = 14, GradNorm = 0.0670079323956532, Relative Error = 0.13595367205970538
+Iter = 15, GradNorm = 0.059031826258313845, Relative Error = 0.11977079819178132
+Iter = 16, GradNorm = 0.05965359375734527, Relative Error = 0.12103231412935091
+Iter = 17, GradNorm = 0.06877312709379034, Relative Error = 0.13953510924978402
+Iter = 18, GradNorm = 0.07175998796223923, Relative Error = 0.14559520823328004
+Iter = 19, GradNorm = 0.042550924345488586, Relative Error = 0.08633238196555904
+Log-partition = 0.19381548249771433
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [202.].
+Iter = 1, GradNorm = 0.5050905811465158, Relative Error = 0.9999999802015713
+Iter = 2, GradNorm = 0.2489032930271727, Relative Error = 0.4927894072668862
+Iter = 3, GradNorm = 0.17936407882627808, Relative Error = 0.3551126906148375
+Iter = 4, GradNorm = 0.13704115740806327, Relative Error = 0.2713199568754402
+Iter = 5, GradNorm = 0.13081896972222803, Relative Error = 0.25900100301864515
+Iter = 6, GradNorm = 0.095579991309162, Relative Error = 0.18923336325114065
+Iter = 7, GradNorm = 0.08113362847490374, Relative Error = 0.16063183495605568
+Iter = 8, GradNorm = 0.0969033218717922, Relative Error = 0.19185334981558314
+Iter = 9, GradNorm = 0.0928487261701825, Relative Error = 0.18382588746985604
+Iter = 10, GradNorm = 0.06568719852768318, Relative Error = 0.13005033092891002
+Iter = 11, GradNorm = 0.07308720240457268, Relative Error = 0.14470117576070957
+Iter = 12, GradNorm = 0.06749001706151522, Relative Error = 0.1336196283290849
+Iter = 13, GradNorm = 0.05303790297301442, Relative Error = 0.10500671345435786
+Iter = 14, GradNorm = 0.05444112655458384, Relative Error = 0.10778487564182648
+Iter = 15, GradNorm = 0.06231187668965784, Relative Error = 0.12336772409126605
+Iter = 16, GradNorm = 0.06947401381232209, Relative Error = 0.1375476301283331
+Iter = 17, GradNorm = 0.05865658876228919, Relative Error = 0.11613082839088995
+Iter = 18, GradNorm = 0.05339315906831659, Relative Error = 0.10571006469773733
+Iter = 19, GradNorm = 0.059552011782565396, Relative Error = 0.11790362526331567
+Iter = 20, GradNorm = 0.048434995707144525, Relative Error = 0.09589368037365514
+Log-partition = 0.2548915188146583
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [206.].
+Iter = 1, GradNorm = 0.47379016585255157, Relative Error = 0.9999999788936105
+Iter = 2, GradNorm = 0.26183486318962046, Relative Error = 0.55263886111287
+Iter = 3, GradNorm = 0.1788984203328972, Relative Error = 0.3775899743192908
+Iter = 4, GradNorm = 0.1600761231003783, Relative Error = 0.33786290062332497
+Iter = 5, GradNorm = 0.1479392490327242, Relative Error = 0.3122463414664901
+Iter = 6, GradNorm = 0.10419114875850824, Relative Error = 0.21990989697290306
+Iter = 7, GradNorm = 0.07716974094191137, Relative Error = 0.16287746111039542
+Iter = 8, GradNorm = 0.0857497728924208, Relative Error = 0.18098681075039222
+Iter = 9, GradNorm = 0.06386113606366389, Relative Error = 0.13478780126403073
+Iter = 10, GradNorm = 0.06329079342546874, Relative Error = 0.13358401387614566
+Iter = 11, GradNorm = 0.05793627953922397, Relative Error = 0.12228256830140426
+Iter = 12, GradNorm = 0.05548606201816975, Relative Error = 0.1171110437617803
+Iter = 13, GradNorm = 0.06941958822474624, Relative Error = 0.1465196869053493
+Iter = 14, GradNorm = 0.04928631066493588, Relative Error = 0.10402560706593099
+Log-partition = 0.21589142743449063
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [210.].
+Iter = 1, GradNorm = 0.47427412963905785, Relative Error = 0.9999999789151481
+Iter = 2, GradNorm = 0.274816721014253, Relative Error = 0.57944698655381
+Iter = 3, GradNorm = 0.21637149197902195, Relative Error = 0.4562160866364959
+Iter = 4, GradNorm = 0.1466683782470018, Relative Error = 0.309248103551719
+Iter = 5, GradNorm = 0.10046705913405113, Relative Error = 0.2118333063879694
+Iter = 6, GradNorm = 0.10262225521144358, Relative Error = 0.21637750540129247
+Iter = 7, GradNorm = 0.07232623873038974, Relative Error = 0.1524988032985163
+Iter = 8, GradNorm = 0.08961461462658761, Relative Error = 0.18895108785561873
+Iter = 9, GradNorm = 0.054409505624816557, Relative Error = 0.11472163687065973
+Iter = 10, GradNorm = 0.07271942128389927, Relative Error = 0.15332782289003097
+Iter = 11, GradNorm = 0.049598593370790985, Relative Error = 0.10457789962686466
+Log-partition = 0.1834032612437171
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [214.].
+Iter = 1, GradNorm = 0.4878647721442489, Relative Error = 0.9999999795025172
+Iter = 2, GradNorm = 0.2589648034360013, Relative Error = 0.5308126614464911
+Iter = 3, GradNorm = 0.1949776226598912, Relative Error = 0.39965504745583663
+Iter = 4, GradNorm = 0.13884077616488505, Relative Error = 0.2845886426863119
+Iter = 5, GradNorm = 0.1261669594932779, Relative Error = 0.25861050871258345
+Iter = 6, GradNorm = 0.08704333543062721, Relative Error = 0.17841692742824541
+Iter = 7, GradNorm = 0.08590382776607178, Relative Error = 0.1760812235482746
+Iter = 8, GradNorm = 0.08506163687243716, Relative Error = 0.1743549442092884
+Iter = 9, GradNorm = 0.0820827637585669, Relative Error = 0.16824900415602695
+Iter = 10, GradNorm = 0.0709418156491942, Relative Error = 0.14541286488726002
+Iter = 11, GradNorm = 0.050401602418015785, Relative Error = 0.10331059806467717
+Iter = 12, GradNorm = 0.060113975436133185, Relative Error = 0.12321851799164928
+Iter = 13, GradNorm = 0.08685149357623692, Relative Error = 0.17802369991641906
+Iter = 14, GradNorm = 0.0625098757387255, Relative Error = 0.12812951052540408
+Iter = 15, GradNorm = 0.0674794555800559, Relative Error = 0.13831589827712545
+Iter = 16, GradNorm = 0.05780160650962639, Relative Error = 0.11847874375268179
+Iter = 17, GradNorm = 0.05492019599397847, Relative Error = 0.11257257749287589
+Iter = 18, GradNorm = 0.04826144868424386, Relative Error = 0.09892382162148816
+Log-partition = 0.253864945624665
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [218.].
+Iter = 1, GradNorm = 0.47440520951449205, Relative Error = 0.9999999789209739
+Iter = 2, GradNorm = 0.2610995786855689, Relative Error = 0.5503724831543361
+Iter = 3, GradNorm = 0.20823923321509727, Relative Error = 0.43894802301755875
+Iter = 4, GradNorm = 0.13494020511454682, Relative Error = 0.2844408104376362
+Iter = 5, GradNorm = 0.11908896249588458, Relative Error = 0.2510279347637883
+Iter = 6, GradNorm = 0.09644023910671246, Relative Error = 0.2032866316382643
+Iter = 7, GradNorm = 0.08798354005442184, Relative Error = 0.18546073364130458
+Iter = 8, GradNorm = 0.08066512431735133, Relative Error = 0.17003422601442772
+Iter = 9, GradNorm = 0.07371170167958026, Relative Error = 0.15537708829387895
+Iter = 10, GradNorm = 0.06719236021764016, Relative Error = 0.141634951416439
+Iter = 11, GradNorm = 0.0663874124763497, Relative Error = 0.13993819997235868
+Iter = 12, GradNorm = 0.06434798874113386, Relative Error = 0.13563929335977334
+Iter = 13, GradNorm = 0.08986094850746837, Relative Error = 0.1894181278178861
+Iter = 14, GradNorm = 0.07748226295250554, Relative Error = 0.16332506423896676
+Iter = 15, GradNorm = 0.06556353332003066, Relative Error = 0.13820154294914505
+Iter = 16, GradNorm = 0.0461063179708662, Relative Error = 0.09718762794821602
+Log-partition = 0.2768103867705428
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [222.].
+Iter = 1, GradNorm = 0.4815630742915919, Relative Error = 0.9999999792342886
+Iter = 2, GradNorm = 0.28391341566761213, Relative Error = 0.5895664035071662
+Iter = 3, GradNorm = 0.18336837905674333, Relative Error = 0.3807774828223994
+Iter = 4, GradNorm = 0.14026626905950612, Relative Error = 0.29127288539121765
+Iter = 5, GradNorm = 0.11806158681376644, Relative Error = 0.2451632832019134
+Iter = 6, GradNorm = 0.08877777853440622, Relative Error = 0.1843533722378318
+Iter = 7, GradNorm = 0.08597319468952791, Relative Error = 0.17852945438290732
+Iter = 8, GradNorm = 0.07678783501391934, Relative Error = 0.15945540162589256
+Iter = 9, GradNorm = 0.08513976892049768, Relative Error = 0.1767987864886765
+Iter = 10, GradNorm = 0.06452373272052606, Relative Error = 0.13398812082002573
+Iter = 11, GradNorm = 0.057646395379739174, Relative Error = 0.11970684061993761
+Iter = 12, GradNorm = 0.058645478009123744, Relative Error = 0.1217815067685156
+Iter = 13, GradNorm = 0.06024304084880336, Relative Error = 0.1250989596460129
+Iter = 14, GradNorm = 0.06507400303682487, Relative Error = 0.13513079627470329
+Iter = 15, GradNorm = 0.0631899170769534, Relative Error = 0.13121835775661572
+Iter = 16, GradNorm = 0.05429714949362144, Relative Error = 0.11275189329243497
+Iter = 17, GradNorm = 0.054587459694121265, Relative Error = 0.1133547430746746
+Iter = 18, GradNorm = 0.06178006209697397, Relative Error = 0.12829069360218118
+Iter = 19, GradNorm = 0.0681036059763133, Relative Error = 0.14142198228607533
+Iter = 20, GradNorm = 0.05058283230516692, Relative Error = 0.10503884943667825
+Iter = 21, GradNorm = 0.049150691257112473, Relative Error = 0.10206490667659063
+Log-partition = 0.274703115678234
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [226.].
+Iter = 1, GradNorm = 0.4745068937743744, Relative Error = 0.9999999789254911
+Iter = 2, GradNorm = 0.2631175974471871, Relative Error = 0.5545074167609966
+Iter = 3, GradNorm = 0.19411223436206576, Relative Error = 0.4090820024282832
+Iter = 4, GradNorm = 0.11715492158558871, Relative Error = 0.24689824458548928
+Iter = 5, GradNorm = 0.11873732172346683, Relative Error = 0.25023307517550014
+Iter = 6, GradNorm = 0.11941719720230012, Relative Error = 0.25166587936322715
+Iter = 7, GradNorm = 0.08060111113495927, Relative Error = 0.16986288396192584
+Iter = 8, GradNorm = 0.10734751704153507, Relative Error = 0.22622962108171615
+Iter = 9, GradNorm = 0.07062023426359447, Relative Error = 0.14882867604635322
+Iter = 10, GradNorm = 0.07030836765807202, Relative Error = 0.14817143248879536
+Iter = 11, GradNorm = 0.0595151271447813, Relative Error = 0.12542520808734206
+Iter = 12, GradNorm = 0.07997418579584886, Relative Error = 0.16854166959365502
+Iter = 13, GradNorm = 0.053386962226838745, Relative Error = 0.11251040143395674
+Iter = 14, GradNorm = 0.052783062175678144, Relative Error = 0.11123771172942981
+Iter = 15, GradNorm = 0.05629841972693022, Relative Error = 0.118646155154151
+Iter = 16, GradNorm = 0.051433554983904575, Relative Error = 0.10839369158759589
+Iter = 17, GradNorm = 0.04456242389965526, Relative Error = 0.0939131202205742
+Log-partition = 0.23509617469861852
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [230.].
+Iter = 1, GradNorm = 0.5069696593124569, Relative Error = 0.999999980274954
+Iter = 2, GradNorm = 0.2826588787377228, Relative Error = 0.5575459358763211
+Iter = 3, GradNorm = 0.18725078489348704, Relative Error = 0.3693530327907647
+Iter = 4, GradNorm = 0.13000088939287488, Relative Error = 0.25642735110599363
+Iter = 5, GradNorm = 0.11861548915852925, Relative Error = 0.23396959687823815
+Iter = 6, GradNorm = 0.07919103456076253, Relative Error = 0.15620467920331402
+Iter = 7, GradNorm = 0.10340083605043832, Relative Error = 0.20395862377855595
+Iter = 8, GradNorm = 0.07195913365600821, Relative Error = 0.1419397214701185
+Iter = 9, GradNorm = 0.08743917809412131, Relative Error = 0.17247418018656765
+Iter = 10, GradNorm = 0.09398760655717053, Relative Error = 0.18539098539096988
+Iter = 11, GradNorm = 0.056313943593406905, Relative Error = 0.11107951225125333
+Iter = 12, GradNorm = 0.06650920606773332, Relative Error = 0.13118971428395687
+Iter = 13, GradNorm = 0.05730523165879203, Relative Error = 0.11303483251080552
+Iter = 14, GradNorm = 0.05024730886653225, Relative Error = 0.09911304740316466
+Iter = 15, GradNorm = 0.04384294088067685, Relative Error = 0.08648040215134734
+Log-partition = 0.2016033969650595
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [234.].
+Iter = 1, GradNorm = 0.46038222501738413, Relative Error = 0.9999999782789186
+Iter = 2, GradNorm = 0.26220657272032616, Relative Error = 0.5695410308575986
+Iter = 3, GradNorm = 0.19991160727460716, Relative Error = 0.43422962935800175
+Iter = 4, GradNorm = 0.13726599181055937, Relative Error = 0.29815657809944857
+Iter = 5, GradNorm = 0.12291366886470116, Relative Error = 0.2669817806068471
+Iter = 6, GradNorm = 0.10619213596181197, Relative Error = 0.230660802882201
+Iter = 7, GradNorm = 0.08675022026994036, Relative Error = 0.18843085955882868
+Iter = 8, GradNorm = 0.07057869757672784, Relative Error = 0.15330456348747423
+Iter = 9, GradNorm = 0.0688652082640702, Relative Error = 0.14958267940436457
+Iter = 10, GradNorm = 0.05722031264258242, Relative Error = 0.12428870684035358
+Iter = 11, GradNorm = 0.0661775240605156, Relative Error = 0.1437447386691989
+Iter = 12, GradNorm = 0.05955697896039798, Relative Error = 0.12936419876876679
+Iter = 13, GradNorm = 0.06273289888330712, Relative Error = 0.1362626402839769
+Iter = 14, GradNorm = 0.050932439865852594, Relative Error = 0.11063076720136557
+Iter = 15, GradNorm = 0.08146035251381027, Relative Error = 0.17694069474842858
+Iter = 16, GradNorm = 0.052762289461664474, Relative Error = 0.11460539840263854
+Iter = 17, GradNorm = 0.07098163273833066, Relative Error = 0.1541797822317153
+Iter = 18, GradNorm = 0.08164874260048928, Relative Error = 0.17734989838912052
+Iter = 19, GradNorm = 0.059996559853400376, Relative Error = 0.1303190160044618
+Iter = 20, GradNorm = 0.05890111153710391, Relative Error = 0.12793958380014336
+Iter = 21, GradNorm = 0.045141982870038525, Relative Error = 0.09805326842886097
+Log-partition = 0.2182722145752657
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [238.].
+Iter = 1, GradNorm = 0.47469267746470256, Relative Error = 0.9999999789337392
+Iter = 2, GradNorm = 0.26135732757128616, Relative Error = 0.550582164994316
+Iter = 3, GradNorm = 0.18733058837278746, Relative Error = 0.3946355048638011
+Iter = 4, GradNorm = 0.13609399092083502, Relative Error = 0.28669915192438006
+Iter = 5, GradNorm = 0.13894701244146537, Relative Error = 0.2927094014941978
+Iter = 6, GradNorm = 0.10586477728704753, Relative Error = 0.22301750181251628
+Iter = 7, GradNorm = 0.10005039122187578, Relative Error = 0.2107687644320735
+Iter = 8, GradNorm = 0.07830173251386748, Relative Error = 0.1649524725819373
+Iter = 9, GradNorm = 0.06716815586581083, Relative Error = 0.14149818954353569
+Iter = 10, GradNorm = 0.058229837986413076, Relative Error = 0.12266849590081996
+Iter = 11, GradNorm = 0.06031089683487042, Relative Error = 0.1270525087651683
+Iter = 12, GradNorm = 0.06136017228975913, Relative Error = 0.12926293981371217
+Iter = 13, GradNorm = 0.06181505524448683, Relative Error = 0.13022120811389853
+Iter = 14, GradNorm = 0.06945571608114273, Relative Error = 0.1463172235748994
+Iter = 15, GradNorm = 0.049557008128850916, Relative Error = 0.10439808625140429
+Log-partition = 0.17987856805574767
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [242.].
+Iter = 1, GradNorm = 0.47288904407783056, Relative Error = 0.9999999788533909
+Iter = 2, GradNorm = 0.2853798404028601, Relative Error = 0.6034815945557724
+Iter = 3, GradNorm = 0.18108097020446848, Relative Error = 0.38292485022219447
+Iter = 4, GradNorm = 0.1252171831826383, Relative Error = 0.2647918832184037
+Iter = 5, GradNorm = 0.11010553124431183, Relative Error = 0.23283586349662067
+Iter = 6, GradNorm = 0.09423478227717978, Relative Error = 0.1992746109569923
+Iter = 7, GradNorm = 0.09693389331510209, Relative Error = 0.20498231557533197
+Iter = 8, GradNorm = 0.07436584898608968, Relative Error = 0.1572585542947462
+Iter = 9, GradNorm = 0.07113272688080412, Relative Error = 0.15042159734383853
+Iter = 10, GradNorm = 0.06287301668912876, Relative Error = 0.13295511102860247
+Iter = 11, GradNorm = 0.0836592883777772, Relative Error = 0.17691102734640188
+Iter = 12, GradNorm = 0.0641335739473347, Relative Error = 0.13562076219421068
+Iter = 13, GradNorm = 0.05376597655135093, Relative Error = 0.11369680919385765
+Iter = 14, GradNorm = 0.05305466487492376, Relative Error = 0.11219262619301766
+Iter = 15, GradNorm = 0.05764557099558406, Relative Error = 0.12190083593285382
+Iter = 16, GradNorm = 0.05570800508093725, Relative Error = 0.11780354102205236
+Iter = 17, GradNorm = 0.0470825392900689, Relative Error = 0.09956360563659782
+Log-partition = 0.19501881188954667
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [246.].
+Iter = 1, GradNorm = 0.48135597905868277, Relative Error = 0.9999999792253546
+Iter = 2, GradNorm = 0.25812682303495826, Relative Error = 0.5362493225434651
+Iter = 3, GradNorm = 0.20113133013047985, Relative Error = 0.4178432069034871
+Iter = 4, GradNorm = 0.14182286330042218, Relative Error = 0.2946319699434182
+Iter = 5, GradNorm = 0.1298277027969545, Relative Error = 0.2697124493056365
+Iter = 6, GradNorm = 0.1249739239553432, Relative Error = 0.2596288958609123
+Iter = 7, GradNorm = 0.10085391607946273, Relative Error = 0.20952043471337695
+Iter = 8, GradNorm = 0.0878573943342761, Relative Error = 0.18252062160083624
+Iter = 9, GradNorm = 0.06851449073577048, Relative Error = 0.14233642520944678
+Iter = 10, GradNorm = 0.06153282529485107, Relative Error = 0.12783226280238413
+Iter = 11, GradNorm = 0.05979338355128646, Relative Error = 0.12421863425490062
+Iter = 12, GradNorm = 0.06930787724802137, Relative Error = 0.14398465755782244
+Iter = 13, GradNorm = 0.055685902106915874, Relative Error = 0.1156854871917406
+Iter = 14, GradNorm = 0.05669782046846571, Relative Error = 0.11778771170862819
+Iter = 15, GradNorm = 0.059000458019939035, Relative Error = 0.12257135957800705
+Iter = 16, GradNorm = 0.06664823204382891, Relative Error = 0.13845933894821394
+Iter = 17, GradNorm = 0.05726750009159892, Relative Error = 0.1189712009267581
+Iter = 18, GradNorm = 0.052575991737233006, Relative Error = 0.1092247586657188
+Iter = 19, GradNorm = 0.042552450948349405, Relative Error = 0.08840120807796115
+Log-partition = 0.23029406547458328
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [250.].
+Iter = 1, GradNorm = 0.4855955903466319, Relative Error = 0.9999999794067327
+Iter = 2, GradNorm = 0.27331319099902635, Relative Error = 0.5628411600185991
+Iter = 3, GradNorm = 0.17273702626388854, Relative Error = 0.3557219755298111
+Iter = 4, GradNorm = 0.1414891562718599, Relative Error = 0.29137240158448907
+Iter = 5, GradNorm = 0.12662541456096596, Relative Error = 0.26076310096421207
+Iter = 6, GradNorm = 0.10188529928968473, Relative Error = 0.20981512027076876
+Iter = 7, GradNorm = 0.07472990861455205, Relative Error = 0.15389329837668983
+Iter = 8, GradNorm = 0.08180818348372672, Relative Error = 0.16846977902050536
+Iter = 9, GradNorm = 0.07552894062515976, Relative Error = 0.1555387663546479
+Iter = 10, GradNorm = 0.08985601066928219, Relative Error = 0.18504288466604807
+Iter = 11, GradNorm = 0.060973648038969756, Relative Error = 0.1255646632618686
+Iter = 12, GradNorm = 0.06515952626139572, Relative Error = 0.13418475417586775
+Iter = 13, GradNorm = 0.06417086502296639, Relative Error = 0.13214877766017527
+Iter = 14, GradNorm = 0.055454470629782884, Relative Error = 0.11419887369283806
+Iter = 15, GradNorm = 0.08408522311381436, Relative Error = 0.1731589475971198
+Iter = 16, GradNorm = 0.05659521085725221, Relative Error = 0.1165480305358058
+Iter = 17, GradNorm = 0.06099222901954037, Relative Error = 0.1256029275718363
+Iter = 18, GradNorm = 0.05570560224559061, Relative Error = 0.11471603574214094
+Iter = 19, GradNorm = 0.0516286780245125, Relative Error = 0.10632031671551077
+Iter = 20, GradNorm = 0.04765762237638096, Relative Error = 0.09814261567106786
+Log-partition = 0.1902661285299813
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [254.].
+Iter = 1, GradNorm = 0.4515133077077411, Relative Error = 0.999999977852259
+Iter = 2, GradNorm = 0.2857665137393157, Relative Error = 0.632908272097278
+Iter = 3, GradNorm = 0.18476978795794852, Relative Error = 0.40922334006889177
+Iter = 4, GradNorm = 0.1515860164314904, Relative Error = 0.3357287824887817
+Iter = 5, GradNorm = 0.09936694763226263, Relative Error = 0.22007534160173234
+Iter = 6, GradNorm = 0.08917352109997238, Relative Error = 0.19749920456984899
+Iter = 7, GradNorm = 0.09678610256273804, Relative Error = 0.21435935279629217
+Iter = 8, GradNorm = 0.07414121893494231, Relative Error = 0.16420605113343079
+Iter = 9, GradNorm = 0.0704059920209413, Relative Error = 0.15593336732210017
+Iter = 10, GradNorm = 0.06117326452493669, Relative Error = 0.13548496162971072
+Iter = 11, GradNorm = 0.06618031072091948, Relative Error = 0.1465744378414042
+Iter = 12, GradNorm = 0.07554577214029581, Relative Error = 0.16731681918892066
+Iter = 13, GradNorm = 0.06757909285305279, Relative Error = 0.14967242427342062
+Iter = 14, GradNorm = 0.054450226600624325, Relative Error = 0.12059495138938355
+Iter = 15, GradNorm = 0.06615917188120071, Relative Error = 0.14652762008677828
+Iter = 16, GradNorm = 0.04605780196541659, Relative Error = 0.10200762670577355
+Log-partition = 0.21581281090665502
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [258.].
+Iter = 1, GradNorm = 0.4935694607291834, Relative Error = 0.9999999797394276
+Iter = 2, GradNorm = 0.2724196486782543, Relative Error = 0.5519378017359753
+Iter = 3, GradNorm = 0.18412728490051172, Relative Error = 0.3730524187982861
+Iter = 4, GradNorm = 0.14953584437943862, Relative Error = 0.3029681802614721
+Iter = 5, GradNorm = 0.11899980980561436, Relative Error = 0.2411004263083937
+Iter = 6, GradNorm = 0.08884707135950941, Relative Error = 0.18000925225024483
+Iter = 7, GradNorm = 0.1027256460531487, Relative Error = 0.20812803900003213
+Iter = 8, GradNorm = 0.07320378366474019, Relative Error = 0.1483150559466154
+Iter = 9, GradNorm = 0.07495177777158125, Relative Error = 0.1518565920636257
+Iter = 10, GradNorm = 0.06851069836989841, Relative Error = 0.1388065965033918
+Iter = 11, GradNorm = 0.04935906901711412, Relative Error = 0.1000042991804024
+Log-partition = 0.18636094741206483
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [262.].
+Iter = 1, GradNorm = 0.48573186157454645, Relative Error = 0.9999999794125101
+Iter = 2, GradNorm = 0.29282304188969377, Relative Error = 0.6028491417301479
+Iter = 3, GradNorm = 0.17749414611447753, Relative Error = 0.3654158940386457
+Iter = 4, GradNorm = 0.14835681154814465, Relative Error = 0.30542943592981003
+Iter = 5, GradNorm = 0.10990479541741843, Relative Error = 0.22626638655839382
+Iter = 6, GradNorm = 0.1281290798721575, Relative Error = 0.26378561377250126
+Iter = 7, GradNorm = 0.08650250796679117, Relative Error = 0.1780869509064435
+Iter = 8, GradNorm = 0.07250314441869447, Relative Error = 0.14926577534158625
+Iter = 9, GradNorm = 0.08254081097241973, Relative Error = 0.16993081122071685
+Iter = 10, GradNorm = 0.05251797728550569, Relative Error = 0.10812133269176599
+Iter = 11, GradNorm = 0.056549375086059436, Relative Error = 0.11642096884182052
+Iter = 12, GradNorm = 0.07349084199015996, Relative Error = 0.15129919671923595
+Iter = 13, GradNorm = 0.05996203729830021, Relative Error = 0.12344678372437763
+Iter = 14, GradNorm = 0.06131667329160844, Relative Error = 0.12623563920737704
+Iter = 15, GradNorm = 0.04395687632155432, Relative Error = 0.09049617472920582
+Log-partition = 0.20327494837444066
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [266.].
+Iter = 1, GradNorm = 0.5041285844266681, Relative Error = 0.9999999801637912
+Iter = 2, GradNorm = 0.24804168332246318, Relative Error = 0.4920206591426426
+Iter = 3, GradNorm = 0.19704807868355612, Relative Error = 0.39086868085245907
+Iter = 4, GradNorm = 0.1398158799808555, Relative Error = 0.2773416971910993
+Iter = 5, GradNorm = 0.11914011346823666, Relative Error = 0.2363288152772439
+Iter = 6, GradNorm = 0.10047142748261165, Relative Error = 0.19929722018025003
+Iter = 7, GradNorm = 0.07416311192216943, Relative Error = 0.1471114964357718
+Iter = 8, GradNorm = 0.06559161369683711, Relative Error = 0.130108893687002
+Iter = 9, GradNorm = 0.0795685859370875, Relative Error = 0.15783390749254902
+Iter = 10, GradNorm = 0.06770321772397327, Relative Error = 0.13429751549992977
+Iter = 11, GradNorm = 0.06636236818918065, Relative Error = 0.13163777838202728
+Iter = 12, GradNorm = 0.06561061981966233, Relative Error = 0.1301465946288556
+Iter = 13, GradNorm = 0.06763738350439662, Relative Error = 0.1341669253681569
+Iter = 14, GradNorm = 0.07101356277947436, Relative Error = 0.14086398503190675
+Iter = 15, GradNorm = 0.055832286566622424, Relative Error = 0.1107500887350359
+Iter = 16, GradNorm = 0.05743580729012376, Relative Error = 0.11393086590425197
+Iter = 17, GradNorm = 0.04715648217271456, Relative Error = 0.093540582093631
+Log-partition = 0.21466669062666924
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [270.].
+Iter = 1, GradNorm = 0.4834426157541381, Relative Error = 0.9999999793150222
+Iter = 2, GradNorm = 0.26434254922412814, Relative Error = 0.5467919772522571
+Iter = 3, GradNorm = 0.1924649687041388, Relative Error = 0.39811336123683
+Iter = 4, GradNorm = 0.1275482647568939, Relative Error = 0.26383330298590685
+Iter = 5, GradNorm = 0.12966875007421186, Relative Error = 0.26821952216550476
+Iter = 6, GradNorm = 0.08650000234529497, Relative Error = 0.1789250631558621
+Iter = 7, GradNorm = 0.09387415178276162, Relative Error = 0.19417847492517698
+Iter = 8, GradNorm = 0.07802330954931098, Relative Error = 0.1613910428928352
+Iter = 9, GradNorm = 0.09348855910540906, Relative Error = 0.19338087732659728
+Iter = 10, GradNorm = 0.08364920565930295, Relative Error = 0.17302819652862797
+Iter = 11, GradNorm = 0.06733350439375856, Relative Error = 0.13927920461858903
+Iter = 12, GradNorm = 0.05492112898310479, Relative Error = 0.11360423358910793
+Iter = 13, GradNorm = 0.06335279393686769, Relative Error = 0.1310451138602881
+Iter = 14, GradNorm = 0.0677272871478447, Relative Error = 0.14009374337274186
+Iter = 15, GradNorm = 0.060335065909504916, Relative Error = 0.1248029501233704
+Iter = 16, GradNorm = 0.048229626840774434, Relative Error = 0.09976287623694631
+Log-partition = 0.1897321098472564
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [274.].
+Iter = 1, GradNorm = 0.4725582159922989, Relative Error = 0.9999999788385866
+Iter = 2, GradNorm = 0.28028253962268784, Relative Error = 0.5931174704114779
+Iter = 3, GradNorm = 0.17513930612772294, Relative Error = 0.370619526852924
+Iter = 4, GradNorm = 0.14557449954761545, Relative Error = 0.30805621728821164
+Iter = 5, GradNorm = 0.11612787930645939, Relative Error = 0.24574300672178306
+Iter = 6, GradNorm = 0.12041072297821988, Relative Error = 0.2548061092902913
+Iter = 7, GradNorm = 0.0926591146440221, Relative Error = 0.1960797835006519
+Iter = 8, GradNorm = 0.07857424053910149, Relative Error = 0.1662741990663855
+Iter = 9, GradNorm = 0.0841295700026825, Relative Error = 0.1780300614300459
+Iter = 10, GradNorm = 0.06214159412774637, Relative Error = 0.13150039658553964
+Iter = 11, GradNorm = 0.060866419590710916, Relative Error = 0.1288019470254716
+Iter = 12, GradNorm = 0.06389308085492497, Relative Error = 0.1352067900643554
+Iter = 13, GradNorm = 0.06568112652179088, Relative Error = 0.1389905474269773
+Iter = 14, GradNorm = 0.05544644320908796, Relative Error = 0.11733251091473233
+Iter = 15, GradNorm = 0.06803021861073737, Relative Error = 0.14396155831989693
+Iter = 16, GradNorm = 0.04629559753268444, Relative Error = 0.09796802803606026
+Log-partition = 0.21988324778264182
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [278.].
+Iter = 1, GradNorm = 0.48590410189875105, Relative Error = 0.9999999794198079
+Iter = 2, GradNorm = 0.25651381776816784, Relative Error = 0.5279103664420486
+Iter = 3, GradNorm = 0.2032963469727036, Relative Error = 0.4183877888546556
+Iter = 4, GradNorm = 0.13359764481352843, Relative Error = 0.2749465203977662
+Iter = 5, GradNorm = 0.1361053212469012, Relative Error = 0.2801073666881456
+Iter = 6, GradNorm = 0.09520385055961977, Relative Error = 0.1959313540023255
+Iter = 7, GradNorm = 0.07168266120507381, Relative Error = 0.14752429429946973
+Iter = 8, GradNorm = 0.08722474415585468, Relative Error = 0.17951019968736115
+Iter = 9, GradNorm = 0.08580800234397729, Relative Error = 0.17659451781271876
+Iter = 10, GradNorm = 0.06078613043995972, Relative Error = 0.12509902458414648
+Iter = 11, GradNorm = 0.06691858796490192, Relative Error = 0.13771974001908818
+Iter = 12, GradNorm = 0.061055644839502765, Relative Error = 0.1256536903977159
+Iter = 13, GradNorm = 0.05277836610050872, Relative Error = 0.1086188916868155
+Iter = 14, GradNorm = 0.052356475841351516, Relative Error = 0.10775063342592407
+Iter = 15, GradNorm = 0.055447629100965165, Relative Error = 0.11411228623749312
+Iter = 16, GradNorm = 0.051142088861691366, Relative Error = 0.10525140168467634
+Iter = 17, GradNorm = 0.07266000616972018, Relative Error = 0.14953568901853728
+Iter = 18, GradNorm = 0.050166454125893045, Relative Error = 0.10324352664944383
+Iter = 19, GradNorm = 0.06477859591679831, Relative Error = 0.13331559525945394
+Iter = 20, GradNorm = 0.05508512164882263, Relative Error = 0.11336623893460865
+Iter = 21, GradNorm = 0.04727787642361168, Relative Error = 0.09729877822779791
+Log-partition = 0.23356024878611772
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [282.].
+Iter = 1, GradNorm = 0.5064251445525642, Relative Error = 0.9999999802537454
+Iter = 2, GradNorm = 0.2559319949435235, Relative Error = 0.505369831341897
+Iter = 3, GradNorm = 0.17340421254371624, Relative Error = 0.3424083716712729
+Iter = 4, GradNorm = 0.15310702542850158, Relative Error = 0.30232902937804185
+Iter = 5, GradNorm = 0.13113599987008648, Relative Error = 0.258944483091381
+Iter = 6, GradNorm = 0.11419444260754937, Relative Error = 0.2254912529146429
+Iter = 7, GradNorm = 0.10076835788927738, Relative Error = 0.19897976430161343
+Iter = 8, GradNorm = 0.06375618987822551, Relative Error = 0.12589459529228017
+Iter = 9, GradNorm = 0.07716546203160646, Relative Error = 0.15237288538675284
+Iter = 10, GradNorm = 0.05570495841581216, Relative Error = 0.1099964287220853
+Iter = 11, GradNorm = 0.07841012090629296, Relative Error = 0.154830620480473
+Iter = 12, GradNorm = 0.05675585597874551, Relative Error = 0.11207155779789481
+Iter = 13, GradNorm = 0.07636662008959647, Relative Error = 0.15079547175548133
+Iter = 14, GradNorm = 0.08547925128876716, Relative Error = 0.16878950526122585
+Iter = 15, GradNorm = 0.05575386341747672, Relative Error = 0.11009299778313
+Iter = 16, GradNorm = 0.041596688389439224, Relative Error = 0.082137879636312
+Log-partition = 0.24949326558382778
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [286.].
+Iter = 1, GradNorm = 0.47057789168317804, Relative Error = 0.9999999787495334
+Iter = 2, GradNorm = 0.2803386787489898, Relative Error = 0.595732773991863
+Iter = 3, GradNorm = 0.1736440500001394, Relative Error = 0.36900170913050495
+Iter = 4, GradNorm = 0.1272839030512454, Relative Error = 0.2704842335264199
+Iter = 5, GradNorm = 0.11361041640206708, Relative Error = 0.2414274363409368
+Iter = 6, GradNorm = 0.12623685647167635, Relative Error = 0.2682592106857299
+Iter = 7, GradNorm = 0.08358289274603031, Relative Error = 0.1776175473754045
+Iter = 8, GradNorm = 0.0730260838833143, Relative Error = 0.15518383592198504
+Iter = 9, GradNorm = 0.08400047682051588, Relative Error = 0.1785049330197196
+Iter = 10, GradNorm = 0.07011232567552314, Relative Error = 0.14899196376358334
+Iter = 11, GradNorm = 0.056261189268137744, Relative Error = 0.11955765255210865
+Iter = 12, GradNorm = 0.08135341334697642, Relative Error = 0.17287979961657557
+Iter = 13, GradNorm = 0.05472504432770059, Relative Error = 0.11629327287141684
+Iter = 14, GradNorm = 0.06004641113772572, Relative Error = 0.12760142565757934
+Iter = 15, GradNorm = 0.0473493360373439, Relative Error = 0.10061954857630008
+Log-partition = 0.23429183650201688
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [290.].
+Iter = 1, GradNorm = 0.4663112644818249, Relative Error = 0.9999999785550971
+Iter = 2, GradNorm = 0.28577508302934007, Relative Error = 0.6128418905309537
+Iter = 3, GradNorm = 0.17968104889920153, Relative Error = 0.3853242645674115
+Iter = 4, GradNorm = 0.13597110010547467, Relative Error = 0.29158870382571955
+Iter = 5, GradNorm = 0.13667207246273697, Relative Error = 0.2930919322390605
+Iter = 6, GradNorm = 0.0812598673338808, Relative Error = 0.17426099642171103
+Iter = 7, GradNorm = 0.09291301016441503, Relative Error = 0.19925104806368227
+Iter = 8, GradNorm = 0.07308573487521865, Relative Error = 0.15673164873920983
+Iter = 9, GradNorm = 0.0726445393336983, Relative Error = 0.15578550918465883
+Iter = 10, GradNorm = 0.06191513464788339, Relative Error = 0.13277640502405783
+Iter = 11, GradNorm = 0.055429017575255375, Relative Error = 0.11886698994539492
+Iter = 12, GradNorm = 0.050980095504286345, Relative Error = 0.10932631976556115
+Iter = 13, GradNorm = 0.05205504358121732, Relative Error = 0.11163153547823179
+Iter = 14, GradNorm = 0.06740854362411601, Relative Error = 0.14455696722971545
+Iter = 15, GradNorm = 0.05422349141178719, Relative Error = 0.11628175079412674
+Iter = 16, GradNorm = 0.06471236267847165, Relative Error = 0.13877503337310773
+Iter = 17, GradNorm = 0.044126817782117904, Relative Error = 0.09462953223928067
+Log-partition = 0.23311064147285276
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [294.].
+Iter = 1, GradNorm = 0.4972746445634882, Relative Error = 0.9999999798903887
+Iter = 2, GradNorm = 0.27027944540580234, Relative Error = 0.5435214582634538
+Iter = 3, GradNorm = 0.16060720454263888, Relative Error = 0.3229748451258213
+Iter = 4, GradNorm = 0.14367089139813727, Relative Error = 0.28891657774967994
+Iter = 5, GradNorm = 0.13867167273082226, Relative Error = 0.27886334334201973
+Iter = 6, GradNorm = 0.09323001107436985, Relative Error = 0.18748192818354661
+Iter = 7, GradNorm = 0.09187683755479827, Relative Error = 0.18476074883697524
+Iter = 8, GradNorm = 0.08224906172418653, Relative Error = 0.1653996658976827
+Iter = 9, GradNorm = 0.07088810635712677, Relative Error = 0.14255322628367806
+Iter = 10, GradNorm = 0.06187558629152859, Relative Error = 0.12442939877127558
+Iter = 11, GradNorm = 0.06042943715625891, Relative Error = 0.12152124907573335
+Iter = 12, GradNorm = 0.06465319734221707, Relative Error = 0.1300150666214231
+Iter = 13, GradNorm = 0.05576576611612055, Relative Error = 0.11214278790273799
+Iter = 14, GradNorm = 0.058630809381847566, Relative Error = 0.117904278538616
+Iter = 15, GradNorm = 0.04407367749446295, Relative Error = 0.0886304521857266
+Log-partition = 0.21208552653537938
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [298.].
+Iter = 1, GradNorm = 0.4910829866988876, Relative Error = 0.9999999796368434
+Iter = 2, GradNorm = 0.2950471135548397, Relative Error = 0.6008090598497157
+Iter = 3, GradNorm = 0.17181026724334691, Relative Error = 0.3498599389477418
+Iter = 4, GradNorm = 0.15784473078672714, Relative Error = 0.3214216982623636
+Iter = 5, GradNorm = 0.11179381267602904, Relative Error = 0.22764749223149447
+Iter = 6, GradNorm = 0.09268316460960752, Relative Error = 0.18873218016635407
+Iter = 7, GradNorm = 0.09003226124325661, Relative Error = 0.1833341041096171
+Iter = 8, GradNorm = 0.06378621354549742, Relative Error = 0.12988886598451824
+Iter = 9, GradNorm = 0.07018169640053169, Relative Error = 0.1429120879205767
+Iter = 10, GradNorm = 0.06394255402689034, Relative Error = 0.1302072245561728
+Iter = 11, GradNorm = 0.06391266466969808, Relative Error = 0.13014636038984417
+Iter = 12, GradNorm = 0.05740879946765595, Relative Error = 0.11690243778254193
+Iter = 13, GradNorm = 0.05224715430181405, Relative Error = 0.10639169886358316
+Iter = 14, GradNorm = 0.07313333661402682, Relative Error = 0.14892255913081276
+Iter = 15, GradNorm = 0.05969447754261338, Relative Error = 0.12155679985641132
+Iter = 16, GradNorm = 0.05780802976460735, Relative Error = 0.11771539669098523
+Iter = 17, GradNorm = 0.04351260061282884, Relative Error = 0.08860539034200979
+Log-partition = 0.2518627587763846
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [302.].
+Iter = 1, GradNorm = 0.4711147806546939, Relative Error = 0.9999999787737507
+Iter = 2, GradNorm = 0.27179359046570056, Relative Error = 0.5769158512047504
+Iter = 3, GradNorm = 0.16419494649955682, Relative Error = 0.3485242869819054
+Iter = 4, GradNorm = 0.1569992116444156, Relative Error = 0.33325044078161625
+Iter = 5, GradNorm = 0.12107715877941973, Relative Error = 0.25700139579817155
+Iter = 6, GradNorm = 0.08170953521534306, Relative Error = 0.17343869654738245
+Iter = 7, GradNorm = 0.08049919981479198, Relative Error = 0.17086960845131755
+Iter = 8, GradNorm = 0.08008474563221452, Relative Error = 0.1699898776706271
+Iter = 9, GradNorm = 0.08163724578817484, Relative Error = 0.17328525320702845
+Iter = 10, GradNorm = 0.09265599405916654, Relative Error = 0.19667392299529657
+Iter = 11, GradNorm = 0.06472155196544438, Relative Error = 0.13737957977397144
+Iter = 12, GradNorm = 0.05383130177025522, Relative Error = 0.11426366320498554
+Iter = 13, GradNorm = 0.06223508318020208, Relative Error = 0.13210173914029716
+Iter = 14, GradNorm = 0.0582689823708437, Relative Error = 0.12368319468354849
+Iter = 15, GradNorm = 0.05675483612822733, Relative Error = 0.1204692301198119
+Iter = 16, GradNorm = 0.05392657111837855, Relative Error = 0.11446588429847093
+Iter = 17, GradNorm = 0.04569758461582543, Relative Error = 0.09699883239140271
+Log-partition = 0.20968497813493633
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [306.].
+Iter = 1, GradNorm = 0.4751400393491694, Relative Error = 0.9999999789535737
+Iter = 2, GradNorm = 0.2787255773705088, Relative Error = 0.5866177303982217
+Iter = 3, GradNorm = 0.19015412625201053, Relative Error = 0.40020647914752117
+Iter = 4, GradNorm = 0.14479513589910414, Relative Error = 0.30474201469112017
+Iter = 5, GradNorm = 0.10037506616873432, Relative Error = 0.21125364259700832
+Iter = 6, GradNorm = 0.10391323034118465, Relative Error = 0.2187002137233463
+Iter = 7, GradNorm = 0.08556675728955866, Relative Error = 0.18008744454769723
+Iter = 8, GradNorm = 0.08028264354895082, Relative Error = 0.16896627354170468
+Iter = 9, GradNorm = 0.08906927264436311, Relative Error = 0.18745898765293972
+Iter = 10, GradNorm = 0.07675453464366176, Relative Error = 0.16154086515922517
+Iter = 11, GradNorm = 0.054926180979379687, Relative Error = 0.11559998163618432
+Iter = 12, GradNorm = 0.07322610355104052, Relative Error = 0.15411477868755358
+Iter = 13, GradNorm = 0.06674656187680245, Relative Error = 0.1404776590991006
+Iter = 14, GradNorm = 0.05838059555749194, Relative Error = 0.12287028979657617
+Iter = 15, GradNorm = 0.06315481160707026, Relative Error = 0.1329183083883953
+Iter = 16, GradNorm = 0.044448692652450585, Relative Error = 0.09354861311593263
+Log-partition = 0.23614591450521094
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [310.].
+Iter = 1, GradNorm = 0.4733598858462505, Relative Error = 0.9999999788744249
+Iter = 2, GradNorm = 0.25832342762792565, Relative Error = 0.545723095460183
+Iter = 3, GradNorm = 0.19404426826899387, Relative Error = 0.409929675014168
+Iter = 4, GradNorm = 0.14402845308837495, Relative Error = 0.30426838934229455
+Iter = 5, GradNorm = 0.1267875549923614, Relative Error = 0.2678460006961439
+Iter = 6, GradNorm = 0.11142405643859647, Relative Error = 0.23538972654072818
+Iter = 7, GradNorm = 0.07957234596437353, Relative Error = 0.16810115656738905
+Iter = 8, GradNorm = 0.07670716177163109, Relative Error = 0.16204829020104808
+Iter = 9, GradNorm = 0.0836257928864825, Relative Error = 0.17666429627921953
+Iter = 10, GradNorm = 0.06543078486724559, Relative Error = 0.13822629555524876
+Iter = 11, GradNorm = 0.05736310824854616, Relative Error = 0.12118286477563779
+Iter = 12, GradNorm = 0.05528450443979189, Relative Error = 0.11679169470188609
+Iter = 13, GradNorm = 0.0773413438234427, Relative Error = 0.16338803625342085
+Iter = 14, GradNorm = 0.05051574162618213, Relative Error = 0.10671740903582985
+Iter = 15, GradNorm = 0.05198300759361135, Relative Error = 0.10981709276549206
+Iter = 16, GradNorm = 0.05493650692824622, Relative Error = 0.11605652994754304
+Iter = 17, GradNorm = 0.061447287038918254, Relative Error = 0.12981092732637542
+Iter = 18, GradNorm = 0.06074423268573101, Relative Error = 0.1283256845769229
+Iter = 19, GradNorm = 0.07600937151968179, Relative Error = 0.1605741681681669
+Iter = 20, GradNorm = 0.05230898794876444, Relative Error = 0.11050574501088417
+Iter = 21, GradNorm = 0.0447687068349665, Relative Error = 0.09457646756265889
+Log-partition = 0.2719354715003742
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [314.].
+Iter = 1, GradNorm = 0.46018486675969705, Relative Error = 0.9999999782696032
+Iter = 2, GradNorm = 0.2811534778804576, Relative Error = 0.6109576652326029
+Iter = 3, GradNorm = 0.18449033554587754, Relative Error = 0.40090482078622536
+Iter = 4, GradNorm = 0.12737473769201127, Relative Error = 0.27679035997205276
+Iter = 5, GradNorm = 0.1139281580549996, Relative Error = 0.24757040878266737
+Iter = 6, GradNorm = 0.09260651704066569, Relative Error = 0.20123763669231506
+Iter = 7, GradNorm = 0.08880827379280842, Relative Error = 0.19298390337843072
+Iter = 8, GradNorm = 0.07403048539451244, Relative Error = 0.1608711827207009
+Iter = 9, GradNorm = 0.060960250133601956, Relative Error = 0.1324690427961079
+Iter = 10, GradNorm = 0.05384420604289322, Relative Error = 0.11700559658115409
+Iter = 11, GradNorm = 0.07254826018926486, Relative Error = 0.1576502485264171
+Iter = 12, GradNorm = 0.06176777769679409, Relative Error = 0.13422383223829512
+Iter = 13, GradNorm = 0.06714067959291369, Relative Error = 0.14589936128642866
+Iter = 14, GradNorm = 0.0876220703530153, Relative Error = 0.19040623622833758
+Iter = 15, GradNorm = 0.0649210690613514, Relative Error = 0.14107605951434252
+Iter = 16, GradNorm = 0.048823151835400556, Relative Error = 0.10609464652376095
+Log-partition = 0.2239193181097819
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [318.].
+Iter = 1, GradNorm = 0.480162764202588, Relative Error = 0.9999999791737292
+Iter = 2, GradNorm = 0.25754971105435176, Relative Error = 0.5363800046391927
+Iter = 3, GradNorm = 0.18852902040401026, Relative Error = 0.39263564468758044
+Iter = 4, GradNorm = 0.1509042136504076, Relative Error = 0.31427720297771106
+Iter = 5, GradNorm = 0.12194909743064229, Relative Error = 0.2539744936145135
+Iter = 6, GradNorm = 0.107510339481263, Relative Error = 0.22390394519818135
+Iter = 7, GradNorm = 0.08025150108472578, Relative Error = 0.1671339499776933
+Iter = 8, GradNorm = 0.08904221329424182, Relative Error = 0.1854417253443174
+Iter = 9, GradNorm = 0.06502496941756473, Relative Error = 0.1354227626778283
+Iter = 10, GradNorm = 0.07128281228889144, Relative Error = 0.14845551575144833
+Iter = 11, GradNorm = 0.054754522206189135, Relative Error = 0.11403325111389698
+Iter = 12, GradNorm = 0.07241470147887276, Relative Error = 0.150812818838638
+Iter = 13, GradNorm = 0.04975247892822245, Relative Error = 0.10361586028997559
+Log-partition = 0.17643407273578673
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [322.].
+Iter = 1, GradNorm = 0.4845568983658454, Relative Error = 0.9999999793625891
+Iter = 2, GradNorm = 0.2574435103646345, Relative Error = 0.5312967495043162
+Iter = 3, GradNorm = 0.1828896519880378, Relative Error = 0.37743688889882515
+Iter = 4, GradNorm = 0.1490294736941418, Relative Error = 0.3075582477953715
+Iter = 5, GradNorm = 0.10481737336145301, Relative Error = 0.21631591986779564
+Iter = 6, GradNorm = 0.09379738046854084, Relative Error = 0.19357350777408144
+Iter = 7, GradNorm = 0.07562253858674454, Relative Error = 0.15606533986230728
+Iter = 8, GradNorm = 0.08012191938970012, Relative Error = 0.16535089688414317
+Iter = 9, GradNorm = 0.07375347620199937, Relative Error = 0.15220807902776767
+Iter = 10, GradNorm = 0.07161943187964397, Relative Error = 0.14780396408169783
+Iter = 11, GradNorm = 0.05868145741634211, Relative Error = 0.12110333462016605
+Iter = 12, GradNorm = 0.05371609491465795, Relative Error = 0.11085611202162812
+Iter = 13, GradNorm = 0.07852727974657298, Relative Error = 0.1620599735362437
+Iter = 14, GradNorm = 0.08037451837655836, Relative Error = 0.16587219579144824
+Iter = 15, GradNorm = 0.05414050542374132, Relative Error = 0.11173198542629112
+Iter = 16, GradNorm = 0.04305784731359899, Relative Error = 0.08886024854915467
+Log-partition = 0.20118341981304302
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [326.].
+Iter = 1, GradNorm = 0.4770825527833075, Relative Error = 0.9999999790392675
+Iter = 2, GradNorm = 0.26570898151503436, Relative Error = 0.5569454896127073
+Iter = 3, GradNorm = 0.1891447025098385, Relative Error = 0.39646115214600425
+Iter = 4, GradNorm = 0.14525460121178568, Relative Error = 0.3044642846813934
+Iter = 5, GradNorm = 0.11907567694638051, Relative Error = 0.2495913416992041
+Iter = 6, GradNorm = 0.11714538939576223, Relative Error = 0.24554531759101422
+Iter = 7, GradNorm = 0.0938687030738754, Relative Error = 0.1967556779401952
+Iter = 8, GradNorm = 0.08304264332800437, Relative Error = 0.1740634636561274
+Iter = 9, GradNorm = 0.09889913809797239, Relative Error = 0.20729983825229997
+Iter = 10, GradNorm = 0.07486603940622515, Relative Error = 0.15692470286370444
+Iter = 11, GradNorm = 0.057398668322717804, Relative Error = 0.12031181351054424
+Iter = 12, GradNorm = 0.053920229452428366, Relative Error = 0.11302075082739738
+Iter = 13, GradNorm = 0.049948064547732755, Relative Error = 0.10469480220852115
+Log-partition = 0.1792180726054782
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [330.].
+Iter = 1, GradNorm = 0.48930835055601385, Relative Error = 0.9999999795629897
+Iter = 2, GradNorm = 0.26260660707218486, Relative Error = 0.536689393113533
+Iter = 3, GradNorm = 0.1821217511264638, Relative Error = 0.37220241019285694
+Iter = 4, GradNorm = 0.14646416861129014, Relative Error = 0.2993289721125122
+Iter = 5, GradNorm = 0.11678897237691682, Relative Error = 0.23868174303052264
+Iter = 6, GradNorm = 0.0863330157555554, Relative Error = 0.1764388731421898
+Iter = 7, GradNorm = 0.1004841067294427, Relative Error = 0.20535947232796103
+Iter = 8, GradNorm = 0.09048153731500985, Relative Error = 0.1849172109223585
+Iter = 9, GradNorm = 0.06146881389874219, Relative Error = 0.12562387822046117
+Iter = 10, GradNorm = 0.06915210388638202, Relative Error = 0.1413262258748301
+Iter = 11, GradNorm = 0.057281222399653685, Relative Error = 0.11706569316445674
+Iter = 12, GradNorm = 0.0828804366366942, Relative Error = 0.16938283364403378
+Iter = 13, GradNorm = 0.07218389048373827, Relative Error = 0.14752229126376226
+Iter = 14, GradNorm = 0.07469426262721357, Relative Error = 0.15265274139672685
+Iter = 15, GradNorm = 0.0635383564224376, Relative Error = 0.1298534044058379
+Iter = 16, GradNorm = 0.0524041864072371, Relative Error = 0.1070984896879523
+Iter = 17, GradNorm = 0.06457303151492595, Relative Error = 0.13196797095710758
+Iter = 18, GradNorm = 0.05323070552955062, Relative Error = 0.108787647668769
+Iter = 19, GradNorm = 0.06586627082408449, Relative Error = 0.1346109654640663
+Iter = 20, GradNorm = 0.04341244960271608, Relative Error = 0.08872206792744228
+Log-partition = 0.22167653102963583
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [334.].
+Iter = 1, GradNorm = 0.47405441878444377, Relative Error = 0.9999999789053758
+Iter = 2, GradNorm = 0.27951625653861223, Relative Error = 0.5896290374405729
+Iter = 3, GradNorm = 0.2036945504428884, Relative Error = 0.42968599822006914
+Iter = 4, GradNorm = 0.13380023938978047, Relative Error = 0.2822465760585067
+Iter = 5, GradNorm = 0.11469123625576468, Relative Error = 0.24193685216664365
+Iter = 6, GradNorm = 0.08689320494661233, Relative Error = 0.18329794991984633
+Iter = 7, GradNorm = 0.09110211658625153, Relative Error = 0.192176490830078
+Iter = 8, GradNorm = 0.07888032062154852, Relative Error = 0.16639507160350994
+Iter = 9, GradNorm = 0.06239335155670234, Relative Error = 0.13161643003038598
+Iter = 10, GradNorm = 0.06164337521710841, Relative Error = 0.1300343831301661
+Iter = 11, GradNorm = 0.07570573011527676, Relative Error = 0.15969839224875323
+Iter = 12, GradNorm = 0.07155338353401738, Relative Error = 0.15093917320315398
+Iter = 13, GradNorm = 0.050160958294465596, Relative Error = 0.10581265620297406
+Iter = 14, GradNorm = 0.06006478662335489, Relative Error = 0.12670440982351167
+Iter = 15, GradNorm = 0.10003243508597746, Relative Error = 0.21101466205574254
+Iter = 16, GradNorm = 0.10817185252948959, Relative Error = 0.228184457229649
+Iter = 17, GradNorm = 0.05224340037811266, Relative Error = 0.11020548950902881
+Iter = 18, GradNorm = 0.06997644157340735, Relative Error = 0.14761267340722636
+Iter = 19, GradNorm = 0.04521244927213811, Relative Error = 0.09537396241201782
+Log-partition = 0.1935789525020778
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [338.].
+Iter = 1, GradNorm = 0.47338057184214344, Relative Error = 0.9999999788753481
+Iter = 2, GradNorm = 0.2737442850284565, Relative Error = 0.5782752726425543
+Iter = 3, GradNorm = 0.17389353996770623, Relative Error = 0.36734404966719547
+Iter = 4, GradNorm = 0.14668275455211013, Relative Error = 0.30986221272807496
+Iter = 5, GradNorm = 0.12075503743705993, Relative Error = 0.2550908129081807
+Iter = 6, GradNorm = 0.10836606864071055, Relative Error = 0.22891954760587752
+Iter = 7, GradNorm = 0.11412970255863215, Relative Error = 0.24109502361609456
+Iter = 8, GradNorm = 0.08415579848383539, Relative Error = 0.17777619469802952
+Iter = 9, GradNorm = 0.06919452483675026, Relative Error = 0.14617102494462758
+Iter = 10, GradNorm = 0.06681229400200026, Relative Error = 0.14113864523551564
+Iter = 11, GradNorm = 0.06756369407485975, Relative Error = 0.1427259517319829
+Iter = 12, GradNorm = 0.05373287074580778, Relative Error = 0.11350881892262724
+Iter = 13, GradNorm = 0.054844484449755475, Relative Error = 0.11585706417515088
+Iter = 14, GradNorm = 0.045960609701980626, Relative Error = 0.09709018803248451
+Log-partition = 0.2157016910398738
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [342.].
+Iter = 1, GradNorm = 0.47316113273592375, Relative Error = 0.9999999788655511
+Iter = 2, GradNorm = 0.25193526753611156, Relative Error = 0.5324513041780341
+Iter = 3, GradNorm = 0.18948485126058834, Relative Error = 0.40046579092472484
+Iter = 4, GradNorm = 0.15617602277722187, Relative Error = 0.33006941752270086
+Iter = 5, GradNorm = 0.12301186429374339, Relative Error = 0.2599787961929021
+Iter = 6, GradNorm = 0.10047556879355991, Relative Error = 0.2123495775933494
+Iter = 7, GradNorm = 0.09187608925169129, Relative Error = 0.19417505148551115
+Iter = 8, GradNorm = 0.09074148000800936, Relative Error = 0.19177711737553466
+Iter = 9, GradNorm = 0.0812459617746212, Relative Error = 0.17170886287246423
+Iter = 10, GradNorm = 0.06278450872589834, Relative Error = 0.13269159923586338
+Iter = 11, GradNorm = 0.0647233727382009, Relative Error = 0.13678928147809405
+Iter = 12, GradNorm = 0.05782501336269574, Relative Error = 0.12220997909578661
+Iter = 13, GradNorm = 0.0680261301194385, Relative Error = 0.14376947719353322
+Iter = 14, GradNorm = 0.05332412693422196, Relative Error = 0.1126976036660363
+Iter = 15, GradNorm = 0.07020318123647891, Relative Error = 0.1483705547555076
+Iter = 16, GradNorm = 0.06827847768910587, Relative Error = 0.14430279987554434
+Iter = 17, GradNorm = 0.0705423421993415, Relative Error = 0.14908735275988613
+Iter = 18, GradNorm = 0.060623060362144314, Relative Error = 0.1281234972331164
+Iter = 19, GradNorm = 0.06891757305683566, Relative Error = 0.1456534927156926
+Iter = 20, GradNorm = 0.08053203873997464, Relative Error = 0.17020002588192332
+Iter = 21, GradNorm = 0.0485733037141988, Relative Error = 0.10265700060097302
+Log-partition = 0.3041211269025579
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [346.].
+Iter = 1, GradNorm = 0.4846266732751471, Relative Error = 0.9999999793655605
+Iter = 2, GradNorm = 0.26152911219297603, Relative Error = 0.5396506655917928
+Iter = 3, GradNorm = 0.19212712505628257, Relative Error = 0.39644355477472193
+Iter = 4, GradNorm = 0.14889113372268867, Relative Error = 0.30722850982217925
+Iter = 5, GradNorm = 0.1180656050675091, Relative Error = 0.24362175906124692
+Iter = 6, GradNorm = 0.09551340918593988, Relative Error = 0.19708656679911307
+Iter = 7, GradNorm = 0.0839426774975441, Relative Error = 0.17321101044262063
+Iter = 8, GradNorm = 0.07888716119025758, Relative Error = 0.16277923587931983
+Iter = 9, GradNorm = 0.07390045681129224, Relative Error = 0.15248945087354016
+Iter = 10, GradNorm = 0.0719449027931813, Relative Error = 0.14845427475633763
+Iter = 11, GradNorm = 0.06294342825420898, Relative Error = 0.12988023653347378
+Iter = 12, GradNorm = 0.0776392560428249, Relative Error = 0.16020425354652865
+Iter = 13, GradNorm = 0.051915200094163144, Relative Error = 0.10712410580308113
+Iter = 14, GradNorm = 0.06482973112305462, Relative Error = 0.13377251678535312
+Iter = 15, GradNorm = 0.060789257942590436, Relative Error = 0.12543522682608316
+Iter = 16, GradNorm = 0.07115633538268493, Relative Error = 0.14682711010009714
+Iter = 17, GradNorm = 0.07669421765773284, Relative Error = 0.1582542198036373
+Iter = 18, GradNorm = 0.059458546514905106, Relative Error = 0.12268937837487476
+Iter = 19, GradNorm = 0.056702948641163334, Relative Error = 0.117003356600095
+Iter = 20, GradNorm = 0.04786022901109344, Relative Error = 0.09875690023432071
+Log-partition = 0.3233056435539466
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [350.].
+Iter = 1, GradNorm = 0.46304874830836074, Relative Error = 0.9999999784040021
+Iter = 2, GradNorm = 0.2810155629543568, Relative Error = 0.6068811500131882
+Iter = 3, GradNorm = 0.17672535120057253, Relative Error = 0.38165603088149264
+Iter = 4, GradNorm = 0.14418459251985982, Relative Error = 0.31138101535269025
+Iter = 5, GradNorm = 0.12385780895646464, Relative Error = 0.2674832978905934
+Iter = 6, GradNorm = 0.11192216315829379, Relative Error = 0.24170707976234507
+Iter = 7, GradNorm = 0.10032059172812537, Relative Error = 0.2166523285682116
+Iter = 8, GradNorm = 0.06501694625415769, Relative Error = 0.14041058330807699
+Iter = 9, GradNorm = 0.06796055005869697, Relative Error = 0.14676758945855894
+Iter = 10, GradNorm = 0.06664528389683094, Relative Error = 0.1439271409350146
+Iter = 11, GradNorm = 0.05041827966178396, Relative Error = 0.1088833060388181
+Iter = 12, GradNorm = 0.06352038320079519, Relative Error = 0.1371786060562
+Iter = 13, GradNorm = 0.05354917856532347, Relative Error = 0.1156447946452826
+Iter = 14, GradNorm = 0.05893472827812867, Relative Error = 0.12727542666010547
+Iter = 15, GradNorm = 0.053904043124740605, Relative Error = 0.11641116007235673
+Iter = 16, GradNorm = 0.05005491355854928, Relative Error = 0.10809858067952301
+Iter = 17, GradNorm = 0.054091748299221386, Relative Error = 0.11681652812725989
+Iter = 18, GradNorm = 0.048490427833042485, Relative Error = 0.10471991763932337
+Log-partition = 0.251699045164199
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [354.].
+Iter = 1, GradNorm = 0.496872703263946, Relative Error = 0.9999999798741213
+Iter = 2, GradNorm = 0.2648894647452053, Relative Error = 0.5331133259565658
+Iter = 3, GradNorm = 0.18209301750730536, Relative Error = 0.3664781998414449
+Iter = 4, GradNorm = 0.14004907967994853, Relative Error = 0.2818610801949038
+Iter = 5, GradNorm = 0.13529658281687587, Relative Error = 0.2722962626144543
+Iter = 6, GradNorm = 0.10833855506549468, Relative Error = 0.21804086272683618
+Iter = 7, GradNorm = 0.07878118742506227, Relative Error = 0.15855406288574467
+Iter = 8, GradNorm = 0.07181575126321998, Relative Error = 0.1445355104961669
+Iter = 9, GradNorm = 0.070576869478224, Relative Error = 0.14204215203247142
+Iter = 10, GradNorm = 0.0679602596886395, Relative Error = 0.1367759948865174
+Iter = 11, GradNorm = 0.06116601415655278, Relative Error = 0.1231019786833424
+Iter = 12, GradNorm = 0.06478663595809975, Relative Error = 0.1303887982346983
+Iter = 13, GradNorm = 0.07028993711123607, Relative Error = 0.14146467542864855
+Iter = 14, GradNorm = 0.05520182247701797, Relative Error = 0.11109851880252873
+Iter = 15, GradNorm = 0.060664062281467424, Relative Error = 0.12209175642382639
+Iter = 16, GradNorm = 0.06586084365709896, Relative Error = 0.1325507356289713
+Iter = 17, GradNorm = 0.049595276394420594, Relative Error = 0.09981485211500206
+Log-partition = 0.18763390657206505
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [358.].
+Iter = 1, GradNorm = 0.4916566309120378, Relative Error = 0.9999999796606022
+Iter = 2, GradNorm = 0.2685945973647046, Relative Error = 0.5463052362446555
+Iter = 3, GradNorm = 0.1703816608166671, Relative Error = 0.3465460376994075
+Iter = 4, GradNorm = 0.1431493114598461, Relative Error = 0.29115707904260146
+Iter = 5, GradNorm = 0.1230852260290962, Relative Error = 0.25034793753780976
+Iter = 6, GradNorm = 0.08240404370759685, Relative Error = 0.16760486252099613
+Iter = 7, GradNorm = 0.09675339931545703, Relative Error = 0.19679058770766641
+Iter = 8, GradNorm = 0.0834092340975376, Relative Error = 0.16964935924146365
+Iter = 9, GradNorm = 0.06736494939951791, Relative Error = 0.13701625035421858
+Iter = 10, GradNorm = 0.08967034786641456, Relative Error = 0.1823840876024239
+Iter = 11, GradNorm = 0.06618460240834426, Relative Error = 0.13461549565479242
+Iter = 12, GradNorm = 0.06663957060798803, Relative Error = 0.1355408735746346
+Iter = 13, GradNorm = 0.057835824801104364, Relative Error = 0.11763458476593985
+Iter = 14, GradNorm = 0.07259638086330353, Relative Error = 0.14765666691420065
+Iter = 15, GradNorm = 0.05456685268256244, Relative Error = 0.11098569233467344
+Iter = 16, GradNorm = 0.0561923964681723, Relative Error = 0.11429195050418463
+Iter = 17, GradNorm = 0.04452986725941611, Relative Error = 0.09057106841232099
+Log-partition = 0.2334282277251355
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [362.].
+Iter = 1, GradNorm = 0.5040478631126735, Relative Error = 0.9999999801606145
+Iter = 2, GradNorm = 0.28530396773173305, Relative Error = 0.5660255363639972
+Iter = 3, GradNorm = 0.17908602797241416, Relative Error = 0.35529567234654663
+Iter = 4, GradNorm = 0.13719891315356778, Relative Error = 0.27219421105046243
+Iter = 5, GradNorm = 0.11259037232626563, Relative Error = 0.22337237856194164
+Iter = 6, GradNorm = 0.10031252840124003, Relative Error = 0.1990138908468649
+Iter = 7, GradNorm = 0.0971022360556807, Relative Error = 0.19264486814722603
+Iter = 8, GradNorm = 0.061445965984385315, Relative Error = 0.12190501986435294
+Iter = 9, GradNorm = 0.06383769813415309, Relative Error = 0.1266500694466436
+Iter = 10, GradNorm = 0.08292845475447169, Relative Error = 0.16452495720765414
+Iter = 11, GradNorm = 0.06390302874911752, Relative Error = 0.12677968137132245
+Iter = 12, GradNorm = 0.07886914093093789, Relative Error = 0.15647152807905548
+Iter = 13, GradNorm = 0.057080754646567686, Relative Error = 0.1132447088687705
+Iter = 14, GradNorm = 0.06004515118685796, Relative Error = 0.11912588940423051
+Iter = 15, GradNorm = 0.06358781895611929, Relative Error = 0.12615432451572914
+Iter = 16, GradNorm = 0.06287903249138356, Relative Error = 0.12474813573378128
+Iter = 17, GradNorm = 0.059386019588769816, Relative Error = 0.1178182128257782
+Iter = 18, GradNorm = 0.042299128485251615, Relative Error = 0.08391887108666796
+Log-partition = 0.26519472588482657
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [366.].
+Iter = 1, GradNorm = 0.483703062742336, Relative Error = 0.9999999793261599
+Iter = 2, GradNorm = 0.2716512971834339, Relative Error = 0.561607549117514
+Iter = 3, GradNorm = 0.19001807096679238, Relative Error = 0.39284032224457915
+Iter = 4, GradNorm = 0.1422641293497341, Relative Error = 0.2941145867508616
+Iter = 5, GradNorm = 0.11518491893903093, Relative Error = 0.23813146004219998
+Iter = 6, GradNorm = 0.11533414691272938, Relative Error = 0.23843997156943175
+Iter = 7, GradNorm = 0.09891553951788339, Relative Error = 0.20449640511292502
+Iter = 8, GradNorm = 0.08602727178407808, Relative Error = 0.17785140643483982
+Iter = 9, GradNorm = 0.07058192832449944, Relative Error = 0.14591995027928584
+Iter = 10, GradNorm = 0.06528335867276591, Relative Error = 0.13496577208543337
+Iter = 11, GradNorm = 0.054327777563586414, Relative Error = 0.1123163788387309
+Iter = 12, GradNorm = 0.05977068200537341, Relative Error = 0.12356895247017106
+Iter = 13, GradNorm = 0.06908073923553233, Relative Error = 0.14281641595510597
+Iter = 14, GradNorm = 0.07174192448105186, Relative Error = 0.1483181077893795
+Iter = 15, GradNorm = 0.06437313772869062, Relative Error = 0.13308399585665145
+Iter = 16, GradNorm = 0.05375902186119645, Relative Error = 0.1111405423918681
+Iter = 17, GradNorm = 0.04010510726382661, Relative Error = 0.08291265762785471
+Log-partition = 0.23788176508417305
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [370.].
+Iter = 1, GradNorm = 0.49910009921753, Relative Error = 0.9999999799639395
+Iter = 2, GradNorm = 0.2649625039921947, Relative Error = 0.5308804768798643
+Iter = 3, GradNorm = 0.19131662638904487, Relative Error = 0.383323150718167
+Iter = 4, GradNorm = 0.14785781886213958, Relative Error = 0.29624882089075355
+Iter = 5, GradNorm = 0.12349082486222973, Relative Error = 0.24742696421331967
+Iter = 6, GradNorm = 0.08517353730184923, Relative Error = 0.1706542149136794
+Iter = 7, GradNorm = 0.09109419745609934, Relative Error = 0.18251688543790007
+Iter = 8, GradNorm = 0.07754922738605198, Relative Error = 0.15537810141462538
+Iter = 9, GradNorm = 0.0921598729371737, Relative Error = 0.18465207928256802
+Iter = 10, GradNorm = 0.06911289208345484, Relative Error = 0.13847500893519613
+Iter = 11, GradNorm = 0.05776643649552248, Relative Error = 0.11574118183641852
+Iter = 12, GradNorm = 0.05050699381643271, Relative Error = 0.10119611854145982
+Iter = 13, GradNorm = 0.05480039201743374, Relative Error = 0.1097983971659467
+Iter = 14, GradNorm = 0.062083249748732465, Relative Error = 0.12439037500124815
+Iter = 15, GradNorm = 0.05038522992860833, Relative Error = 0.1009521516787491
+Iter = 16, GradNorm = 0.05452498247060558, Relative Error = 0.10924658493080228
+Iter = 17, GradNorm = 0.0641971631345694, Relative Error = 0.1286258246571319
+Iter = 18, GradNorm = 0.039578137136582286, Relative Error = 0.07929899514274075
+Log-partition = 0.2437695077142019
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [374.].
+Iter = 1, GradNorm = 0.4920583924187249, Relative Error = 0.9999999796772091
+Iter = 2, GradNorm = 0.2866728330120298, Relative Error = 0.5825992028647059
+Iter = 3, GradNorm = 0.17685454663169003, Relative Error = 0.3594177962663726
+Iter = 4, GradNorm = 0.14783742018979942, Relative Error = 0.30044689708193384
+Iter = 5, GradNorm = 0.1252552522969077, Relative Error = 0.25455362957163724
+Iter = 6, GradNorm = 0.09161041020317208, Relative Error = 0.18617792065506636
+Iter = 7, GradNorm = 0.09288423688434491, Relative Error = 0.18876669197755838
+Iter = 8, GradNorm = 0.07791636418134054, Relative Error = 0.15834779733125331
+Iter = 9, GradNorm = 0.06741727889938992, Relative Error = 0.13701072589757368
+Iter = 10, GradNorm = 0.09305501799440119, Relative Error = 0.18911376685569642
+Iter = 11, GradNorm = 0.0609825450193991, Relative Error = 0.12393355081355777
+Iter = 12, GradNorm = 0.0688387955934527, Relative Error = 0.13989964454437512
+Iter = 13, GradNorm = 0.06996557297323933, Relative Error = 0.1421895706471465
+Iter = 14, GradNorm = 0.05456263563720372, Relative Error = 0.11088650324636216
+Iter = 15, GradNorm = 0.05101819625028716, Relative Error = 0.10368321321108631
+Iter = 16, GradNorm = 0.05239352377931958, Relative Error = 0.10647826258382735
+Iter = 17, GradNorm = 0.06494972427581053, Relative Error = 0.13199596624414622
+Iter = 18, GradNorm = 0.045345276933954556, Relative Error = 0.09215425793169826
+Log-partition = 0.287926934712481
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [378.].
+Iter = 1, GradNorm = 0.48456758152684065, Relative Error = 0.9999999793630442
+Iter = 2, GradNorm = 0.2678803410958765, Relative Error = 0.5528234776325076
+Iter = 3, GradNorm = 0.18448515599865012, Relative Error = 0.38072120221112915
+Iter = 4, GradNorm = 0.16751823995043952, Relative Error = 0.34570665244574145
+Iter = 5, GradNorm = 0.11726896765044911, Relative Error = 0.2420074509748832
+Iter = 6, GradNorm = 0.08396661089795598, Relative Error = 0.1732815243243625
+Iter = 7, GradNorm = 0.08336759432375768, Relative Error = 0.17204533646394277
+Iter = 8, GradNorm = 0.0937584668920953, Relative Error = 0.1934889343232149
+Iter = 9, GradNorm = 0.07472261490571307, Relative Error = 0.15420473059344933
+Iter = 10, GradNorm = 0.06223907269212571, Relative Error = 0.12844249962325066
+Iter = 11, GradNorm = 0.05873433972639743, Relative Error = 0.1212097976699791
+Iter = 12, GradNorm = 0.05514920333669136, Relative Error = 0.11381116752550423
+Iter = 13, GradNorm = 0.0636878427252041, Relative Error = 0.13143231994638332
+Iter = 14, GradNorm = 0.05898318198478732, Relative Error = 0.12172333234035562
+Iter = 15, GradNorm = 0.05064811083742523, Relative Error = 0.10452228280029285
+Iter = 16, GradNorm = 0.060709360541776974, Relative Error = 0.1252856394099444
+Iter = 17, GradNorm = 0.058242656777645466, Relative Error = 0.12019511373867715
+Iter = 18, GradNorm = 0.061626164209823496, Relative Error = 0.1271776430933887
+Iter = 19, GradNorm = 0.0554679897842368, Relative Error = 0.11446904571034314
+Iter = 20, GradNorm = 0.03870215981916414, Relative Error = 0.07986947640723593
+Log-partition = 0.2803416307331717
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [382.].
+Iter = 1, GradNorm = 0.48906556715539323, Relative Error = 0.9999999795528444
+Iter = 2, GradNorm = 0.26275900240958816, Relative Error = 0.5372674231907768
+Iter = 3, GradNorm = 0.18339936265109624, Relative Error = 0.37499953220552235
+Iter = 4, GradNorm = 0.16692961399490286, Relative Error = 0.341323580706363
+Iter = 5, GradNorm = 0.10632598899548107, Relative Error = 0.21740640511629708
+Iter = 6, GradNorm = 0.09648855747283498, Relative Error = 0.1972916557203886
+Iter = 7, GradNorm = 0.08087730085998, Relative Error = 0.1653710762683313
+Iter = 8, GradNorm = 0.07709299771597776, Relative Error = 0.15763325271098075
+Iter = 9, GradNorm = 0.05987100847222891, Relative Error = 0.12241918317061558
+Iter = 10, GradNorm = 0.06082466512393157, Relative Error = 0.12436913977408279
+Iter = 11, GradNorm = 0.05745728516437464, Relative Error = 0.11748380554315409
+Iter = 12, GradNorm = 0.056699228877151425, Relative Error = 0.11593379605029143
+Iter = 13, GradNorm = 0.07472119135600709, Relative Error = 0.15278358331947284
+Iter = 14, GradNorm = 0.07803321773330613, Relative Error = 0.15955573521894437
+Iter = 15, GradNorm = 0.05456752738980634, Relative Error = 0.11157507283009682
+Iter = 16, GradNorm = 0.05766436842463209, Relative Error = 0.11790723190953613
+Iter = 17, GradNorm = 0.04723528037146827, Relative Error = 0.09658271319402219
+Log-partition = 0.2229424931170662
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [386.].
+Iter = 1, GradNorm = 0.4566212983245536, Relative Error = 0.9999999781000146
+Iter = 2, GradNorm = 0.2707848185588488, Relative Error = 0.5930183581498184
+Iter = 3, GradNorm = 0.18871588687288132, Relative Error = 0.4132875173200357
+Iter = 4, GradNorm = 0.16237716664879998, Relative Error = 0.35560575840097863
+Iter = 5, GradNorm = 0.1135755224494034, Relative Error = 0.2487302287011913
+Iter = 6, GradNorm = 0.10724683383411292, Relative Error = 0.23487040985368313
+Iter = 7, GradNorm = 0.06846267474476521, Relative Error = 0.14993315795088533
+Iter = 8, GradNorm = 0.09655296912737601, Relative Error = 0.2114508617253334
+Iter = 9, GradNorm = 0.07586645721167724, Relative Error = 0.16614743076718946
+Iter = 10, GradNorm = 0.1097385311156817, Relative Error = 0.24032722327027856
+Iter = 11, GradNorm = 0.11261213755578285, Relative Error = 0.24662041718767383
+Iter = 12, GradNorm = 0.06343794139447874, Relative Error = 0.13892899923406296
+Iter = 13, GradNorm = 0.07582458048074765, Relative Error = 0.16605572078746195
+Iter = 14, GradNorm = 0.06349225814109546, Relative Error = 0.139047952830022
+Iter = 15, GradNorm = 0.049595089837671115, Relative Error = 0.10861317449167378
+Log-partition = 0.21659445734503335
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [390.].
+Iter = 1, GradNorm = 0.4869373645245115, Relative Error = 0.9999999794634782
+Iter = 2, GradNorm = 0.2551060247156537, Relative Error = 0.5238990434134608
+Iter = 3, GradNorm = 0.18879187937819614, Relative Error = 0.3877128543738282
+Iter = 4, GradNorm = 0.1416329895845917, Relative Error = 0.2908648976121305
+Iter = 5, GradNorm = 0.10195134640571556, Relative Error = 0.20937260465017668
+Iter = 6, GradNorm = 0.08344898727700588, Relative Error = 0.1713751945175554
+Iter = 7, GradNorm = 0.11220772193612914, Relative Error = 0.23043563260203356
+Iter = 8, GradNorm = 0.0837641305276863, Relative Error = 0.17202238914086432
+Iter = 9, GradNorm = 0.08355091027933394, Relative Error = 0.17158450891332874
+Iter = 10, GradNorm = 0.06469523638120324, Relative Error = 0.13286151313477912
+Iter = 11, GradNorm = 0.05742403165157817, Relative Error = 0.11792898770124607
+Iter = 12, GradNorm = 0.062109113510813094, Relative Error = 0.12755051626805583
+Iter = 13, GradNorm = 0.06367388700519223, Relative Error = 0.13076401676369373
+Iter = 14, GradNorm = 0.04957037959024264, Relative Error = 0.10180031803606679
+Log-partition = 0.24640288135456798
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [394.].
+Iter = 1, GradNorm = 0.46268216001340784, Relative Error = 0.9999999783868914
+Iter = 2, GradNorm = 0.2856022409509557, Relative Error = 0.6172752257617349
+Iter = 3, GradNorm = 0.19785959031628822, Relative Error = 0.4276360818281684
+Iter = 4, GradNorm = 0.14813978965374167, Relative Error = 0.3201761365678924
+Iter = 5, GradNorm = 0.10925113769680848, Relative Error = 0.23612567065993173
+Iter = 6, GradNorm = 0.09708373460476791, Relative Error = 0.20982813018698032
+Iter = 7, GradNorm = 0.07024219458699842, Relative Error = 0.15181521817657875
+Iter = 8, GradNorm = 0.06542901129470134, Relative Error = 0.1414124328430579
+Iter = 9, GradNorm = 0.08915667400014866, Relative Error = 0.19269528799340818
+Iter = 10, GradNorm = 0.07483649695275835, Relative Error = 0.1617449337859501
+Iter = 11, GradNorm = 0.07930235969677198, Relative Error = 0.1713970514456477
+Iter = 12, GradNorm = 0.06102539006090744, Relative Error = 0.13189483843550534
+Iter = 13, GradNorm = 0.08219727143602987, Relative Error = 0.17765385563409092
+Iter = 14, GradNorm = 0.06810735164897024, Relative Error = 0.14720115894458735
+Iter = 15, GradNorm = 0.06162975459551892, Relative Error = 0.13320105806915572
+Iter = 16, GradNorm = 0.04996748409173499, Relative Error = 0.10799526614627705
+Log-partition = 0.24369266137274634
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [398.].
+Iter = 1, GradNorm = 0.49576312992881255, Relative Error = 0.9999999798290773
+Iter = 2, GradNorm = 0.24766016813910482, Relative Error = 0.49955341208841536
+Iter = 3, GradNorm = 0.19102945100276253, Relative Error = 0.3853240299998761
+Iter = 4, GradNorm = 0.13834172017935237, Relative Error = 0.27904801514533145
+Iter = 5, GradNorm = 0.11100536202595442, Relative Error = 0.22390805827535679
+Iter = 6, GradNorm = 0.07260205005088718, Relative Error = 0.14644503433900358
+Iter = 7, GradNorm = 0.07914023955342044, Relative Error = 0.15963316587994886
+Iter = 8, GradNorm = 0.08267546849733352, Relative Error = 0.16676404887464008
+Iter = 9, GradNorm = 0.07167724997970781, Relative Error = 0.1445796272590981
+Iter = 10, GradNorm = 0.05693311342570306, Relative Error = 0.11483934330793164
+Iter = 11, GradNorm = 0.09356155074445233, Relative Error = 0.18872228128514554
+Iter = 12, GradNorm = 0.055709730741401585, Relative Error = 0.11237166754551586
+Iter = 13, GradNorm = 0.06047496753368654, Relative Error = 0.12198358986989279
+Iter = 14, GradNorm = 0.05239404799932891, Relative Error = 0.1056836294986599
+Iter = 15, GradNorm = 0.05529864278021231, Relative Error = 0.11154246519447318
+Iter = 16, GradNorm = 0.05619095914507005, Relative Error = 0.11334234964127951
+Iter = 17, GradNorm = 0.0649273053381887, Relative Error = 0.13096436606301898
+Iter = 18, GradNorm = 0.04656414479318035, Relative Error = 0.09392417677495461
+Log-partition = 0.22556176241165227
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [402.].
+Iter = 1, GradNorm = 0.47586646183296755, Relative Error = 0.9999999789857017
+Iter = 2, GradNorm = 0.2634938808113801, Relative Error = 0.5537139017095289
+Iter = 3, GradNorm = 0.20141586802436906, Relative Error = 0.4232613137221978
+Iter = 4, GradNorm = 0.1427140086191716, Relative Error = 0.2999034751691126
+Iter = 5, GradNorm = 0.1365577208170471, Relative Error = 0.28696646832681205
+Iter = 6, GradNorm = 0.08429491245746033, Relative Error = 0.17713984373130712
+Iter = 7, GradNorm = 0.09482380737036958, Relative Error = 0.1992655776002084
+Iter = 8, GradNorm = 0.09147289846032917, Relative Error = 0.19222387765204185
+Iter = 9, GradNorm = 0.0931842583440685, Relative Error = 0.19582018036516938
+Iter = 10, GradNorm = 0.08469885066090242, Relative Error = 0.17798869152234015
+Iter = 11, GradNorm = 0.0757981819870918, Relative Error = 0.15928456084566828
+Iter = 12, GradNorm = 0.05695860724160552, Relative Error = 0.11969451645166208
+Iter = 13, GradNorm = 0.06274245022412384, Relative Error = 0.1318488566392357
+Iter = 14, GradNorm = 0.04944574303241594, Relative Error = 0.103906759478049
+Log-partition = 0.1842245562602388
+--------------------------------------------------
+Computing the contaminated log-density values
+with the current contaminated data point being [406.].
+Iter = 1, GradNorm = 0.46532339410216766, Relative Error = 0.9999999785095701
+Iter = 2, GradNorm = 0.27620655228875124, Relative Error = 0.593579755184862
+Iter = 3, GradNorm = 0.177829837717279, Relative Error = 0.3821639662857667
+Iter = 4, GradNorm = 0.15348501871660197, Relative Error = 0.32984590365221
+Iter = 5, GradNorm = 0.11276358242143811, Relative Error = 0.24233378641036382
+Iter = 6, GradNorm = 0.10441992984725267, Relative Error = 0.22440291832887466
+Iter = 7, GradNorm = 0.0909550642468902, Relative Error = 0.1954663432895369
+Iter = 8, GradNorm = 0.07167597300573392, Relative Error = 0.15403474739043332
+Iter = 9, GradNorm = 0.08453511855334632, Relative Error = 0.18166960399607487
+Iter = 10, GradNorm = 0.05893776556129795, Relative Error = 0.12665979196773308
+Iter = 11, GradNorm = 0.05601873648177077, Relative Error = 0.12038667298469076
+Iter = 12, GradNorm = 0.061167671980579326, Relative Error = 0.13145195672803336
+Iter = 13, GradNorm = 0.060338277211095484, Relative Error = 0.12966955171214095
+Iter = 14, GradNorm = 0.05327854898125285, Relative Error = 0.11449789224346615
+Iter = 15, GradNorm = 0.058747927972571425, Relative Error = 0.1262518228283067
+Iter = 16, GradNorm = 0.06568242188531802, Relative Error = 0.14115434836562962
+Iter = 17, GradNorm = 0.05049478313970801, Relative Error = 0.10851545977391079
+Iter = 18, GradNorm = 0.049642570933933705, Relative Error = 0.10668401910649233
+Log-partition = 0.2414952419505875
+(base) zhoucx1119@iMac examples %
