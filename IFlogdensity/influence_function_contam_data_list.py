@@ -3,8 +3,9 @@ import numpy as np
 from IFlogdensity.contam_sm_de import ContamSMDensityEstimate
 from IFlogdensity.contam_ml_de import *
 
-def eval_IF_SMlogdensity_contam_data_array(data, new_data, contam_data_array, contam_weight, penalty_param, base_density,
-								  		   r1=1.0, r2=0., c=0., bw=1.0, kernel_type='gaussian_poly2',
+def eval_IF_SMlogdensity_contam_data_array(data, new_data, contam_data_array, contam_weight,
+										   penalty_param, base_density,
+										   r1=1.0, r2=0., c=0., bw=1.0, kernel_type='gaussian_poly2',
 										   save_data=False, save_dir=None):
 	
 	"""
