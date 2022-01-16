@@ -5,9 +5,9 @@ from IFlogdensity.contam_ml_de import *
 
 
 def eval_IF_SMlogdensity_contam_data_array(data, new_data, contam_data_array, contam_weight,
-	penalty_param, base_density,
-	r1=1.0, r2=0., c=0., bw=1.0, kernel_type='gaussian_poly2',
-	save_data=False, save_dir=None):
+										   penalty_param, base_density,
+										   r1=1.0, r2=0., c=0., bw=1.0, kernel_type='gaussian_poly2',
+										   save_data=False, save_dir=None):
 	
 	"""
 	Evaluates the influence function of the logarithm of the score matching density estimate at new_data.
@@ -195,12 +195,11 @@ def eval_IF_SMlogdensity_contam_data_array(data, new_data, contam_data_array, co
 
 
 def eval_IF_MLlogdensity_contam_data_array(data, new_data, contam_data_array, contam_weight,
-										penalty_param, base_density, basis_type,
-										optalgo_params, batchmc_params,
-										r1=1.0, r2=0., c=0., bw=1.0, kernel_type='gaussian_poly2',
-										grid_points=None, algo='gd', step_size_factor=1.0,
-										random_seed=0, save_data=False, save_dir=None, print_error=True):
-	
+										   penalty_param, base_density, basis_type,
+										   optalgo_params, batchmc_params,
+										   r1=1.0, r2=0., c=0., bw=1.0, kernel_type='gaussian_poly2',
+										   grid_points=None, algo='gd', step_size_factor=1.0,
+										   random_seed=0, save_data=False, save_dir=None, print_error=True):
 	"""
 	Evaluates the influence function of the logarithm of the maximum likelihood density estimate at new_data.
 	The result is a dict, where each key corresponds to a distinct contaminated observation in contam_data_array.
@@ -352,7 +351,7 @@ def eval_IF_MLlogdensity_contam_data_array(data, new_data, contam_data_array, co
 		kernel_type=kernel_type)
 	
 	if basis_type == 'gubasis':
-
+		
 		np.random.seed(random_seed)
 		uncontam_coef = uncontam_den.coef_gubasis(
 			optalgo_params=optalgo_params,
@@ -444,7 +443,7 @@ def eval_IF_MLlogdensity_contam_data_array(data, new_data, contam_data_array, co
 				algo=algo,
 				grid_points=grid_points,
 				print_error=print_error)
-			
+		
 		contam_logdenvals_new = contam_den.log_density(
 			new_data=new_data,
 			coef=contam_coef,
